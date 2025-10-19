@@ -1,0 +1,14 @@
+/home/dima/university/C#TEST/bin/Debug/net9.0/C#TEST
+/home/dima/university/C#TEST/bin/Debug/net9.0/C#TEST.deps.json
+/home/dima/university/C#TEST/bin/Debug/net9.0/C#TEST.runtimeconfig.json
+/home/dima/university/C#TEST/bin/Debug/net9.0/C#TEST.dll
+/home/dima/university/C#TEST/bin/Debug/net9.0/C#TEST.pdb
+/home/dima/university/C#TEST/obj/Debug/net9.0/C#TEST.GeneratedMSBuildEditorConfig.editorconfig
+/home/dima/university/C#TEST/obj/Debug/net9.0/C#TEST.AssemblyInfoInputs.cache
+/home/dima/university/C#TEST/obj/Debug/net9.0/C#TEST.AssemblyInfo.cs
+/home/dima/university/C#TEST/obj/Debug/net9.0/C#TEST.csproj.CoreCompileInputs.cache
+/home/dima/university/C#TEST/obj/Debug/net9.0/C#TEST.dll
+/home/dima/university/C#TEST/obj/Debug/net9.0/refint/C#TEST.dll
+/home/dima/university/C#TEST/obj/Debug/net9.0/C#TEST.pdb
+/home/dima/university/C#TEST/obj/Debug/net9.0/C#TEST.genruntimeconfig.cache
+/home/dima/university/C#TEST/obj/Debug/net9.0/ref/C#TEST.dll

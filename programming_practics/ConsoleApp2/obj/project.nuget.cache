@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "j1fehs1RXno=",
+  "success": true,
+  "projectFilePath": "/home/dima/university/programming_practics/ConsoleApp2/ConsoleApp2.csproj",
+  "expectedPackageFiles": [
+    "/home/dima/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.8/microsoft.aspnetcore.app.ref.9.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

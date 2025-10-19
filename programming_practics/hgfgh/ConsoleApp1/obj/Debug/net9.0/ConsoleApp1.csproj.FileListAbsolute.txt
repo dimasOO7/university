@@ -1,0 +1,14 @@
+/home/dima/university/programming_practics/hgfgh/ConsoleApp1/bin/Debug/net9.0/ConsoleApp1
+/home/dima/university/programming_practics/hgfgh/ConsoleApp1/bin/Debug/net9.0/ConsoleApp1.deps.json
+/home/dima/university/programming_practics/hgfgh/ConsoleApp1/bin/Debug/net9.0/ConsoleApp1.runtimeconfig.json
+/home/dima/university/programming_practics/hgfgh/ConsoleApp1/bin/Debug/net9.0/ConsoleApp1.dll
+/home/dima/university/programming_practics/hgfgh/ConsoleApp1/bin/Debug/net9.0/ConsoleApp1.pdb
+/home/dima/university/programming_practics/hgfgh/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+/home/dima/university/programming_practics/hgfgh/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.AssemblyInfoInputs.cache
+/home/dima/university/programming_practics/hgfgh/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.AssemblyInfo.cs
+/home/dima/university/programming_practics/hgfgh/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.csproj.CoreCompileInputs.cache
+/home/dima/university/programming_practics/hgfgh/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.dll
+/home/dima/university/programming_practics/hgfgh/ConsoleApp1/obj/Debug/net9.0/refint/ConsoleApp1.dll
+/home/dima/university/programming_practics/hgfgh/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.pdb
+/home/dima/university/programming_practics/hgfgh/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.genruntimeconfig.cache
+/home/dima/university/programming_practics/hgfgh/ConsoleApp1/obj/Debug/net9.0/ref/ConsoleApp1.dll

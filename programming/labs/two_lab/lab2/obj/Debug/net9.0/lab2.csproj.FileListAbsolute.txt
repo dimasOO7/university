@@ -1,0 +1,14 @@
+/home/dima/university/programming/labs/two_lab/lab2/obj/Debug/net9.0/lab2.GeneratedMSBuildEditorConfig.editorconfig
+/home/dima/university/programming/labs/two_lab/lab2/obj/Debug/net9.0/lab2.AssemblyInfoInputs.cache
+/home/dima/university/programming/labs/two_lab/lab2/obj/Debug/net9.0/lab2.AssemblyInfo.cs
+/home/dima/university/programming/labs/two_lab/lab2/obj/Debug/net9.0/lab2.csproj.CoreCompileInputs.cache
+/home/dima/university/programming/labs/two_lab/lab2/bin/Debug/net9.0/lab2
+/home/dima/university/programming/labs/two_lab/lab2/bin/Debug/net9.0/lab2.deps.json
+/home/dima/university/programming/labs/two_lab/lab2/bin/Debug/net9.0/lab2.runtimeconfig.json
+/home/dima/university/programming/labs/two_lab/lab2/bin/Debug/net9.0/lab2.dll
+/home/dima/university/programming/labs/two_lab/lab2/bin/Debug/net9.0/lab2.pdb
+/home/dima/university/programming/labs/two_lab/lab2/obj/Debug/net9.0/lab2.dll
+/home/dima/university/programming/labs/two_lab/lab2/obj/Debug/net9.0/refint/lab2.dll
+/home/dima/university/programming/labs/two_lab/lab2/obj/Debug/net9.0/lab2.pdb
+/home/dima/university/programming/labs/two_lab/lab2/obj/Debug/net9.0/lab2.genruntimeconfig.cache
+/home/dima/university/programming/labs/two_lab/lab2/obj/Debug/net9.0/ref/lab2.dll

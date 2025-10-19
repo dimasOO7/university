@@ -1,0 +1,14 @@
+/home/dima/university/programming/practics/1/practics1/bin/Debug/net9.0/practics1
+/home/dima/university/programming/practics/1/practics1/bin/Debug/net9.0/practics1.deps.json
+/home/dima/university/programming/practics/1/practics1/bin/Debug/net9.0/practics1.runtimeconfig.json
+/home/dima/university/programming/practics/1/practics1/bin/Debug/net9.0/practics1.dll
+/home/dima/university/programming/practics/1/practics1/bin/Debug/net9.0/practics1.pdb
+/home/dima/university/programming/practics/1/practics1/obj/Debug/net9.0/practics1.GeneratedMSBuildEditorConfig.editorconfig
+/home/dima/university/programming/practics/1/practics1/obj/Debug/net9.0/practics1.AssemblyInfoInputs.cache
+/home/dima/university/programming/practics/1/practics1/obj/Debug/net9.0/practics1.AssemblyInfo.cs
+/home/dima/university/programming/practics/1/practics1/obj/Debug/net9.0/practics1.csproj.CoreCompileInputs.cache
+/home/dima/university/programming/practics/1/practics1/obj/Debug/net9.0/practics1.dll
+/home/dima/university/programming/practics/1/practics1/obj/Debug/net9.0/refint/practics1.dll
+/home/dima/university/programming/practics/1/practics1/obj/Debug/net9.0/practics1.pdb
+/home/dima/university/programming/practics/1/practics1/obj/Debug/net9.0/practics1.genruntimeconfig.cache
+/home/dima/university/programming/practics/1/practics1/obj/Debug/net9.0/ref/practics1.dll

@@ -1,0 +1,14 @@
+/home/dima/university/programming/practics/2/pract2/bin/Debug/net9.0/pract2
+/home/dima/university/programming/practics/2/pract2/bin/Debug/net9.0/pract2.deps.json
+/home/dima/university/programming/practics/2/pract2/bin/Debug/net9.0/pract2.runtimeconfig.json
+/home/dima/university/programming/practics/2/pract2/bin/Debug/net9.0/pract2.dll
+/home/dima/university/programming/practics/2/pract2/bin/Debug/net9.0/pract2.pdb
+/home/dima/university/programming/practics/2/pract2/obj/Debug/net9.0/pract2.GeneratedMSBuildEditorConfig.editorconfig
+/home/dima/university/programming/practics/2/pract2/obj/Debug/net9.0/pract2.AssemblyInfoInputs.cache
+/home/dima/university/programming/practics/2/pract2/obj/Debug/net9.0/pract2.AssemblyInfo.cs
+/home/dima/university/programming/practics/2/pract2/obj/Debug/net9.0/pract2.csproj.CoreCompileInputs.cache
+/home/dima/university/programming/practics/2/pract2/obj/Debug/net9.0/pract2.dll
+/home/dima/university/programming/practics/2/pract2/obj/Debug/net9.0/refint/pract2.dll
+/home/dima/university/programming/practics/2/pract2/obj/Debug/net9.0/pract2.pdb
+/home/dima/university/programming/practics/2/pract2/obj/Debug/net9.0/pract2.genruntimeconfig.cache
+/home/dima/university/programming/practics/2/pract2/obj/Debug/net9.0/ref/pract2.dll

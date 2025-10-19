@@ -1,0 +1,14 @@
+/home/dima/university/programming_practics/labconsole1/bin/Debug/net9.0/labconsole1
+/home/dima/university/programming_practics/labconsole1/bin/Debug/net9.0/labconsole1.deps.json
+/home/dima/university/programming_practics/labconsole1/bin/Debug/net9.0/labconsole1.runtimeconfig.json
+/home/dima/university/programming_practics/labconsole1/bin/Debug/net9.0/labconsole1.dll
+/home/dima/university/programming_practics/labconsole1/bin/Debug/net9.0/labconsole1.pdb
+/home/dima/university/programming_practics/labconsole1/obj/Debug/net9.0/labconsole1.GeneratedMSBuildEditorConfig.editorconfig
+/home/dima/university/programming_practics/labconsole1/obj/Debug/net9.0/labconsole1.AssemblyInfoInputs.cache
+/home/dima/university/programming_practics/labconsole1/obj/Debug/net9.0/labconsole1.AssemblyInfo.cs
+/home/dima/university/programming_practics/labconsole1/obj/Debug/net9.0/labconsole1.csproj.CoreCompileInputs.cache
+/home/dima/university/programming_practics/labconsole1/obj/Debug/net9.0/labconsole1.dll
+/home/dima/university/programming_practics/labconsole1/obj/Debug/net9.0/refint/labconsole1.dll
+/home/dima/university/programming_practics/labconsole1/obj/Debug/net9.0/labconsole1.pdb
+/home/dima/university/programming_practics/labconsole1/obj/Debug/net9.0/labconsole1.genruntimeconfig.cache
+/home/dima/university/programming_practics/labconsole1/obj/Debug/net9.0/ref/labconsole1.dll

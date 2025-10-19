@@ -1,0 +1,14 @@
+/home/dima/university/programming/labs/first_lab/firstLab/bin/Debug/net9.0/firstLab
+/home/dima/university/programming/labs/first_lab/firstLab/bin/Debug/net9.0/firstLab.deps.json
+/home/dima/university/programming/labs/first_lab/firstLab/bin/Debug/net9.0/firstLab.runtimeconfig.json
+/home/dima/university/programming/labs/first_lab/firstLab/bin/Debug/net9.0/firstLab.dll
+/home/dima/university/programming/labs/first_lab/firstLab/bin/Debug/net9.0/firstLab.pdb
+/home/dima/university/programming/labs/first_lab/firstLab/obj/Debug/net9.0/firstLab.GeneratedMSBuildEditorConfig.editorconfig
+/home/dima/university/programming/labs/first_lab/firstLab/obj/Debug/net9.0/firstLab.AssemblyInfoInputs.cache
+/home/dima/university/programming/labs/first_lab/firstLab/obj/Debug/net9.0/firstLab.AssemblyInfo.cs
+/home/dima/university/programming/labs/first_lab/firstLab/obj/Debug/net9.0/firstLab.csproj.CoreCompileInputs.cache
+/home/dima/university/programming/labs/first_lab/firstLab/obj/Debug/net9.0/firstLab.dll
+/home/dima/university/programming/labs/first_lab/firstLab/obj/Debug/net9.0/refint/firstLab.dll
+/home/dima/university/programming/labs/first_lab/firstLab/obj/Debug/net9.0/firstLab.pdb
+/home/dima/university/programming/labs/first_lab/firstLab/obj/Debug/net9.0/firstLab.genruntimeconfig.cache
+/home/dima/university/programming/labs/first_lab/firstLab/obj/Debug/net9.0/ref/firstLab.dll

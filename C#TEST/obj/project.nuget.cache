@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "b8qojEJ7klY=",
+  "success": true,
+  "projectFilePath": "/home/dima/university/C#TEST/C#TEST.csproj",
+  "expectedPackageFiles": [
+    "/home/dima/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.9/microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "IGhDeKrpSK0=",
+  "success": true,
+  "projectFilePath": "/home/dima/university/programming/practics/2/pract2/pract2.csproj",
+  "expectedPackageFiles": [
+    "/home/dima/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.9/microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
