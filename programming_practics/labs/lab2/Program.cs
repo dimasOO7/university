@@ -2,7 +2,7 @@
 
 namespace Lab2
 {
-    class Program()
+    class Program
     {
         static double InputDouble(string text)
         {
