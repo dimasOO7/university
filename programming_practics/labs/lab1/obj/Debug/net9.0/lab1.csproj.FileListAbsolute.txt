@@ -12,3 +12,4 @@
 /home/dima/university/programming_practics/labs/lab1/obj/Debug/net9.0/lab1.pdb
 /home/dima/university/programming_practics/labs/lab1/obj/Debug/net9.0/lab1.genruntimeconfig.cache
 /home/dima/university/programming_practics/labs/lab1/obj/Debug/net9.0/ref/lab1.dll
+/home/dima/university/programming_practics/labs/lab1/obj/Debug/net9.0/lab1.sourcelink.json
