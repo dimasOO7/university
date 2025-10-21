@@ -128,6 +128,7 @@ namespace lab
             }
             snake.Enqueue(snakeHead);
             GenerateApple(false);
+            moveDirection = new Vector2i(0, -1);
             DisplayWorld();
         }    
 

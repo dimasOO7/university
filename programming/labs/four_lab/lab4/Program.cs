@@ -2,15 +2,6 @@
 
 namespace lab
 {
-    enum MenuItems
-    {
-        GuessAnswer,
-        MathTest,
-        AboutAuthor,
-        ArraySorter,
-        Snake,
-        Exit
-    } 
 
     class Program()
     {
@@ -165,44 +156,6 @@ namespace lab
             }
             return (bool)exit;
         }
-        
-        static MenuItems MenuSelection()
-        {
-            MenuItems? result = null;
-            string[] menuItems = ["1. Отгадай ответ", "2. Простой математический тест", "3. Об авторе", "4. Сортировка массива", "5. Змейка", "6. Выход"];
-            int selectedItem = 0;
-            while (result == null)
-            {
-                Console.Clear();
-                Console.WriteLine("===== МЕНЮ ====");
-                for (int i = 0; i < menuItems.Length; i++)
-                {
-                    if (i == selectedItem)
-                    {
-                        Console.Write("=> ");
-                    }
-                    Console.WriteLine(menuItems[i] + new string(' ', 10));
-                }
-                ConsoleKeyInfo key = Console.ReadKey(intercept: true);
-                switch (key.Key)
-                {
-                    case ConsoleKey.DownArrow:
-                        selectedItem = ++selectedItem % menuItems.Length;
-                        break;
-
-                    case ConsoleKey.UpArrow:
-                        selectedItem = (selectedItem + menuItems.Length - 1) % menuItems.Length;
-                        break;
-
-                    case ConsoleKey.Enter:
-                        result = (MenuItems)selectedItem;
-                        break;
-
-                }
-            }
-            Console.Clear();
-            return (MenuItems) result;
-        }
 
         static void Main(string[] args)
         {
@@ -213,7 +166,7 @@ namespace lab
             {
                 //Console.SetCursorPosition(0,0);
                 Console.Clear();
-                switch (Menu.MenuSelection(["Отгадай ответ", "Простой математический тест", "Об авторе", "Сортировка массива", "Змейка", "Выход"]))
+                switch (Menu.MenuSelection(["Отгадай ответ", "Простой математический тест", "Об авторе", "Сортировка массива", "Угашенный червяк", "Выход"]))
                 {
                     case 0:
                         GuessAnswer(CalculateFunction(InputDouble("Введите а: "), InputDouble("Введите b: ")));
