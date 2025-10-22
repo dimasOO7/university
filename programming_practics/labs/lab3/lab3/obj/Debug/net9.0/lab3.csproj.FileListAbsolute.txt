@@ -1,0 +1,15 @@
+/home/dima/university/programming_practics/labs/lab3/lab3/bin/Debug/net9.0/lab3
+/home/dima/university/programming_practics/labs/lab3/lab3/bin/Debug/net9.0/lab3.deps.json
+/home/dima/university/programming_practics/labs/lab3/lab3/bin/Debug/net9.0/lab3.runtimeconfig.json
+/home/dima/university/programming_practics/labs/lab3/lab3/bin/Debug/net9.0/lab3.dll
+/home/dima/university/programming_practics/labs/lab3/lab3/bin/Debug/net9.0/lab3.pdb
+/home/dima/university/programming_practics/labs/lab3/lab3/obj/Debug/net9.0/lab3.GeneratedMSBuildEditorConfig.editorconfig
+/home/dima/university/programming_practics/labs/lab3/lab3/obj/Debug/net9.0/lab3.AssemblyInfoInputs.cache
+/home/dima/university/programming_practics/labs/lab3/lab3/obj/Debug/net9.0/lab3.AssemblyInfo.cs
+/home/dima/university/programming_practics/labs/lab3/lab3/obj/Debug/net9.0/lab3.csproj.CoreCompileInputs.cache
+/home/dima/university/programming_practics/labs/lab3/lab3/obj/Debug/net9.0/lab3.sourcelink.json
+/home/dima/university/programming_practics/labs/lab3/lab3/obj/Debug/net9.0/lab3.dll
+/home/dima/university/programming_practics/labs/lab3/lab3/obj/Debug/net9.0/refint/lab3.dll
+/home/dima/university/programming_practics/labs/lab3/lab3/obj/Debug/net9.0/lab3.pdb
+/home/dima/university/programming_practics/labs/lab3/lab3/obj/Debug/net9.0/lab3.genruntimeconfig.cache
+/home/dima/university/programming_practics/labs/lab3/lab3/obj/Debug/net9.0/ref/lab3.dll

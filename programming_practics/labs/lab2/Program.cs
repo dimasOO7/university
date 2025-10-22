@@ -6,11 +6,35 @@ namespace Lab2
     {
         static double InputDouble(string text)
         {
+            while (true)
+            {
+                Console.Write(text);
+                if (double.TryParse(Console.ReadLine(), out double value))
+                {
+                    if (value >= 0)
+                    {
+                        return value;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Введите неотрицатекдльгное число");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("");
+                }
+            }
+
+
+
+
+
             double result = 0;
             while (result <= 0)
             {
                 Console.Write(text);
-                while (!Double.TryParse(Console.ReadLine(), out result))
+                while (!double.TryParse(Console.ReadLine(), out result))
                 {
                     Console.WriteLine("Ошибка ввода");
                     Console.Write(text);
@@ -36,7 +60,7 @@ namespace Lab2
                 float seasonCoef = 0;
 
                 float typeCoef = 0;
-                double distance = Program.InputDouble("Введите расстояние (в км): ");
+                double distance = InputDouble("Введите расстояние (в км): ");
                 double fuelConsumption = Program.InputDouble("Введите средний расход топлива на 100 км (в литрах): ");
                 double fuelCostLiter = Program.InputDouble("Введите  цену топлива за литр (в рублях): ");
                 while (!(typeCoef > 0))
@@ -47,6 +71,7 @@ namespace Lab2
                     {
                         Console.Write("Ошибка ввода\nВыберите транспорт: \n1.Легковой \n2.Грузовик \n3.Мотоцикл \nВыбор: ");
                     }
+                    
                     switch (i)
                     {
                         case 1:
@@ -85,7 +110,7 @@ namespace Lab2
                     }
                 }
                 double fuelConsumed = fuelConsumption * (distance / km100Coef) * typeCoef;
-                decimal costNoSeason = (decimal)(fuelConsumed * fuelCostLiter);
+                decimal costNoSeason = (decimal)fuelConsumed * (decimal)fuelCostLiter;
                 decimal totalCost = costNoSeason * (decimal)seasonCoef;
                 float seasonCoefProcent = (seasonCoef - 1) * 100;
 
@@ -97,11 +122,11 @@ namespace Lab2
             }
             catch (OverflowException ex)
             {
-                Console.WriteLine("ошибка переполнения:\n" + ex);
+                Console.WriteLine("ошибка переполнения:\n" + ex.Message);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("вызвано исключение:\n" + ex);
+                Console.WriteLine("вызвано исключение:\n" + ex.Message);
             }
             finally
 
