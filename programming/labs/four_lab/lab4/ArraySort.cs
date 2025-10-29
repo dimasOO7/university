@@ -43,6 +43,7 @@ namespace lab
                     arr[i - 1] = k;
                     i--;
                 }
+                
             }
             stopwatch.Stop();
             return ((double)stopwatch.ElapsedTicks)/((double)Stopwatch.Frequency);

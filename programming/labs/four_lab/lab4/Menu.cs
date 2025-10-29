@@ -6,6 +6,7 @@ namespace lab
         public static int MenuSelection(string[] menuItems, string menuText = "========= МЕНЮ =========")
         {
             int selectedItem = 0;
+            Console.CursorVisible = false;
             while (true)
             {
                 Console.Clear();
@@ -16,7 +17,7 @@ namespace lab
                     {
                         Console.Write("=> ");
                     }
-                    Console.WriteLine($"{i+1} {menuItems[i]}");
+                    Console.WriteLine($"{i + 1} {menuItems[i]}");
                 }
                 ConsoleKeyInfo key = Console.ReadKey(intercept: true);
                 switch (key.Key)
@@ -31,6 +32,7 @@ namespace lab
 
                     case ConsoleKey.Enter:
                         Console.Clear();
+                        Console.CursorVisible = true;
                         return selectedItem;
 
                 }
