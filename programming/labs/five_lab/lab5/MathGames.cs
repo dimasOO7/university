@@ -1,6 +1,9 @@
 namespace lab
 {
-    class MathGames
+    /// <summary>
+    /// Статический класс содержащий игры из 1 лабы
+    /// </summary>
+    static class MathGames
     {
         private static double CalculateFunction(double a, double b)
         {

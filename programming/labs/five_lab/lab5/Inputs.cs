@@ -1,5 +1,8 @@
 namespace lab
 {
+    /// <summary>
+    /// статический класс содержащий функции ввода
+    /// </summary>
     static class Inputs
     { 
         /// <summary>
