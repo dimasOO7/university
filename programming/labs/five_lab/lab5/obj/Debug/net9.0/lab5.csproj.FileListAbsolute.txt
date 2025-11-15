@@ -13,3 +13,13 @@
 /home/dima/university/programming/labs/five_lab/lab5/obj/Debug/net9.0/lab5.pdb
 /home/dima/university/programming/labs/five_lab/lab5/obj/Debug/net9.0/lab5.genruntimeconfig.cache
 /home/dima/university/programming/labs/five_lab/lab5/obj/Debug/net9.0/ref/lab5.dll
+/home/dima/university/programming/labs/five_lab/lab5/bin/Debug/net9.0/NAudio.dll
+/home/dima/university/programming/labs/five_lab/lab5/bin/Debug/net9.0/NAudio.Asio.dll
+/home/dima/university/programming/labs/five_lab/lab5/bin/Debug/net9.0/NAudio.Core.dll
+/home/dima/university/programming/labs/five_lab/lab5/bin/Debug/net9.0/NAudio.Midi.dll
+/home/dima/university/programming/labs/five_lab/lab5/bin/Debug/net9.0/NAudio.Wasapi.dll
+/home/dima/university/programming/labs/five_lab/lab5/bin/Debug/net9.0/NAudio.WinMM.dll
+/home/dima/university/programming/labs/five_lab/lab5/obj/Debug/net9.0/lab5.csproj.AssemblyReference.cache
+/home/dima/university/programming/labs/five_lab/lab5/obj/Debug/net9.0/lab5.csproj.Up2Date
+/home/dima/university/programming/labs/five_lab/lab5/bin/Debug/net9.0/Bufdio.dll
+/home/dima/university/programming/labs/five_lab/lab5/bin/Debug/net9.0/FFmpeg.AutoGen.dll

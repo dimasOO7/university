@@ -18,7 +18,7 @@ namespace lab
                 switch (Menu.MenuSelection(["Отгадай ответ", "Простой математический тест", "Об авторе", "Сортировка массива", "Угашенный червяк", "Выход"]))
                 {
                     case 0:
-                        MathGames.GuessAnswer();
+                        MathGames.StartGuessAnswer();
                         break;
                     case 1:
                         MathGames.MathTest();
@@ -27,15 +27,15 @@ namespace lab
                         AboutAuthor.DisplayInformation();
                         break;
                     case 3:
-                        int arraySize = Inputs.InputInt("Введите размер массива: ", true);
+                        int? arraySize = Inputs.InputInt("Введите размер массива: ", true,true);
                         ArraySorter arraySorter;
-                        if (arraySize == 10)
+                        if (arraySize == null)
                         {
                             arraySorter = new ArraySorter();
                         }
                         else
                         {
-                            arraySorter = new ArraySorter(arraySize);
+                            arraySorter = new ArraySorter((int)arraySize);
                         }
                         arraySorter.DoTask();
                         break;

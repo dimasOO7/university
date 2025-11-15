@@ -16,11 +16,21 @@ namespace lab
             return result;
         }
         /// <summary>
-        /// Запускает игру по отгадыванию ответа
+        /// запускает игру по отгадыванию ответа
         /// </summary>
-        public static void GuessAnswer()
+        public static void StartGuessAnswer()
         {
-            double result = CalculateFunction(Inputs.InputDouble("Введите а: "), Inputs.InputDouble("Введите b: "));
+            double a = Inputs.InputDouble("Введите а: ");
+            double b = Inputs.InputDouble("Введите b: ");
+            double result = CalculateFunction(a, b);
+            GuessAnswer(result);
+        }
+        /// <summary>
+        /// игра по отгадыванию ответа
+        /// </summary>
+        /// <param name="result"></param>
+        public static void GuessAnswer(double result)
+        {
             double gues = 0;
             //Console.WriteLine($"результат: {result}");
             for (int i = 3; i > 0; i--)

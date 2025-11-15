@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace Lab
 {
@@ -9,40 +9,65 @@ namespace Lab
         public readonly static (string type, double coef)[] vehicles = { ("Машина", 0), ("Грузовик", 0.2), ("Мотоцикл", -0.15) };
         public readonly static (string season, double coef)[] seasonsTypes = { ("Лето", 0), ("Зима", 0.2) };
         public static double[] distances = new double[10];
-        string[] vehicleTypes = new string[10];
-        string[] seasons = new string[10];
-        double[] totalCosts = new double[10];
     }
 
     class History
     {
-        double[] distances = new double[10];
-        string[] vehicleTypes = new string[10];
-        string[] seasons = new string[10];
-        double[] totalCosts = new double[10];
+        private (double distance, string vehicle, string season, double cost)[] trips =
+            new (double, string, string, double)[10];
 
-        ulong tripCount = 0;
+        private ulong tripCount = 0;
 
         public void SaveTripToHistory(double distance, int vehicle, int season, double totalCost)
         {
-            distances[tripCount % 10] = distance;
-            vehicleTypes[tripCount % 10] = Globals.vehicles[vehicle].type;
-            seasons[tripCount % 10] = Globals.seasonsTypes[season].season;
-            totalCosts[tripCount % 10] = totalCost;
+            int index = (int)(tripCount % 10);
+
+            trips[index] = (
+                distance,
+                Globals.vehicles[vehicle].type,
+                Globals.seasonsTypes[season].season,
+                totalCost
+            );
+
             tripCount++;
         }
 
-        void ShowTrip(int index, string text = "")
+        private int GetRealIndex(int historyIndex)
         {
-            Console.WriteLine($"{text}: {distances[index]:F2} км. {seasons[index]:F2} {vehicleTypes[index]:F2} итоговая стоимость: {totalCosts[index]:F2}");
+            return ((int)tripCount - historyIndex - 1) % 10;
+        }
+
+        void ShowTrip(int arrayIndex, string text = "")
+        {
+            var trip = trips[arrayIndex];
+
+            Console.WriteLine($"{text} {trip.distance:F2} км. {trip.season} {trip.vehicle} итоговая стоимость: {trip.cost:F2}");
         }
 
         public void ShowTripHistory()
         {
             for (UInt16 i = 0; i < 10 && i < tripCount; i++)
             {
-                ShowTrip((int)((tripCount - i - 1) % 10),i.ToString());
+                ShowTrip(GetRealIndex(i), $"{i+1}:");
             }
+        }
+
+        private int GetMaximumIndex()
+        {
+            int limit = (int)Math.Min(10, tripCount);
+            if (limit == 0) return 0;
+
+            return Enumerable.Range(0, limit)
+                .Aggregate((maxIndex, nextIndex) => trips[nextIndex].cost > trips[maxIndex].cost ? nextIndex : maxIndex);
+        }
+
+        private int GetMinimumIndex()
+        {
+            int limit = (int)Math.Min(10, tripCount);
+            if (limit == 0) return 0;
+
+            return Enumerable.Range(0, limit)
+                .Aggregate((minIndex, nextIndex) => trips[nextIndex].cost < trips[minIndex].cost ? nextIndex : minIndex);
         }
 
         public void AnalyzeTrips()
@@ -50,10 +75,10 @@ namespace Lab
             switch (Menu.MenuSelection(["Самая дорогая поездка", "Самая дешёвая поездка", "Расчёт стоимости 1 км", "Поиск поездок по типу транспорта"], "=== Анализ поездок ==="))
             {
                 case 0:
-                    ShowTrip(GetMaximum(), "Самая дорогая поездка");
+                    ShowTrip(GetMaximumIndex(), "Самая дорогая поездка:");
                     break;
                 case 1:
-                    ShowTrip(GetMinimum(), "Самая дешёвая поездка");
+                    ShowTrip(GetMinimumIndex(), "Самая дешёвая поездка:");
                     break;
                 case 2:
                     Console.WriteLine($"Средняя стоимость 1 км: {GetAverageKmCost():F2}");
@@ -61,66 +86,44 @@ namespace Lab
                 case 3:
                     string vehicle = Globals.vehicles[Menu.MenuSelection(["Легковой", "Грузовик", "Мотоцикл"], "Выберите транспорт: ")].type;
                     int[] indices = FindTripsPerVehicles(vehicle);
-                    Console.WriteLine($"Все поездки на {vehicle}");
-                    foreach (int i in indices)
+                    if (indices.Length > 0)
                     {
-                        ShowTrip(i);
+                        Console.WriteLine($"Все поездки на {vehicle}");
+                        for (int i = 0; i < indices.Length; i++)
+                        {
+                            ShowTrip(indices[i], $"{i + 1}:");
+                        }
                     }
+                    else
+                    {
+                        Console.WriteLine($"поездки на {vehicle} отсутствуют");
+                    }
+
                     break;
 
             }
         }
 
-        int GetMaximum()
+        private double GetAverageKmCost()
         {
-            double max = totalCosts[0];
-            int index = 0;
-            for (UInt16 i = 0; i < 10 && i < tripCount; i++)
-            {
-                if (totalCosts[i] > max)
-                {
-                    index = i;
-                }
-            }
-            return index;
-        }
-        int GetMinimum()
-        {
-            double min = totalCosts[0];
-            int index = 0;
-            for (UInt16 i = 0; i < 10 && i < tripCount; i++)
-            {
-                if (totalCosts[i] < min)
-                {
-                    index = i;
-                }
-            }
-            return index;
-        }
+            double totalCost = trips.Take(10).Sum(t => t.cost);
+            double totalDistance = trips.Take(10).Sum(t => t.distance);
 
-        double GetAverageKmCost()
-        {
-            double totalCost = 0;
-            double totalDistance = 0;
-            for (UInt16 i = 0; i < 10 && i < tripCount; i++)
+            if (totalDistance == 0)
             {
-                totalCost += totalCosts[i];
-                totalDistance += distances[i];
+                return -1;
             }
+
             return totalCost / totalDistance;
         }
 
-        int[] FindTripsPerVehicles(string vehicle)
+        private int[] FindTripsPerVehicles(string vehicle)
         {
-            List<int> coincidences = new List<int>();
-            for (UInt16 i = 0; i < 10 && i < tripCount; i++)
-            {
-                if (vehicleTypes[i] == vehicle)
-                {
-                    coincidences.Add(i);
-                }
-            }
-            return coincidences.ToArray();
+            int limit = (int)Math.Min(10, tripCount);
+
+            return Enumerable.Range(0, limit)
+                .Where(i => trips[i].vehicle == vehicle)
+                .ToArray();
         }
     }
     class Program

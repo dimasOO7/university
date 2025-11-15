@@ -55,9 +55,9 @@ namespace lab
             switch (menuResult)
             {
                 case 3:
-                    worldSize = Math.Clamp(Inputs.InputInt("Введите размер поля (от 5 до 30): "), 5, 30);
-                    walls = Math.Clamp(Inputs.InputInt($"Введите количество препятствий(не более {(int)Math.Pow(worldSize, 1.4)}): "), 0, (int)Math.Pow(worldSize, 1.4));
-                    frameDelay = Math.Max(Inputs.InputInt("Введите задержку между кадрами (в мс): "), 1);
+                    worldSize = Math.Clamp((int)Inputs.InputInt("Введите размер поля (от 5 до 30): "), 5, 30);
+                    walls = Math.Clamp((int)Inputs.InputInt($"Введите количество препятствий(не более {(int)Math.Pow(worldSize, 1.4)}): "), 0, (int)Math.Pow(worldSize, 1.4));
+                    frameDelay = Math.Max((int)Inputs.InputInt("Введите задержку между кадрами (в мс): "), 1);
                     break;
 
                 default:
@@ -67,7 +67,7 @@ namespace lab
                     break;
             }
 
-            seed = Inputs.InputInt("Введите сид (введите 0 для случайного): ");
+            seed = (int)Inputs.InputInt("Введите сид (введите 0 для случайного): ");
 
             if (seed == 0)
             {
