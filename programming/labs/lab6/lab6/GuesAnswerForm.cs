@@ -29,6 +29,12 @@ namespace lab6
             BLabel.Text = $"b: {this.guessAnswer.B:F2}";
             TimeBar.Maximum = ticksLeft;
             timer1.Start();
+            this.FormClosing += OnClosing;
+        }
+
+        private void OnClosing(object sender, FormClosingEventArgs e)
+        {
+            menu.Show();
         }
 
         private void AnswerButton_Click(object sender, EventArgs e)
@@ -41,7 +47,7 @@ namespace lab6
                     if (guessAnswer.Guess(answer))
                     {
                         SoundOut.PlayWavFile(@"sounds\music-with-completed-mission-from-gta-san-andreas.wav");
-                        MessageBox.Show($"Твоя оценка: {2+tryes}");
+                        MessageBox.Show($"Твоя оценка: {2 + tryes}");
                         menu.Show();
                         Close();
                         return;
@@ -100,6 +106,14 @@ namespace lab6
             TimeLabel.Text = $"{(double)ticksLeft / 100.0:F2} C";
         }
 
-        
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TimeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

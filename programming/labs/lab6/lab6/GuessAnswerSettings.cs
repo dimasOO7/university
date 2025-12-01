@@ -18,12 +18,17 @@ namespace lab6
         {
             InitializeComponent();
             mainMenu = menu;
+            this.FormClosing += OnClosing;
         }
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            mainMenu.Show();
             Close();
+        }
+
+        private void OnClosing(object sender, FormClosingEventArgs e)
+        {
+            mainMenu.Show();
         }
 
         private void IncorrectInput()

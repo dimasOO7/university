@@ -8,6 +8,14 @@ namespace lab
     {
         private readonly int[] array;
 
+        public int[] Array
+        {
+            get
+            {
+                return array;
+            }
+        }
+
         /// <summary>
         /// создание массива с заданным размером
         /// </summary>
@@ -26,6 +34,11 @@ namespace lab
         /// </summary>
         public ArraySorter() : this(10)
         {
+        }
+
+        public ArraySorter(int[] arr)
+        {
+            array = arr;
         }
 
         /// <summary>
@@ -131,6 +144,18 @@ namespace lab
             double SelectionSortTime = GnomeSort(SelectionSorted);
             Console.WriteLine($"Время сортировки выбором: {SelectionSortTime} С");
             PrintArray(SelectionSorted, "результат сортировки выбором: ");
+        }
+        /// <summary>
+        /// отсортировать массив
+        /// </summary>
+        /// <returns> возвращает кортеж: (sortedArr отсортированный массив,selectionSortTime и gnomeSortTime время сортировки выбором и гномьей соответственно) </returns>
+        public (int[] sortedArr, double selectionSortTime, double gnomeSortTime) GetSortedArr()
+        {
+            int[] GnomeSorted = GetArrayCopy();
+            int[] SelectionSorted = GetArrayCopy();
+            double GnomeSortTime = GnomeSort(GnomeSorted);
+            double SelectionSortTime = GnomeSort(SelectionSorted);
+            return (GnomeSorted, SelectionSortTime, GnomeSortTime);
         }
 
     }

@@ -32,7 +32,7 @@ partial class MainMenu
         GuessAnswerButton = new Button();
         button1 = new Button();
         button3 = new Button();
-        button4 = new Button();
+        ArraySortButton = new Button();
         button5 = new Button();
         ExitButton = new Button();
         SuspendLayout();
@@ -75,16 +75,17 @@ partial class MainMenu
         button3.Text = "математический тест";
         button3.UseVisualStyleBackColor = true;
         // 
-        // button4
+        // ArraySortButton
         // 
-        button4.Font = new Font("Segoe UI", 24F);
-        button4.Location = new Point(15, 259);
-        button4.Margin = new Padding(6);
-        button4.Name = "button4";
-        button4.Size = new Size(694, 110);
-        button4.TabIndex = 4;
-        button4.Text = "сортировка массивов";
-        button4.UseVisualStyleBackColor = true;
+        ArraySortButton.Font = new Font("Segoe UI", 24F);
+        ArraySortButton.Location = new Point(15, 259);
+        ArraySortButton.Margin = new Padding(6);
+        ArraySortButton.Name = "ArraySortButton";
+        ArraySortButton.Size = new Size(694, 110);
+        ArraySortButton.TabIndex = 4;
+        ArraySortButton.Text = "сортировка массивов";
+        ArraySortButton.UseVisualStyleBackColor = true;
+        ArraySortButton.Click += ArraySortButton_Click;
         // 
         // button5
         // 
@@ -119,7 +120,7 @@ partial class MainMenu
         ClientSize = new Size(974, 929);
         Controls.Add(ExitButton);
         Controls.Add(button5);
-        Controls.Add(button4);
+        Controls.Add(ArraySortButton);
         Controls.Add(button3);
         Controls.Add(button1);
         Controls.Add(GuessAnswerButton);
@@ -133,7 +134,7 @@ partial class MainMenu
 
     private System.Windows.Forms.Button button1;
     private System.Windows.Forms.Button button3;
-    private System.Windows.Forms.Button button4;
+    private System.Windows.Forms.Button ArraySortButton;
     private System.Windows.Forms.Button button5;
     private System.Windows.Forms.Button ExitButton;
 

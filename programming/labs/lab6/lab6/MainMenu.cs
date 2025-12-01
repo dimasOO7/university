@@ -64,4 +64,11 @@ public partial class MainMenu : Form
         guesAnswer.Show();
         Hide();
     }
+
+    private void ArraySortButton_Click(object sender, EventArgs e)
+    {
+        ArraySorterForm arrSorterForm = new ArraySorterForm(this);
+        arrSorterForm.Show();
+        Hide();
+    }
 }

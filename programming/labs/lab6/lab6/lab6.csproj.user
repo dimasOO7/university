@@ -4,6 +4,9 @@
     <Compile Update="AboutAuthor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ArraySorterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GuesAnswer.cs">
       <SubType>Form</SubType>
     </Compile>
