@@ -18,6 +18,24 @@ namespace lab6
         ArraySorter sorter;
 
         bool isSorterActual = false;
+
+        private bool IsSorterActual
+        {
+            get
+            {
+                return isSorterActual;
+            }
+
+            set
+            {
+                isSorterActual = value;
+                MinLabel.Text = "";
+                MaxLabel.Text = "";
+                AvgLabel.Text = "";
+                GnomeSortLabel.Text = "";
+                SelectionSortLabel.Text = "";
+            }
+        }
         public ArraySorterForm(Form mainMenu)
         {
             InitializeComponent();
@@ -48,6 +66,7 @@ namespace lab6
         }
         private void UpdateRowIds()
         {
+            IsSorterActual = false;
             for (int i = 1; i < dataGrid.Rows.Count + 1; i++)
             {
                 dataGrid.Rows[i - 1].Cells["id"].Value = i;
@@ -59,8 +78,8 @@ namespace lab6
             if (e.ColumnIndex == 1)
             {
                 int value;
-                isSorterActual = false;
-                if (!int.TryParse(e.FormattedValue.ToString(), out value))
+                IsSorterActual = false;
+                if (!int.TryParse(e.FormattedValue.ToString().Replace(" ", ""), out value))
                 {
                     MessageBox.Show("Введите целое число!");
                     e.Cancel = true;
@@ -75,32 +94,30 @@ namespace lab6
 
             DisplayArr(sorter.Array);
 
-            isSorterActual = true;
+            IsSorterActual = true;
         }
 
         private void DisplayArr(int[] arr)
         {
             dataGrid.Rows.Clear();
-            foreach (int i in arr)
+
+            var rows = new DataGridViewRow[arr.Length];
+
+            for (int i = 0; i < arr.Length; i++)
             {
-                int rowIndex = dataGrid.Rows.Add();
-                dataGrid.Rows[rowIndex].Cells[1].Value = i;
+                var row = new DataGridViewRow();
+                row.CreateCells(dataGrid);
+                row.Cells[0].Value = i + 1;
+                row.Cells[1].Value = arr[i];
+                rows[i] = row;
             }
+
+            dataGrid.Rows.AddRange(rows);
         }
 
         private void SortButton_Click(object sender, EventArgs e)
         {
-            if (!isSorterActual)
-            {
-                int[] arr = dataGrid.Rows
-                    .Cast<DataGridViewRow>()
-                    .Where(r => !r.IsNewRow)
-                    .Select(r => Convert.ToInt32(r.Cells[1].Value))
-                    .ToArray();
-
-                sorter = new ArraySorter(arr);
-            }
-
+            UpdateSorter();
             (int[] sortedArr, double selectionSortTime, double gnomeSortTime) sortResult = sorter.GetSortedArr();
 
             DisplayArr(sortResult.sortedArr);
@@ -111,11 +128,62 @@ namespace lab6
 
         }
 
+        private int[] GetArr()
+        {
+            int[] arr = dataGrid.Rows
+                    .Cast<DataGridViewRow>()
+                    .Where(r => !r.IsNewRow)
+                    .Select(r => Convert.ToInt32(r.Cells[1].Value))
+                    .ToArray();
+            return arr;
+        }
+
+        private void UpdateSorter()
+        {
+            if (!isSorterActual)
+            {
+                int[] arr = GetArr();
+
+                sorter = new ArraySorter(arr);
+            }
+        }
+
         private void ClearButton_Click(object sender, EventArgs e)
         {
             isSorterActual = false;
 
             DisplayArr([]);
+        }
+
+        private void MaxButton_Click(object sender, EventArgs e)
+        {
+            UpdateSorter();
+            int index = sorter.GetMaxIndex();
+            dataGrid.Rows[index].DefaultCellStyle.BackColor = Color.Green;
+            MaxLabel.Text = $"Максимум = {sorter.Array[index]}";
+        }
+
+        private void MinButton_Click(object sender, EventArgs e)
+        {
+            UpdateSorter();
+            int index = sorter.GetMinIndex();
+            dataGrid.Rows[index].DefaultCellStyle.BackColor = Color.Red;
+            MinLabel.Text = $"Минимум = {sorter.Array[index]}";
+        }
+
+        private void AvgButton_Click(object sender, EventArgs e)
+        {
+            UpdateSorter();
+            AvgLabel.Text = $"Среднее = {sorter.FindAverage():F2}";
+        }
+
+        private void GenerateDefault_Click(object sender, EventArgs e)
+        {
+            sorter = new ArraySorter();
+
+            DisplayArr(sorter.Array);
+
+            IsSorterActual = true;
         }
     }
 }

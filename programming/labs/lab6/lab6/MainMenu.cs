@@ -71,4 +71,11 @@ public partial class MainMenu : Form
         arrSorterForm.Show();
         Hide();
     }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+        SnakeSettings snake = new SnakeSettings(this);
+        snake.Show();
+        Hide();
+    }
 }

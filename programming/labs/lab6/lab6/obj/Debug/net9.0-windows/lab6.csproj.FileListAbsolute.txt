@@ -20,3 +20,5 @@ C:\Users\REDMI\university\programming\labs\lab6\lab6\obj\Debug\net9.0-windows\la
 C:\Users\REDMI\university\programming\labs\lab6\lab6\obj\Debug\net9.0-windows\lab6.GuessAnswerSettings.resources
 C:\Users\REDMI\university\programming\labs\lab6\lab6\obj\Debug\net9.0-windows\lab6.GuesAnswerForm.resources
 C:\Users\REDMI\university\programming\labs\lab6\lab6\obj\Debug\net9.0-windows\lab6.ArraySorterForm.resources
+C:\Users\REDMI\university\programming\labs\lab6\lab6\obj\Debug\net9.0-windows\lab6.SnakeSettings.resources
+C:\Users\REDMI\university\programming\labs\lab6\lab6\obj\Debug\net9.0-windows\lab6.SnakeGameForm.resources

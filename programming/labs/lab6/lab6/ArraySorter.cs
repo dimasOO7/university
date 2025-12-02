@@ -158,5 +158,44 @@ namespace lab
             return (GnomeSorted, SelectionSortTime, GnomeSortTime);
         }
 
+        public double FindAverage()
+        {
+            return Array.Average();
+        }
+
+        public int GetMaxIndex()
+        {
+            int max = array[0];
+            int maxI = 0;
+
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i] > max)
+                {
+                    max = array[i];
+                    maxI = i;
+                }
+            }
+
+            return maxI;
+        }
+
+        public int GetMinIndex()
+        {
+            int min = array[0];
+            int minI = 0;
+
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i] < min)
+                {
+                    min = array[i];
+                    minI = i;
+                }
+            }
+
+            return minI;
+        }
+
     }
 }

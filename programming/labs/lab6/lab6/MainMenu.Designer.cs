@@ -31,7 +31,6 @@ partial class MainMenu
     {
         GuessAnswerButton = new Button();
         button1 = new Button();
-        button3 = new Button();
         ArraySortButton = new Button();
         button5 = new Button();
         ExitButton = new Button();
@@ -56,29 +55,19 @@ partial class MainMenu
         // button1
         // 
         button1.Font = new Font("Segoe UI", 24F);
-        button1.Location = new Point(15, 381);
+        button1.Location = new Point(15, 259);
         button1.Margin = new Padding(6);
         button1.Name = "button1";
         button1.Size = new Size(694, 110);
         button1.TabIndex = 2;
         button1.Text = "червяк";
         button1.UseVisualStyleBackColor = true;
-        // 
-        // button3
-        // 
-        button3.Font = new Font("Segoe UI", 24F);
-        button3.Location = new Point(15, 137);
-        button3.Margin = new Padding(6);
-        button3.Name = "button3";
-        button3.Size = new Size(694, 110);
-        button3.TabIndex = 3;
-        button3.Text = "математический тест";
-        button3.UseVisualStyleBackColor = true;
+        button1.Click += button1_Click;
         // 
         // ArraySortButton
         // 
         ArraySortButton.Font = new Font("Segoe UI", 24F);
-        ArraySortButton.Location = new Point(15, 259);
+        ArraySortButton.Location = new Point(15, 137);
         ArraySortButton.Margin = new Padding(6);
         ArraySortButton.Name = "ArraySortButton";
         ArraySortButton.Size = new Size(694, 110);
@@ -90,7 +79,7 @@ partial class MainMenu
         // button5
         // 
         button5.Font = new Font("Segoe UI", 24F);
-        button5.Location = new Point(15, 503);
+        button5.Location = new Point(15, 381);
         button5.Margin = new Padding(6);
         button5.Name = "button5";
         button5.Size = new Size(694, 110);
@@ -102,7 +91,7 @@ partial class MainMenu
         // ExitButton
         // 
         ExitButton.Font = new Font("Segoe UI", 24F);
-        ExitButton.Location = new Point(15, 625);
+        ExitButton.Location = new Point(15, 503);
         ExitButton.Margin = new Padding(6);
         ExitButton.Name = "ExitButton";
         ExitButton.Size = new Size(694, 110);
@@ -121,7 +110,6 @@ partial class MainMenu
         Controls.Add(ExitButton);
         Controls.Add(button5);
         Controls.Add(ArraySortButton);
-        Controls.Add(button3);
         Controls.Add(button1);
         Controls.Add(GuessAnswerButton);
         Margin = new Padding(4, 2, 4, 2);
@@ -133,7 +121,6 @@ partial class MainMenu
     }
 
     private System.Windows.Forms.Button button1;
-    private System.Windows.Forms.Button button3;
     private System.Windows.Forms.Button ArraySortButton;
     private System.Windows.Forms.Button button5;
     private System.Windows.Forms.Button ExitButton;

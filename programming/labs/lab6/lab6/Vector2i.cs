@@ -1,4 +1,4 @@
-namespace lab
+namespace lab6
 {
     /// <summary>
     /// Класс целочисленного 2D вектора
