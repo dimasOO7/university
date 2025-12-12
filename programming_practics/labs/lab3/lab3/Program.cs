@@ -8,19 +8,24 @@ namespace Lab
     {
         public readonly static (string type, double coef)[] vehicles = { ("Машина", 0), ("Грузовик", 0.2), ("Мотоцикл", -0.15) };
         public readonly static (string season, double coef)[] seasonsTypes = { ("Лето", 0), ("Зима", 0.2) };
-        public static double[] distances = new double[10];
     }
 
     class History
     {
-        private (double distance, string vehicle, string season, double cost)[] trips =
-            new (double, string, string, double)[10];
+        private readonly int tripSavingCount;
+        private (double distance, string vehicle, string season, double cost)[] trips;
 
         private ulong tripCount = 0;
 
+        public History(int savingTrips)
+        {
+            tripSavingCount = savingTrips;
+            trips =new (double, string, string, double)[savingTrips];
+        }
+
         public void SaveTripToHistory(double distance, int vehicle, int season, double totalCost)
         {
-            int index = (int)(tripCount % 10);
+            int index = (int)tripCount % tripSavingCount;
 
             trips[index] = (
                 distance,
@@ -34,7 +39,7 @@ namespace Lab
 
         private int GetRealIndex(int historyIndex)
         {
-            return ((int)tripCount - historyIndex - 1) % 10;
+            return ((int)tripCount - historyIndex - 1) % tripSavingCount;
         }
 
         void ShowTrip(int arrayIndex, string text = "")
@@ -46,15 +51,23 @@ namespace Lab
 
         public void ShowTripHistory()
         {
-            for (UInt16 i = 0; i < 10 && i < tripCount; i++)
+            if (tripCount > 0)
             {
-                ShowTrip(GetRealIndex(i), $"{i+1}:");
+                for (UInt16 i = 0; i < tripSavingCount && i < tripCount; i++)
+                {
+                    ShowTrip(GetRealIndex(i), $"{i + 1}:");
+                }
             }
+            else
+            {
+                Console.WriteLine("Ошибка: нет поездок");
+            }
+            
         }
 
         private int GetMaximumIndex()
         {
-            int limit = (int)Math.Min(10, tripCount);
+            int limit = Math.Min(tripSavingCount, (int)tripCount);
             if (limit == 0) return 0;
 
             return Enumerable.Range(0, limit)
@@ -63,7 +76,7 @@ namespace Lab
 
         private int GetMinimumIndex()
         {
-            int limit = (int)Math.Min(10, tripCount);
+            int limit = Math.Min(tripSavingCount, (int)tripCount);
             if (limit == 0) return 0;
 
             return Enumerable.Range(0, limit)
@@ -75,13 +88,35 @@ namespace Lab
             switch (Menu.MenuSelection(["Самая дорогая поездка", "Самая дешёвая поездка", "Расчёт стоимости 1 км", "Поиск поездок по типу транспорта"], "=== Анализ поездок ==="))
             {
                 case 0:
-                    ShowTrip(GetMaximumIndex(), "Самая дорогая поездка:");
+                    if (tripCount > 0)
+                    {
+                        ShowTrip(GetMaximumIndex(), "Самая дорогая поездка:");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ошибка: нет поездок");
+                    }
                     break;
                 case 1:
-                    ShowTrip(GetMinimumIndex(), "Самая дешёвая поездка:");
+                    if (tripCount > 0)
+                    {
+                        ShowTrip(GetMinimumIndex(), "Самая дешёвая поездка:");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ошибка: нет поездок");
+                    }
                     break;
                 case 2:
-                    Console.WriteLine($"Средняя стоимость 1 км: {GetAverageKmCost():F2}");
+                    double averageKmCost = GetAverageKmCost();
+                    if (averageKmCost >= 0)
+                    {
+                        Console.WriteLine($"Средняя стоимость 1 км: {averageKmCost:F2}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Невозможно вычислить среднюю стоимость: нет поездок");
+                    }
                     break;
                 case 3:
                     string vehicle = Globals.vehicles[Menu.MenuSelection(["Легковой", "Грузовик", "Мотоцикл"], "Выберите транспорт: ")].type;
@@ -106,8 +141,8 @@ namespace Lab
 
         private double GetAverageKmCost()
         {
-            double totalCost = trips.Take(10).Sum(t => t.cost);
-            double totalDistance = trips.Take(10).Sum(t => t.distance);
+            double totalCost = trips.Take(tripSavingCount).Sum(t => t.cost);
+            double totalDistance = trips.Take(tripSavingCount).Sum(t => t.distance);
 
             if (totalDistance == 0)
             {
@@ -119,7 +154,7 @@ namespace Lab
 
         private int[] FindTripsPerVehicles(string vehicle)
         {
-            int limit = (int)Math.Min(10, tripCount);
+            int limit = Math.Min(tripSavingCount, (int)tripCount);
 
             return Enumerable.Range(0, limit)
                 .Where(i => trips[i].vehicle == vehicle)
@@ -176,7 +211,7 @@ namespace Lab
 
         static double CalculateFuelConsumption(double distance, double fuelConsumption, double fuelCost, int vehicleType)
         {
-            double fuelConsumed = fuelConsumption * (distance / 100) * (1+Globals.vehicles[vehicleType].coef);
+            double fuelConsumed = fuelConsumption * (distance / 100) * (1 + Globals.vehicles[vehicleType].coef);
             double cost = fuelConsumed * fuelCost;
             return cost;
         }
@@ -189,7 +224,7 @@ namespace Lab
         static void Main()
         {
 
-            History history = new History();
+            History history = new History(10);
 
             bool isRunning = true;
 
