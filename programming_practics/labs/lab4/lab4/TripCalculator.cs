@@ -11,15 +11,19 @@ namespace lab
             trips = new TripData[tripCountSaving];
         }
 
+        public TripCalculator() : this(10)
+        {
+
+        }
+
         public void AddTrip(TripData trip)
         {
-            tripCount++;
-
-            for (int i = trips.Length - 1; i > 1; i--)
+            int limit = Math.Min(trips.Length - 1, tripCount);
+            for (int i = limit; i >= 1; i--)
             {
                 trips[i] = trips[i - 1];
             }
-
+            tripCount++;
             trips[0] = trip;
         }
 
@@ -27,14 +31,14 @@ namespace lab
         {
             for (int i = 0; i < trips.Length && i < tripCount; i++)
             {
-                trips[i].PrintInfo((i + 1).ToString());
+                trips[i].PrintInfo($"{(i + 1)}.");
             }
         }
 
         public int GetMaximumIndex()
         {
             int limit = Math.Min(trips.Length, tripCount);
-            if (limit <= 0) return -1;
+            if (limit <= 0) throw new InvalidOperationException("Ошибка: нет поездок в истории.");
 
             return Enumerable.Range(0, limit)
             .Aggregate((maxIndex, nextIndex) => trips[nextIndex].TotalCost > trips[maxIndex].TotalCost ? nextIndex : maxIndex);
@@ -43,7 +47,7 @@ namespace lab
         public int GetMinimumIndex()
         {
             int limit = Math.Min(trips.Length, tripCount);
-            if (limit <= 0) return -1;
+            if (limit <= 0) throw new InvalidOperationException("Ошибка: нет поездок в истории.");
 
             return Enumerable.Range(0, limit)
             .Aggregate((minIndex, nextIndex) => trips[nextIndex].TotalCost < trips[minIndex].TotalCost ? nextIndex : minIndex);
@@ -52,12 +56,12 @@ namespace lab
         public double GetAverageKmCost()
         {
             int limit = Math.Min(trips.Length, tripCount);
-            if (limit <= 0) return -1;
+            if (limit <= 0) throw new InvalidOperationException("Ошибка: нет поездок в истории.");
 
             double totalCost = trips.Take(limit).Sum(t => t.TotalCost);
             double totalDistance = trips.Take(limit).Sum(t => t.Distance);
 
-            if (totalDistance <= 0) return -2;
+            if (totalDistance <= 0) throw new DivideByZeroException("Ошибка: суммарная дистанция поездок равна 0");
 
             return totalCost / totalDistance;
         }
@@ -75,12 +79,12 @@ namespace lab
         {
             int[] indices = FindTripsPerVehicles(vehicle);
 
-            if (indices.Length <= 0) return -1;
+            if (indices.Length <= 0) throw new InvalidOperationException("Ошибка: нет поездок в истории.");
 
             double totalCost = indices.Sum(i => trips[i].TotalCost);
-            double totalDistance = indices.Sum(i => trips[i].TotalCost);
+            double totalDistance = indices.Sum(i => trips[i].Distance);
 
-            if (totalDistance <= 0) return -2;
+            if (totalDistance <= 0) throw new DivideByZeroException("Ошибка: суммарная дистанция поездок равна 0");
 
             return totalCost / totalDistance;
         }
@@ -88,7 +92,7 @@ namespace lab
         private int GetMaxEfficiencyTrip()
         {
             int limit = Math.Min(trips.Length, tripCount);
-            if (limit <= 0) return -1;
+            if (limit <= 0) throw new InvalidOperationException("Ошибка: нет поездок в истории.");
 
             return Enumerable.Range(0, limit)
             .Aggregate((maxIndex, nextIndex) => trips[nextIndex].TotalCost / trips[nextIndex].Distance < trips[maxIndex].TotalCost / trips[maxIndex].Distance ? nextIndex : maxIndex);
@@ -96,7 +100,7 @@ namespace lab
         private int GetMinEfficiencyTrip()
         {
             int limit = Math.Min(trips.Length, tripCount);
-            if (limit <= 0) return -1;
+            if (limit <= 0) throw new InvalidOperationException("Ошибка: нет поездок в истории.");
 
             return Enumerable.Range(0, limit)
             .Aggregate((minIndex, nextIndex) => trips[nextIndex].TotalCost / trips[nextIndex].Distance > trips[minIndex].TotalCost / trips[minIndex].Distance ? nextIndex : minIndex);
@@ -104,94 +108,99 @@ namespace lab
 
         public void AnalyzeTrips()
         {
-            string[] avaibleVehicles = Globals.vehicles.Keys.ToArray();
-            switch (Menu.MenuSelection(["Самая дорогая поездка", "Самая дешёвая поездка", "Расчёт стоимости 1 км", "Поиск поездок по типу транспорта","Сравнение эффективности разных видов транспорта", "самая экономичная поездка", "самая затратная поездка"], "=== Анализ поездок ==="))
+            try
             {
-                case 0:
-                    int maxIndex = GetMaximumIndex();
-                    if (maxIndex >= 0)
-                    {
-                        trips[maxIndex].PrintInfo("Самая дорогая поездка:");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ошибка: нет поездок");
-                    }
-                    break;
-                case 1:
-                    int minIndex = GetMinimumIndex();
-                    if (minIndex >= 0)
-                    {
-                        trips[minIndex].PrintInfo("Самая дешёвая поездка:");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ошибка: нет поездок");
-                    }
-                    break;
-                case 2:
-                    double averageKmCost = GetAverageKmCost();
-                    if (averageKmCost >= 0)
-                    {
-                        Console.WriteLine($"Средняя стоимость 1 км: {averageKmCost:F2}");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Невозможно вычислить среднюю стоимость");
-                    }
-                    break;
-                case 3:
-                    string vehicle = avaibleVehicles[Menu.MenuSelection(["Легковой", "Грузовик", "Мотоцикл"], "Выберите транспорт: ")];
-                    int[] indices = FindTripsPerVehicles(vehicle);
-                    if (indices.Length > 0)
-                    {
-                        Console.WriteLine($"Все поездки на {vehicle}");
-                        for (int i = 0; i < indices.Length; i++)
+                string[] avaibleVehicles = Globals.vehicles.Keys.ToArray();
+                switch (Menu.MenuSelection(["Самая дорогая поездка", "Самая дешёвая поездка", "Расчёт стоимости 1 км", "Поиск поездок по типу транспорта", "Сравнение эффективности разных видов транспорта", "самая экономичная поездка", "самая затратная поездка"], "=== Анализ поездок ==="))
+                {
+                    case 0:
+                        int maxIndex = GetMaximumIndex();
+                        if (maxIndex >= 0)
                         {
-                            trips[indices[i]].PrintInfo($"{i + 1}:");
+                            trips[maxIndex].PrintInfo("Самая дорогая поездка:");
                         }
-                    }
-                    else
-                    {
-                        Console.WriteLine($"поездки на {vehicle} отсутствуют");
-                    }
+                        else
+                        {
+                            Console.WriteLine("Ошибка: нет поездок");
+                        }
+                        break;
+                    case 1:
+                        int minIndex = GetMinimumIndex();
+                        if (minIndex >= 0)
+                        {
+                            trips[minIndex].PrintInfo("Самая дешёвая поездка:");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ошибка: нет поездок");
+                        }
+                        break;
+                    case 2:
+                        double averageKmCost = GetAverageKmCost();
+                        if (averageKmCost >= 0)
+                        {
+                            Console.WriteLine($"Средняя стоимость 1 км: {averageKmCost:F2}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Невозможно вычислить среднюю стоимость");
+                        }
+                        break;
+                    case 3:
+                        string vehicle = avaibleVehicles[Menu.MenuSelection(avaibleVehicles, "Выберите транспорт: ")];
+                        int[] indices = FindTripsPerVehicles(vehicle);
+                        if (indices.Length > 0)
+                        {
+                            Console.WriteLine($"Все поездки на {vehicle}");
+                            for (int i = 0; i < indices.Length; i++)
+                            {
+                                trips[indices[i]].PrintInfo($"{i + 1}:");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine($"поездки на {vehicle} отсутствуют");
+                        }
 
-                    break;
-                case 4:
-                    Console.WriteLine("=== Сравнение эффективности видов транспорта ===");
-                    foreach (string v in avaibleVehicles)
-                    {
-                        double efficiency = GetVehicleEfficiency(v);
-                        Console.WriteLine($"{v}: {efficiency}");
-                    }
-                    break;
+                        break;
+                    case 4:
+                        Console.WriteLine("=== Сравнение эффективности видов транспорта ===");
+                        foreach (string v in avaibleVehicles)
+                        {
+                            double efficiency = GetVehicleEfficiency(v);
+                            Console.WriteLine($"{v}: {efficiency:F2} руб/км");
+                        }
+                        break;
 
-                case 5:
-                    int MaxEfficiencyTrip = GetMaxEfficiencyTrip();
-                    if (MaxEfficiencyTrip >= 0)
-                    {
-                        trips[MaxEfficiencyTrip].PrintInfo("Самая эффективная поездка:");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ошибка");
-                    }
-                    break;
-                case 6:
-                    int MinEfficiencyTrip = GetMinEfficiencyTrip();
-                    if (MinEfficiencyTrip >= 0)
-                    {
-                        trips[MinEfficiencyTrip].PrintInfo("Самая затратная поездка:");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ошибка");
-                    }
-                    break;
+                    case 5:
+                        int MaxEfficiencyTrip = GetMaxEfficiencyTrip();
+                        if (MaxEfficiencyTrip >= 0)
+                        {
+                            trips[MaxEfficiencyTrip].PrintInfo("Самая эффективная поездка:");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ошибка");
+                        }
+                        break;
+                    case 6:
+                        int MinEfficiencyTrip = GetMinEfficiencyTrip();
+                        if (MinEfficiencyTrip >= 0)
+                        {
+                            trips[MinEfficiencyTrip].PrintInfo("Самая затратная поездка:");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ошибка");
+                        }
+                        break;
 
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
             }
         }
-
-
     }
 }

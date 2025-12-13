@@ -137,12 +137,13 @@ namespace lab
             }
         }
 
-        public TripData(double distance, string vehicleType, double fuelConsumption, double fuelPrice)
+        public TripData(double distance, double fuelConsumption, double fuelPrice,string vehicleType, string season)
         {
             this.Distance = distance;
             this.VehicleType = vehicleType;
             this.FuelConsumption = fuelConsumption;
             this.FuelPrice = fuelPrice;
+            this.Season = season;
             CalculateCost();
         }
 
@@ -166,13 +167,13 @@ namespace lab
         public double CalculateCost()
         {
             double cost = CalculateRawCost();
-            double TotalCost = ApplySeasonalCoefficient(cost);
+            TotalCost = ApplySeasonalCoefficient(cost);
             CalculationTime = DateTime.Now;
             return TotalCost;
         }
         public void PrintInfo(string text = "")
         {
-            Console.WriteLine($"{text} {Distance:F2} км. сезон:{Season} транспорт:{VehicleType} итоговая стоимость: {TotalCost:F2}");
+            Console.WriteLine($"{text} {Distance:F2} км. сезон: {Season} транспорт: {VehicleType} итоговая стоимость: {TotalCost:F2}");
         }
 
 

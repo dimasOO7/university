@@ -3,3 +3,13 @@
 /home/dima/university/programming_practics/labs/lab4/lab4/obj/Debug/net9.0/lab4.AssemblyInfo.cs
 /home/dima/university/programming_practics/labs/lab4/lab4/obj/Debug/net9.0/lab4.csproj.CoreCompileInputs.cache
 /home/dima/university/programming_practics/labs/lab4/lab4/obj/Debug/net9.0/lab4.sourcelink.json
+/home/dima/university/programming_practics/labs/lab4/lab4/bin/Debug/net9.0/lab4
+/home/dima/university/programming_practics/labs/lab4/lab4/bin/Debug/net9.0/lab4.deps.json
+/home/dima/university/programming_practics/labs/lab4/lab4/bin/Debug/net9.0/lab4.runtimeconfig.json
+/home/dima/university/programming_practics/labs/lab4/lab4/bin/Debug/net9.0/lab4.dll
+/home/dima/university/programming_practics/labs/lab4/lab4/bin/Debug/net9.0/lab4.pdb
+/home/dima/university/programming_practics/labs/lab4/lab4/obj/Debug/net9.0/lab4.dll
+/home/dima/university/programming_practics/labs/lab4/lab4/obj/Debug/net9.0/refint/lab4.dll
+/home/dima/university/programming_practics/labs/lab4/lab4/obj/Debug/net9.0/lab4.pdb
+/home/dima/university/programming_practics/labs/lab4/lab4/obj/Debug/net9.0/lab4.genruntimeconfig.cache
+/home/dima/university/programming_practics/labs/lab4/lab4/obj/Debug/net9.0/ref/lab4.dll
