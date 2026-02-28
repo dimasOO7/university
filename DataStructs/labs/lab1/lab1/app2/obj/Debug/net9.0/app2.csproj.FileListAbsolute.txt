@@ -1,0 +1,15 @@
+C:\Users\REDMI\university\DataStructs\labs\lab1\lab1\app2\bin\Debug\net9.0\app2.exe
+C:\Users\REDMI\university\DataStructs\labs\lab1\lab1\app2\bin\Debug\net9.0\app2.deps.json
+C:\Users\REDMI\university\DataStructs\labs\lab1\lab1\app2\bin\Debug\net9.0\app2.runtimeconfig.json
+C:\Users\REDMI\university\DataStructs\labs\lab1\lab1\app2\bin\Debug\net9.0\app2.dll
+C:\Users\REDMI\university\DataStructs\labs\lab1\lab1\app2\bin\Debug\net9.0\app2.pdb
+C:\Users\REDMI\university\DataStructs\labs\lab1\lab1\app2\obj\Debug\net9.0\app2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\REDMI\university\DataStructs\labs\lab1\lab1\app2\obj\Debug\net9.0\app2.AssemblyInfoInputs.cache
+C:\Users\REDMI\university\DataStructs\labs\lab1\lab1\app2\obj\Debug\net9.0\app2.AssemblyInfo.cs
+C:\Users\REDMI\university\DataStructs\labs\lab1\lab1\app2\obj\Debug\net9.0\app2.csproj.CoreCompileInputs.cache
+C:\Users\REDMI\university\DataStructs\labs\lab1\lab1\app2\obj\Debug\net9.0\app2.sourcelink.json
+C:\Users\REDMI\university\DataStructs\labs\lab1\lab1\app2\obj\Debug\net9.0\app2.dll
+C:\Users\REDMI\university\DataStructs\labs\lab1\lab1\app2\obj\Debug\net9.0\refint\app2.dll
+C:\Users\REDMI\university\DataStructs\labs\lab1\lab1\app2\obj\Debug\net9.0\app2.pdb
+C:\Users\REDMI\university\DataStructs\labs\lab1\lab1\app2\obj\Debug\net9.0\app2.genruntimeconfig.cache
+C:\Users\REDMI\university\DataStructs\labs\lab1\lab1\app2\obj\Debug\net9.0\ref\app2.dll

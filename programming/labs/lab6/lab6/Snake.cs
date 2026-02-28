@@ -52,6 +52,7 @@ namespace lab6
         public Snake(int seed, int worldsize, int walls)
         {
             rnd = new Random(seed);
+            this.worldSize = worldsize;
 
             word = new char[worldSize, worldSize];
             freeCells = worldSize * worldSize - walls;

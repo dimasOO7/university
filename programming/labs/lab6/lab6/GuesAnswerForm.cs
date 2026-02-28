@@ -17,17 +17,23 @@ namespace lab6
 
         private GuesAnswer guessAnswer;
 
-        private int ticksLeft = 3000; //1 тик - 10мс
+        private int ticksLeft = 6000; //1 тик - 10мс
 
-        private int tryes = 3;
-        public GuesAnswerForm(Form menu, GuesAnswer guessAnswer)
+        private int startTryes;
+
+        private int tryes;
+        public GuesAnswerForm(Form menu, GuesAnswer guessAnswer, int tryes)
         {
             InitializeComponent();
+            SoundOut.PlayWavFile(@"sounds\minuta-poshla_LeSDguC.wav");
             this.menu = menu;
             this.guessAnswer = guessAnswer;
+            startTryes = tryes;
+            this.tryes = tryes;
             ALabel.Text = $"a: {this.guessAnswer.A:F2}";
             BLabel.Text = $"b: {this.guessAnswer.B:F2}";
             TimeBar.Maximum = ticksLeft;
+            TryesLabel.Text = $"Осталось попыток: {tryes}";
             timer1.Start();
             this.FormClosing += OnClosing;
         }
@@ -46,9 +52,10 @@ namespace lab6
                 {
                     if (guessAnswer.Guess(answer))
                     {
-                        SoundOut.PlayWavFile(@"sounds\music-with-completed-mission-from-gta-san-andreas.wav");
+                        SoundOut.PlayWavFile(@"sounds\yippee-tbh.wav");
                         MessageBox.Show($"Твоя оценка: {2 + tryes}");
                         menu.Show();
+                        timer1.Stop();
                         Close();
                         return;
                     }
@@ -60,6 +67,7 @@ namespace lab6
                             SoundOut.PlayWavFile(@"sounds\gta-v-mission-failed-made-with-Voicemod.wav");
                             MessageBox.Show("Незачёт");
                             menu.Show();
+                            timer1.Stop();
                             Close();
                             return;
                         }
@@ -104,16 +112,6 @@ namespace lab6
 
             TimeBar.Value = ticksLeft;
             TimeLabel.Text = $"{(double)ticksLeft / 100.0:F2} C";
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TimeLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

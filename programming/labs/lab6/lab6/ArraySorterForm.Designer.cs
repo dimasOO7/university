@@ -208,7 +208,7 @@
             ArraySizeNumeric.Dock = DockStyle.Fill;
             ArraySizeNumeric.Font = new Font("Segoe UI", 24F);
             ArraySizeNumeric.Location = new Point(3, 269);
-            ArraySizeNumeric.Maximum = new decimal(new int[] { 99999999, 0, 0, 0 });
+            ArraySizeNumeric.Maximum = new decimal(new int[] { 99999, 0, 0, 0 });
             ArraySizeNumeric.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             ArraySizeNumeric.Name = "ArraySizeNumeric";
             ArraySizeNumeric.Size = new Size(651, 93);

@@ -36,13 +36,16 @@
             label1 = new Label();
             ATextBox = new TextBox();
             ExitButton = new Button();
+            TryLabel = new Label();
+            TryesUpDown = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)TryesUpDown).BeginInit();
             SuspendLayout();
             // 
             // GameStartButton
             // 
             GameStartButton.Font = new Font("Segoe UI", 12F);
-            GameStartButton.Location = new Point(933, 260);
+            GameStartButton.Location = new Point(933, 332);
             GameStartButton.Margin = new Padding(4, 2, 4, 2);
             GameStartButton.Name = "GameStartButton";
             GameStartButton.Size = new Size(312, 98);
@@ -107,7 +110,7 @@
             // ExitButton
             // 
             ExitButton.Font = new Font("Segoe UI", 12F);
-            ExitButton.Location = new Point(20, 260);
+            ExitButton.Location = new Point(26, 332);
             ExitButton.Margin = new Padding(4, 2, 4, 2);
             ExitButton.Name = "ExitButton";
             ExitButton.Size = new Size(312, 98);
@@ -116,6 +119,27 @@
             ExitButton.UseVisualStyleBackColor = true;
             ExitButton.Click += Exit_Click;
             // 
+            // TryLabel
+            // 
+            TryLabel.AutoSize = true;
+            TryLabel.Font = new Font("Segoe UI", 24F);
+            TryLabel.Location = new Point(20, 231);
+            TryLabel.Name = "TryLabel";
+            TryLabel.Size = new Size(665, 86);
+            TryLabel.TabIndex = 17;
+            TryLabel.Text = "Количество попыток:";
+            TryLabel.Click += TryLabel_Click;
+            // 
+            // TryesUpDown
+            // 
+            TryesUpDown.Font = new Font("Segoe UI", 24F);
+            TryesUpDown.Location = new Point(678, 229);
+            TryesUpDown.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            TryesUpDown.Name = "TryesUpDown";
+            TryesUpDown.Size = new Size(567, 93);
+            TryesUpDown.TabIndex = 18;
+            TryesUpDown.Value = new decimal(new int[] { 3, 0, 0, 0 });
+            // 
             // GuessAnswerSettings
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -123,6 +147,8 @@
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(1534, 823);
+            Controls.Add(TryesUpDown);
+            Controls.Add(TryLabel);
             Controls.Add(ExitButton);
             Controls.Add(GameStartButton);
             Controls.Add(pictureBox1);
@@ -134,6 +160,7 @@
             Name = "GuessAnswerSettings";
             Text = "Q";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TryesUpDown).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -147,5 +174,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox ATextBox;
         private System.Windows.Forms.Button ExitButton;
+        private Label TryLabel;
+        private NumericUpDown TryesUpDown;
     }
 }

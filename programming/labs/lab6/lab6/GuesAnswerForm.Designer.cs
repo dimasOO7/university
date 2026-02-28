@@ -81,7 +81,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // TimeBar
             // 
@@ -106,7 +105,6 @@
             TimeLabel.Size = new Size(371, 86);
             TimeLabel.TabIndex = 7;
             TimeLabel.Text = "30,0 с";
-            TimeLabel.Click += TimeLabel_Click;
             // 
             // TryesLabel
             // 

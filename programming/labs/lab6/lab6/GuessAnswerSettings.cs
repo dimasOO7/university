@@ -80,7 +80,7 @@ namespace lab6
             GuesAnswer guesAnswer = new GuesAnswer(a, b);
             if (guesAnswer.Result != 1.0 / 0.0)
             {
-                GuesAnswerForm guesAnswerForm = new GuesAnswerForm(this, guesAnswer);
+                GuesAnswerForm guesAnswerForm = new GuesAnswerForm(this, guesAnswer, (int)TryesUpDown.Value);
                 guesAnswerForm.Show();
                 this.Hide();
             }
@@ -91,6 +91,11 @@ namespace lab6
         }
 
         private void ErrorLablel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TryLabel_Click(object sender, EventArgs e)
         {
 
         }

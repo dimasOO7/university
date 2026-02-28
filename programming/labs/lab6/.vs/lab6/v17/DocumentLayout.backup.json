@@ -1,0 +1,367 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|c:\\users\\redmi\\university\\programming\\labs\\lab6\\lab6\\snake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\snake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\arraysorterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\arraysorterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|c:\\users\\redmi\\university\\programming\\labs\\lab6\\lab6\\guessanswersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\guessanswersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|c:\\users\\redmi\\university\\programming\\labs\\lab6\\lab6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|c:\\users\\redmi\\university\\programming\\labs\\lab6\\lab6\\guesanswerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\guesanswerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|c:\\users\\redmi\\university\\programming\\labs\\lab6\\lab6\\snakesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\snakesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\guesanswerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\guesanswerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\snakesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\snakesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|c:\\users\\redmi\\university\\programming\\labs\\lab6\\lab6\\arraysorter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\arraysorter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|c:\\users\\redmi\\university\\programming\\labs\\lab6\\lab6\\arraysorterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\arraysorterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|c:\\users\\redmi\\university\\programming\\labs\\lab6\\lab6\\soundout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\soundout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|c:\\users\\redmi\\university\\programming\\labs\\lab6\\lab6\\snakegameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\snakegameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\guessanswersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\guessanswersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\snakegameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\snakegameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|c:\\users\\redmi\\university\\programming\\labs\\lab6\\lab6\\vector2i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\vector2i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|c:\\users\\redmi\\university\\programming\\labs\\lab6\\lab6\\guesanswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\guesanswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|c:\\users\\redmi\\university\\programming\\labs\\lab6\\lab6\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|c:\\users\\redmi\\university\\programming\\labs\\lab6\\lab6\\inputvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\inputvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|c:\\users\\redmi\\university\\programming\\labs\\lab6\\lab6\\aboutauthor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\aboutauthor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\aboutauthor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FFC11EC9-B429-453F-AE8C-57532A9D038B}|lab6\\lab6.csproj|solutionrelative:lab6\\aboutauthor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\MainMenu.cs",
+              "RelativeDocumentMoniker": "lab6\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\MainMenu.cs",
+              "RelativeToolTip": "lab6\\MainMenu.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAYwE4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T10:25:12.211Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SnakeSettings.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\SnakeSettings.cs",
+              "RelativeDocumentMoniker": "lab6\\SnakeSettings.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\SnakeSettings.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "lab6\\SnakeSettings.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T08:36:38.828Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ArraySorterForm.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\ArraySorterForm.cs",
+              "RelativeDocumentMoniker": "lab6\\ArraySorterForm.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\ArraySorterForm.cs*",
+              "RelativeToolTip": "lab6\\ArraySorterForm.cs*",
+              "ViewState": "AgIAAKoAAAAAAAAAAAApwL8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T10:35:29.663Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SnakeSettings.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\SnakeSettings.cs",
+              "RelativeDocumentMoniker": "lab6\\SnakeSettings.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\SnakeSettings.cs",
+              "RelativeToolTip": "lab6\\SnakeSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T09:11:26.907Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Snake.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\Snake.cs",
+              "RelativeDocumentMoniker": "lab6\\Snake.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\Snake.cs",
+              "RelativeToolTip": "lab6\\Snake.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T09:06:21.927Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SnakeGameForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\SnakeGameForm.cs",
+              "RelativeDocumentMoniker": "lab6\\SnakeGameForm.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\SnakeGameForm.cs [Design]",
+              "RelativeToolTip": "lab6\\SnakeGameForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T10:23:34.762Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SnakeGameForm.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\SnakeGameForm.cs",
+              "RelativeDocumentMoniker": "lab6\\SnakeGameForm.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\SnakeGameForm.cs",
+              "RelativeToolTip": "lab6\\SnakeGameForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T10:23:59.426Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Vector2i.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\Vector2i.cs",
+              "RelativeDocumentMoniker": "lab6\\Vector2i.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\Vector2i.cs",
+              "RelativeToolTip": "lab6\\Vector2i.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T10:33:43.646Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ArraySorterForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\ArraySorterForm.cs",
+              "RelativeDocumentMoniker": "lab6\\ArraySorterForm.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\ArraySorterForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "RelativeToolTip": "lab6\\ArraySorterForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T17:57:32.815Z",
+              "IsPinned": true,
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ArraySorter.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\ArraySorter.cs",
+              "RelativeDocumentMoniker": "lab6\\ArraySorter.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\ArraySorter.cs",
+              "RelativeToolTip": "lab6\\ArraySorter.cs",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAIwKIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T18:04:53.826Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AboutAuthor.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\AboutAuthor.cs",
+              "RelativeDocumentMoniker": "lab6\\AboutAuthor.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\AboutAuthor.cs",
+              "RelativeToolTip": "lab6\\AboutAuthor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T15:07:33.273Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GuesAnswerForm.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\GuesAnswerForm.cs",
+              "RelativeDocumentMoniker": "lab6\\GuesAnswerForm.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\GuesAnswerForm.cs",
+              "RelativeToolTip": "lab6\\GuesAnswerForm.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAQwDYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T11:11:25.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SoundOut.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\SoundOut.cs",
+              "RelativeDocumentMoniker": "lab6\\SoundOut.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\SoundOut.cs",
+              "RelativeToolTip": "lab6\\SoundOut.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T15:52:40.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GuesAnswerForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\GuesAnswerForm.cs",
+              "RelativeDocumentMoniker": "lab6\\GuesAnswerForm.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\GuesAnswerForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "lab6\\GuesAnswerForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T13:07:14.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "InputValidation.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\InputValidation.cs",
+              "RelativeDocumentMoniker": "lab6\\InputValidation.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\InputValidation.cs",
+              "RelativeToolTip": "lab6\\InputValidation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T15:14:29.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GuessAnswerSettings.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\GuessAnswerSettings.cs",
+              "RelativeDocumentMoniker": "lab6\\GuessAnswerSettings.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\GuessAnswerSettings.cs",
+              "RelativeToolTip": "lab6\\GuessAnswerSettings.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAQwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T12:35:15.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GuesAnswer.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\GuesAnswer.cs",
+              "RelativeDocumentMoniker": "lab6\\GuesAnswer.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\GuesAnswer.cs",
+              "RelativeToolTip": "lab6\\GuesAnswer.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAADcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T18:52:02.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AboutAuthor.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\AboutAuthor.cs",
+              "RelativeDocumentMoniker": "lab6\\AboutAuthor.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\AboutAuthor.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "lab6\\AboutAuthor.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T15:05:37.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GuessAnswerSettings.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\GuessAnswerSettings.cs",
+              "RelativeDocumentMoniker": "lab6\\GuessAnswerSettings.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\GuessAnswerSettings.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "lab6\\GuessAnswerSettings.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T18:47:52.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\Program.cs",
+              "RelativeDocumentMoniker": "lab6\\Program.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\Program.cs",
+              "RelativeToolTip": "lab6\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAewA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T18:08:07.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MainMenu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\MainMenu.cs",
+              "RelativeDocumentMoniker": "lab6\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\programming\\labs\\lab6\\lab6\\MainMenu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "lab6\\MainMenu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T10:23:08.698Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

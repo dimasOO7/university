@@ -14,7 +14,7 @@ namespace lab6
     {
         Form mainMenu;
 
-        const int MaxSpeed = 50;
+        const int MaxSpeed = 0;
         const int MinSpeed = 1000;
 
         private static (int size, int walls, int speed) easy = (10, 10, 10);

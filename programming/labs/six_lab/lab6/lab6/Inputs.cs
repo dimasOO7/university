@@ -10,31 +10,17 @@ namespace lab
         /// </summary>
         /// <param name="text"> текст выводящийся перед вводом</param>
         /// <param name="checkZero"> проверять ли на то что число > 0</param>
-        /// <param name="canNone"> если true возвращает null, если пользователь ничего не ввёл > 0</param>
         /// <returns>введённое число</returns>
-        public static int? InputInt(string text, bool checkZero = false, bool canNone = false)
+        public static int InputInt(string text, bool checkZero = false)
         {
             int result = -1;
             Console.Write(text);
             do
             {
-                string input = Console.ReadLine();
-                if (input != "")
+                while (!int.TryParse(Console.ReadLine(), out result))
                 {
-                    while (!int.TryParse(input, out result))
-                    {
-                        Console.WriteLine("Ошибка ввода");
-                        Console.Write(text);
-                    }
-                    if (checkZero && result <= 0)
-                    {
-                        Console.WriteLine("Ошибка ввода: Введите положительное число");
-                        Console.Write(text);
-                    }
-                }
-                else if (canNone == true)
-                {
-                    return null;
+                    Console.WriteLine("Ошибка ввода");
+                    Console.Write(text);
                 }
             } while (checkZero && result <= 0);
             return result;

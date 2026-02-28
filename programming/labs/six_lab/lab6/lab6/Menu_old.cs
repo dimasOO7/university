@@ -3,7 +3,7 @@ namespace lab
     /// <summary>
     /// Статический класс для работы с меню
     /// </summary>
-    static class Menu
+    static class Menu_old
     {
         /// <summary>
         /// Вызывает меню

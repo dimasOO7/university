@@ -158,23 +158,44 @@ namespace lab6
         private void MaxButton_Click(object sender, EventArgs e)
         {
             UpdateSorter();
-            int index = sorter.GetMaxIndex();
-            dataGrid.Rows[index].DefaultCellStyle.BackColor = Color.Green;
-            MaxLabel.Text = $"Максимум = {sorter.Array[index]}";
+            if (sorter.Array.Length > 0)
+            {
+                int index = sorter.GetMaxIndex();
+                dataGrid.Rows[index].DefaultCellStyle.BackColor = Color.Green;
+                MaxLabel.Text = $"Максимум = {sorter.Array[index]}";
+            }
+            else
+            {
+                MaxLabel.Text = "";
+            }
         }
 
         private void MinButton_Click(object sender, EventArgs e)
         {
             UpdateSorter();
-            int index = sorter.GetMinIndex();
-            dataGrid.Rows[index].DefaultCellStyle.BackColor = Color.Red;
-            MinLabel.Text = $"Минимум = {sorter.Array[index]}";
+            if (sorter.Array.Length > 0)
+            {
+                int index = sorter.GetMinIndex();
+                dataGrid.Rows[index].DefaultCellStyle.BackColor = Color.Red;
+                MinLabel.Text = $"Минимум = {sorter.Array[index]}";
+            }
+            else
+            {
+                MinLabel.Text = "";
+            }
         }
 
         private void AvgButton_Click(object sender, EventArgs e)
         {
             UpdateSorter();
-            AvgLabel.Text = $"Среднее = {sorter.FindAverage():F2}";
+            if (sorter.Array.Length > 0)
+            {
+                AvgLabel.Text = $"Среднее = {sorter.FindAverage():F2}";
+            }
+            else
+            {
+                AvgLabel.Text = "";
+            }
         }
 
         private void GenerateDefault_Click(object sender, EventArgs e)

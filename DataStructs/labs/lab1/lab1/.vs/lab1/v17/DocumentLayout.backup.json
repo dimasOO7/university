@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\REDMI\\university\\DataStructs\\labs\\lab1\\lab1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{518E19C1-EE1A-457C-852C-D87C8400DF11}|app2\\app2.csproj|c:\\users\\redmi\\university\\datastructs\\labs\\lab1\\lab1\\app2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{518E19C1-EE1A-457C-852C-D87C8400DF11}|app2\\app2.csproj|solutionrelative:app2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{495EFE3C-5D20-4275-95F3-56C8C7C5EEF6}|lab1\\lab1.csproj|c:\\users\\redmi\\university\\datastructs\\labs\\lab1\\lab1\\lab1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495EFE3C-5D20-4275-95F3-56C8C7C5EEF6}|lab1\\lab1.csproj|solutionrelative:lab1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{495EFE3C-5D20-4275-95F3-56C8C7C5EEF6}|lab1\\lab1.csproj|c:\\users\\redmi\\university\\datastructs\\labs\\lab1\\lab1\\lab1\\task1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495EFE3C-5D20-4275-95F3-56C8C7C5EEF6}|lab1\\lab1.csproj|solutionrelative:lab1\\task1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\labs\\lab1\\lab1\\app2\\Program.cs",
+              "RelativeDocumentMoniker": "app2\\Program.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\labs\\lab1\\lab1\\app2\\Program.cs",
+              "RelativeToolTip": "app2\\Program.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAqwGYAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T06:23:42.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Task1.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\labs\\lab1\\lab1\\lab1\\Task1.cs",
+              "RelativeDocumentMoniker": "lab1\\Task1.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\labs\\lab1\\lab1\\lab1\\Task1.cs",
+              "RelativeToolTip": "lab1\\Task1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T05:26:54.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\labs\\lab1\\lab1\\lab1\\Program.cs",
+              "RelativeDocumentMoniker": "lab1\\Program.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\labs\\lab1\\lab1\\lab1\\Program.cs",
+              "RelativeToolTip": "lab1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T07:53:41.685Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
