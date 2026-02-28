@@ -1,0 +1,15 @@
+/home/dima/university/programming/training/ConsoleApp3/bin/Debug/net10.0/ConsoleApp3
+/home/dima/university/programming/training/ConsoleApp3/bin/Debug/net10.0/ConsoleApp3.deps.json
+/home/dima/university/programming/training/ConsoleApp3/bin/Debug/net10.0/ConsoleApp3.runtimeconfig.json
+/home/dima/university/programming/training/ConsoleApp3/bin/Debug/net10.0/ConsoleApp3.dll
+/home/dima/university/programming/training/ConsoleApp3/bin/Debug/net10.0/ConsoleApp3.pdb
+/home/dima/university/programming/training/ConsoleApp3/obj/Debug/net10.0/ConsoleApp3.GeneratedMSBuildEditorConfig.editorconfig
+/home/dima/university/programming/training/ConsoleApp3/obj/Debug/net10.0/ConsoleApp3.AssemblyInfoInputs.cache
+/home/dima/university/programming/training/ConsoleApp3/obj/Debug/net10.0/ConsoleApp3.AssemblyInfo.cs
+/home/dima/university/programming/training/ConsoleApp3/obj/Debug/net10.0/ConsoleApp3.csproj.CoreCompileInputs.cache
+/home/dima/university/programming/training/ConsoleApp3/obj/Debug/net10.0/ConsoleApp3.sourcelink.json
+/home/dima/university/programming/training/ConsoleApp3/obj/Debug/net10.0/ConsoleApp3.dll
+/home/dima/university/programming/training/ConsoleApp3/obj/Debug/net10.0/refint/ConsoleApp3.dll
+/home/dima/university/programming/training/ConsoleApp3/obj/Debug/net10.0/ConsoleApp3.pdb
+/home/dima/university/programming/training/ConsoleApp3/obj/Debug/net10.0/ConsoleApp3.genruntimeconfig.cache
+/home/dima/university/programming/training/ConsoleApp3/obj/Debug/net10.0/ref/ConsoleApp3.dll

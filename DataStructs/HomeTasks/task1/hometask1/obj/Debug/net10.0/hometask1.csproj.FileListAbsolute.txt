@@ -1,0 +1,15 @@
+/home/dima/university/DataStructs/HomeTasks/task1/hometask1/bin/Debug/net10.0/hometask1
+/home/dima/university/DataStructs/HomeTasks/task1/hometask1/bin/Debug/net10.0/hometask1.deps.json
+/home/dima/university/DataStructs/HomeTasks/task1/hometask1/bin/Debug/net10.0/hometask1.runtimeconfig.json
+/home/dima/university/DataStructs/HomeTasks/task1/hometask1/bin/Debug/net10.0/hometask1.dll
+/home/dima/university/DataStructs/HomeTasks/task1/hometask1/bin/Debug/net10.0/hometask1.pdb
+/home/dima/university/DataStructs/HomeTasks/task1/hometask1/obj/Debug/net10.0/hometask1.GeneratedMSBuildEditorConfig.editorconfig
+/home/dima/university/DataStructs/HomeTasks/task1/hometask1/obj/Debug/net10.0/hometask1.AssemblyInfoInputs.cache
+/home/dima/university/DataStructs/HomeTasks/task1/hometask1/obj/Debug/net10.0/hometask1.AssemblyInfo.cs
+/home/dima/university/DataStructs/HomeTasks/task1/hometask1/obj/Debug/net10.0/hometask1.csproj.CoreCompileInputs.cache
+/home/dima/university/DataStructs/HomeTasks/task1/hometask1/obj/Debug/net10.0/hometask1.sourcelink.json
+/home/dima/university/DataStructs/HomeTasks/task1/hometask1/obj/Debug/net10.0/hometask1.dll
+/home/dima/university/DataStructs/HomeTasks/task1/hometask1/obj/Debug/net10.0/refint/hometask1.dll
+/home/dima/university/DataStructs/HomeTasks/task1/hometask1/obj/Debug/net10.0/hometask1.pdb
+/home/dima/university/DataStructs/HomeTasks/task1/hometask1/obj/Debug/net10.0/hometask1.genruntimeconfig.cache
+/home/dima/university/DataStructs/HomeTasks/task1/hometask1/obj/Debug/net10.0/ref/hometask1.dll
