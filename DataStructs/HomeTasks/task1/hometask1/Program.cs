@@ -123,7 +123,7 @@ class Program
         Entry entry7  = new Entry("Makarov",      2354678791L);
         Entry entry8  = new Entry("Gavrilov",      1235478931L);
         Entry entry9  = new Entry("Groshev",      5632589412L);
-        Entry entry10 = new Entry("Gerasimov",      1268745621L);
+        Entry entry10 = new Entry("Gilfanov",      1268745621L);
 
         Page page1 = new Page('K');
         page1.AddEntry(entry1);

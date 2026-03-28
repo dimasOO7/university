@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Kwacc4TAOeE=",
+  "dgSpecHash": "E2PCC5FfwDM=",
   "success": true,
-  "projectFilePath": "/home/dima/university/DataStructs/labconsole/ConsoleApp1/ConsoleApp1.csproj",
-  "expectedPackageFiles": [
-    "/home/dima/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.3/microsoft.aspnetcore.app.ref.10.0.3.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\REDMI\\university\\DataStructs\\labconsole\\ConsoleApp1\\ConsoleApp1.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

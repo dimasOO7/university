@@ -9,24 +9,32 @@
     "net10.0": []
   },
   "packageFolders": {
-    "/home/dima/.nuget/packages/": {}
+    "C:\\Users\\REDMI\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/dima/university/DataStructs/HomeTasks/task2/ConsoleApp1/ConsoleApp1.csproj",
+      "projectUniqueName": "C:\\Users\\REDMI\\university\\DataStructs\\HomeTasks\\task2\\ConsoleApp1\\ConsoleApp1.csproj",
       "projectName": "ConsoleApp1",
-      "projectPath": "/home/dima/university/DataStructs/HomeTasks/task2/ConsoleApp1/ConsoleApp1.csproj",
-      "packagesPath": "/home/dima/.nuget/packages/",
-      "outputPath": "/home/dima/university/DataStructs/HomeTasks/task2/ConsoleApp1/obj/",
+      "projectPath": "C:\\Users\\REDMI\\university\\DataStructs\\HomeTasks\\task2\\ConsoleApp1\\ConsoleApp1.csproj",
+      "packagesPath": "C:\\Users\\REDMI\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\REDMI\\university\\DataStructs\\HomeTasks\\task2\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/dima/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\REDMI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -63,12 +71,8 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[10.0.3, 10.0.3]"
-          },
-          {
             "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[10.0.3, 10.0.3]"
+            "version": "[10.0.4, 10.0.4]"
           }
         ],
         "frameworkReferences": {
@@ -76,7 +80,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.104/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
