@@ -181,6 +181,21 @@ public class SingleLinkedList
 
         t = null;
     }
+
+    public void Concat(SingleLinkedList L2)
+    {
+        if (first == null) first = L2.first;
+        else
+        {
+            Node p = first;
+            while (p.Link != null)
+            {
+                p = p.Link;
+            }
+            p.Link = L2.first;
+        }
+        L2.first = null;
+     }
     public static void Main()
     {
         SingleLinkedList L = new SingleLinkedList();
@@ -193,34 +208,11 @@ public class SingleLinkedList
         //Console.ReadKey();
         //Console.WriteLine("");
         L.Create2(new int[] { 10, 20, 30 });
+        SingleLinkedList L2 = new SingleLinkedList();
+        L2.Create2(new int[] { 1, 2, 3 });
+        L.Concat(L2);
         L.Print();
         Console.ReadKey();
         Console.WriteLine("");
-        //L.DeleteFirst1();
-        //L.Print();
-        //Console.ReadKey();
-        //Console.WriteLine("");
-        //Node Deleted = L.DeleteFirst2();
-        //L.Print();
-        //Console.ReadKey();
-        //Console.WriteLine("");
-        //Console.WriteLine(Deleted.Info);
-        //Console.WriteLine(L.Count());
-        //Console.ReadKey();
-        //Console.WriteLine("");
-        //Console.WriteLine(L.IsSorted());
-        //Console.ReadKey();
-        //Console.WriteLine("");
-        Node p = L.Find(20);
-        L.InsertAfter(p,25);
-        L.Print();
-        Console.ReadKey();
-        Console.WriteLine("");
-        //Node q =L.DeleteAfter2(p);
-        Node q = L.Find(30);
-        L.DeleteCurrent(ref q);
-        L.Print();
-        Console.ReadKey();
-        //Console.WriteLine(q.Info);
     }
 }
