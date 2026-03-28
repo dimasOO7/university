@@ -46,6 +46,7 @@
             numericUpDown.Name = "numericUpDown";
             numericUpDown.Size = new Size(439, 61);
             numericUpDown.TabIndex = 0;
+            numericUpDown.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // button1
             // 

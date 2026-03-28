@@ -30,7 +30,7 @@
         {
             menuStrip1 = new MenuStrip();
             заданиеToolStripMenuItem = new ToolStripMenuItem();
-            созданиеСпискаToolStripMenuItem = new ToolStripMenuItem();
+            CreateListToolStripMenuItem = new ToolStripMenuItem();
             редактированиеСпискаToolStripMenuItem = new ToolStripMenuItem();
             добавлениеЭлементаToolStripMenuItem = new ToolStripMenuItem();
             InsertBeforeFirstToolStripMenuItem = new ToolStripMenuItem();
@@ -60,22 +60,23 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(3, 1, 0, 1);
-            menuStrip1.Size = new Size(800, 40);
+            menuStrip1.Size = new Size(800, 38);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // заданиеToolStripMenuItem
             // 
-            заданиеToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { созданиеСпискаToolStripMenuItem, редактированиеСпискаToolStripMenuItem, ProcessingToolStripMenuItem, DestroyToolStripMenuItem });
+            заданиеToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { CreateListToolStripMenuItem, редактированиеСпискаToolStripMenuItem, ProcessingToolStripMenuItem, DestroyToolStripMenuItem });
             заданиеToolStripMenuItem.Name = "заданиеToolStripMenuItem";
-            заданиеToolStripMenuItem.Size = new Size(125, 38);
+            заданиеToolStripMenuItem.Size = new Size(125, 36);
             заданиеToolStripMenuItem.Text = "Задание";
             // 
-            // созданиеСпискаToolStripMenuItem
+            // CreateListToolStripMenuItem
             // 
-            созданиеСпискаToolStripMenuItem.Name = "созданиеСпискаToolStripMenuItem";
-            созданиеСпискаToolStripMenuItem.Size = new Size(409, 44);
-            созданиеСпискаToolStripMenuItem.Text = "Создание списка";
+            CreateListToolStripMenuItem.Name = "CreateListToolStripMenuItem";
+            CreateListToolStripMenuItem.Size = new Size(409, 44);
+            CreateListToolStripMenuItem.Text = "Создание списка";
+            CreateListToolStripMenuItem.Click += CreateListToolStripMenuItem_Click;
             // 
             // редактированиеСпискаToolStripMenuItem
             // 
@@ -96,6 +97,7 @@
             InsertBeforeFirstToolStripMenuItem.Name = "InsertBeforeFirstToolStripMenuItem";
             InsertBeforeFirstToolStripMenuItem.Size = new Size(359, 44);
             InsertBeforeFirstToolStripMenuItem.Text = "В начало";
+            InsertBeforeFirstToolStripMenuItem.Click += InsertBeforeFirstToolStripMenuItem_Click;
             // 
             // InsertInEndToolStripMenuItem
             // 
@@ -109,6 +111,7 @@
             InsertToolStripMenuItem.Name = "InsertToolStripMenuItem";
             InsertToolStripMenuItem.Size = new Size(359, 44);
             InsertToolStripMenuItem.Text = "В произвольную";
+            InsertToolStripMenuItem.Click += InsertToolStripMenuItem_Click;
             // 
             // удалениеЭлементаToolStripMenuItem
             // 
@@ -122,24 +125,28 @@
             DeleteFirstToolStripMenuItem.Name = "DeleteFirstToolStripMenuItem";
             DeleteFirstToolStripMenuItem.Size = new Size(320, 44);
             DeleteFirstToolStripMenuItem.Text = "Первого";
+            DeleteFirstToolStripMenuItem.Click += DeleteFirstToolStripMenuItem_Click;
             // 
             // DeleteLastToolStripMenuItem
             // 
             DeleteLastToolStripMenuItem.Name = "DeleteLastToolStripMenuItem";
             DeleteLastToolStripMenuItem.Size = new Size(320, 44);
             DeleteLastToolStripMenuItem.Text = "Последнего";
+            DeleteLastToolStripMenuItem.Click += DeleteLastToolStripMenuItem_Click;
             // 
             // DeleteAtToolStripMenuItem
             // 
             DeleteAtToolStripMenuItem.Name = "DeleteAtToolStripMenuItem";
             DeleteAtToolStripMenuItem.Size = new Size(320, 44);
             DeleteAtToolStripMenuItem.Text = "Произвольного";
+            DeleteAtToolStripMenuItem.Click += DeleteAtToolStripMenuItem_Click;
             // 
             // ProcessingToolStripMenuItem
             // 
             ProcessingToolStripMenuItem.Name = "ProcessingToolStripMenuItem";
             ProcessingToolStripMenuItem.Size = new Size(409, 44);
             ProcessingToolStripMenuItem.Text = "Обработка";
+            ProcessingToolStripMenuItem.Click += ProcessingToolStripMenuItem_Click;
             // 
             // DestroyToolStripMenuItem
             // 
@@ -151,14 +158,14 @@
             // AboutToolStripMenuItem
             // 
             AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
-            AboutToolStripMenuItem.Size = new Size(183, 38);
+            AboutToolStripMenuItem.Size = new Size(183, 36);
             AboutToolStripMenuItem.Text = "О программе";
             AboutToolStripMenuItem.Click += AboutToolStripMenuItem_Click;
             // 
             // ExitToolStripMenuItem
             // 
             ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            ExitToolStripMenuItem.Size = new Size(103, 38);
+            ExitToolStripMenuItem.Size = new Size(103, 36);
             ExitToolStripMenuItem.Text = "Выход";
             ExitToolStripMenuItem.Click += ExitToolStripMenuItem_Click;
             // 
@@ -166,7 +173,7 @@
             // 
             menuStrip2.ImageScalingSize = new Size(32, 32);
             menuStrip2.Items.AddRange(new ToolStripItem[] { f1ToolStripMenuItem, f2ToolStripMenuItem, f3ToolStripMenuItem });
-            menuStrip2.Location = new Point(0, 40);
+            menuStrip2.Location = new Point(0, 38);
             menuStrip2.Name = "menuStrip2";
             menuStrip2.Padding = new Padding(3, 1, 0, 1);
             menuStrip2.Size = new Size(800, 38);
@@ -197,10 +204,11 @@
             // listBox1
             // 
             listBox1.Dock = DockStyle.Fill;
+            listBox1.Font = new Font("Segoe UI", 15F);
             listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(0, 78);
+            listBox1.Location = new Point(0, 76);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(800, 372);
+            listBox1.Size = new Size(800, 374);
             listBox1.TabIndex = 2;
             // 
             // Form1
@@ -227,7 +235,7 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem заданиеToolStripMenuItem;
-        private ToolStripMenuItem созданиеСпискаToolStripMenuItem;
+        private ToolStripMenuItem CreateListToolStripMenuItem;
         private ToolStripMenuItem редактированиеСпискаToolStripMenuItem;
         private ToolStripMenuItem ProcessingToolStripMenuItem;
         private ToolStripMenuItem DestroyToolStripMenuItem;

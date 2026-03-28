@@ -4,10 +4,19 @@
     <Compile Update="About.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CreateList.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="InputNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InsertAt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Processing.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -105,39 +105,45 @@ namespace LabWork2
         {
             if (index == 1)
             {
-                if (first != null)
-                {
-                    first = first.Link;
-                }
+                first = new Node(data, first);
             }
             else
             {
                 Node p = first;
-                for (int i = 2; i < index; i++)
+                for (int i = 2; i < index && p != null; i++)
                 {
                     p = p.Link;
                 }
-                p.Link = new Node(data, p.Link);
+                if (p != null)
+                {
+                    p.Link = new Node(data, p.Link);
+                }
             }
         }
 
         public void DeleteAt(int index)
         {
-            if (index == 1)
+            if (index > 0)
             {
-                if (first != null)
+                if (index == 1)
                 {
-                    first = first.Link;
+                    if (first != null)
+                    {
+                        first = first.Link;
+                    }
                 }
-            }
-            else
-            {
-                Node p = first;
-                for (int i = 2; i < index; i++)
+                else
                 {
-                    p = p.Link;
+                    Node p = first;
+                    for (int i = 2; i < index && p != null; i++)
+                    {
+                        p = p.Link;
+                    }
+                    if (p != null)
+                    {
+                        p.Link = p.Link.Link;
+                    }
                 }
-                p.Link = p.Link.Link;
             }
         }
 
@@ -152,7 +158,8 @@ namespace LabWork2
             {
                 Node p = first;
                 Node p2 = F2.First;
-                Node part_start = p;
+                Node part_start = new Node(0,first);
+                first = part_start;
                 while (p != null)
                 {
                     if (p.Info == p2.Info)
@@ -173,15 +180,17 @@ namespace LabWork2
                                 p3 = p3.Link;
                             }
                             last.Link = p.Link;
+                            p = p.Link;
                         }
                     }
                     else
                     {
+                        part_start = p;
                         p = p.Link;
                         p2 = F2.First;
-                        part_start = p;
                     }
                 }
+                first = first.Link;
             }
         }
         public void DisplayInListBox(System.Windows.Forms.ListBox listBox)
