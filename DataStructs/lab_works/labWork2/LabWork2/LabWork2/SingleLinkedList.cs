@@ -60,18 +60,34 @@ namespace LabWork2
                 }
             }
         }
+
+        public int Count()
+        {
+            int count = 0;
+            Node p = first;
+            while (p != null)
+            {
+                count++;
+                p = p.Link;
+            }
+            return count;
+        }
+
         public void InsertBeforeFirst(int data)
         {
             Node p = new Node(data, first);
             first = p;
         }
 
-        public void DeleteFirst()
+        public bool DeleteFirst()
         {
+            bool success = false;
             if (first != null)
             {
                 first = first.Link;
+                success = true;
             }
+            return success;
         }
 
         public void InsertAfterLast(int data)
@@ -91,38 +107,51 @@ namespace LabWork2
             }
         }
 
-        public void DeleteLast()
+        public bool DeleteLast()
         {
-            Node p = first;
-            while (p.Link.Link != null)
+            bool success = false;
+            if (first != null)
             {
-                p = p.Link;
+                Node p = first;
+                while (p.Link.Link != null)
+                {
+                    p = p.Link;
+                }
+                p.Link = null;
+                success = true;
             }
-            p.Link = null;
+            return success;
         }
 
-        public void InsertAt(int index,int  data)
+        public bool InsertAt(int index,int  data)
         {
+            bool success = false;
             if (index == 1)
             {
                 first = new Node(data, first);
+                success = true;
             }
             else
             {
                 Node p = first;
-                for (int i = 2; i < index && p != null; i++)
+                int i = 2;
+                while (i < index && p != null)
                 {
                     p = p.Link;
+                    i++;
                 }
                 if (p != null)
                 {
                     p.Link = new Node(data, p.Link);
+                    success = true;
                 }
             }
+            return success;
         }
 
-        public void DeleteAt(int index)
+        public bool DeleteAt(int index)
         {
+            bool success = false;
             if (index > 0)
             {
                 if (index == 1)
@@ -130,21 +159,26 @@ namespace LabWork2
                     if (first != null)
                     {
                         first = first.Link;
+                        success = true;
                     }
                 }
                 else
                 {
                     Node p = first;
-                    for (int i = 2; i < index && p != null; i++)
+                    int i = 2;
+                    while(i < index && p != null)
                     {
                         p = p.Link;
+                        i++;
                     }
                     if (p != null)
                     {
                         p.Link = p.Link.Link;
+                        success = true;
                     }
                 }
             }
+            return success;
         }
 
         public void Destroy()
@@ -158,8 +192,7 @@ namespace LabWork2
             {
                 Node p = first;
                 Node p2 = F2.First;
-                Node part_start = new Node(0,first);
-                first = part_start;
+                Node partStart = null;
                 while (p != null)
                 {
                     if (p.Info == p2.Info)
@@ -172,7 +205,17 @@ namespace LabWork2
                         else
                         {
                             Node p3 = F3.first;
-                            Node last = part_start;
+                            Node last;
+                            if (partStart == null)
+                            {
+                                first = new Node(p3.Info,first.Link);
+                                last = first;
+                                p3= p3.Link;
+                            }
+                            else
+                            {
+                                last= partStart;
+                            }
                             while (p3 != null)
                             {
                                 last.Link = new Node(p3.Info);
@@ -185,12 +228,11 @@ namespace LabWork2
                     }
                     else
                     {
-                        part_start = p;
+                        partStart = p;
                         p = p.Link;
                         p2 = F2.First;
                     }
                 }
-                first = first.Link;
             }
         }
         public void DisplayInListBox(System.Windows.Forms.ListBox listBox)

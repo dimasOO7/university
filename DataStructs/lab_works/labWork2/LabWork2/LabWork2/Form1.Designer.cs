@@ -31,6 +31,9 @@
             menuStrip1 = new MenuStrip();
             заданиеToolStripMenuItem = new ToolStripMenuItem();
             CreateListToolStripMenuItem = new ToolStripMenuItem();
+            f1CreateToolStripMenuItem1 = new ToolStripMenuItem();
+            f2CreateToolStripMenuItem1 = new ToolStripMenuItem();
+            f3CreateToolStripMenuItem1 = new ToolStripMenuItem();
             редактированиеСпискаToolStripMenuItem = new ToolStripMenuItem();
             добавлениеЭлементаToolStripMenuItem = new ToolStripMenuItem();
             InsertBeforeFirstToolStripMenuItem = new ToolStripMenuItem();
@@ -41,16 +44,18 @@
             DeleteLastToolStripMenuItem = new ToolStripMenuItem();
             DeleteAtToolStripMenuItem = new ToolStripMenuItem();
             ProcessingToolStripMenuItem = new ToolStripMenuItem();
-            DestroyToolStripMenuItem = new ToolStripMenuItem();
-            AboutToolStripMenuItem = new ToolStripMenuItem();
-            ExitToolStripMenuItem = new ToolStripMenuItem();
-            menuStrip2 = new MenuStrip();
+            показатьToolStripMenuItem = new ToolStripMenuItem();
             f1ToolStripMenuItem = new ToolStripMenuItem();
             f2ToolStripMenuItem = new ToolStripMenuItem();
             f3ToolStripMenuItem = new ToolStripMenuItem();
-            listBox1 = new ListBox();
+            DestroyToolStripMenuItem = new ToolStripMenuItem();
+            f1DestroyToolStripMenuItem1 = new ToolStripMenuItem();
+            f2DestroyToolStripMenuItem1 = new ToolStripMenuItem();
+            f3DestroyToolStripMenuItem1 = new ToolStripMenuItem();
+            AboutToolStripMenuItem = new ToolStripMenuItem();
+            ExitToolStripMenuItem = new ToolStripMenuItem();
+            label1 = new Label();
             menuStrip1.SuspendLayout();
-            menuStrip2.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -60,23 +65,44 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(3, 1, 0, 1);
-            menuStrip1.Size = new Size(800, 38);
+            menuStrip1.Size = new Size(740, 38);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // заданиеToolStripMenuItem
             // 
-            заданиеToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { CreateListToolStripMenuItem, редактированиеСпискаToolStripMenuItem, ProcessingToolStripMenuItem, DestroyToolStripMenuItem });
+            заданиеToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { CreateListToolStripMenuItem, редактированиеСпискаToolStripMenuItem, ProcessingToolStripMenuItem, показатьToolStripMenuItem, DestroyToolStripMenuItem });
             заданиеToolStripMenuItem.Name = "заданиеToolStripMenuItem";
             заданиеToolStripMenuItem.Size = new Size(125, 36);
             заданиеToolStripMenuItem.Text = "Задание";
             // 
             // CreateListToolStripMenuItem
             // 
+            CreateListToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { f1CreateToolStripMenuItem1, f2CreateToolStripMenuItem1, f3CreateToolStripMenuItem1 });
             CreateListToolStripMenuItem.Name = "CreateListToolStripMenuItem";
             CreateListToolStripMenuItem.Size = new Size(409, 44);
             CreateListToolStripMenuItem.Text = "Создание списка";
-            CreateListToolStripMenuItem.Click += CreateListToolStripMenuItem_Click;
+            // 
+            // f1CreateToolStripMenuItem1
+            // 
+            f1CreateToolStripMenuItem1.Name = "f1CreateToolStripMenuItem1";
+            f1CreateToolStripMenuItem1.Size = new Size(172, 44);
+            f1CreateToolStripMenuItem1.Text = "F1";
+            f1CreateToolStripMenuItem1.Click += f1CreateToolStripMenuItem1_Click;
+            // 
+            // f2CreateToolStripMenuItem1
+            // 
+            f2CreateToolStripMenuItem1.Name = "f2CreateToolStripMenuItem1";
+            f2CreateToolStripMenuItem1.Size = new Size(172, 44);
+            f2CreateToolStripMenuItem1.Text = "F2";
+            f2CreateToolStripMenuItem1.Click += f2CreateToolStripMenuItem1_Click;
+            // 
+            // f3CreateToolStripMenuItem1
+            // 
+            f3CreateToolStripMenuItem1.Name = "f3CreateToolStripMenuItem1";
+            f3CreateToolStripMenuItem1.Size = new Size(172, 44);
+            f3CreateToolStripMenuItem1.Text = "F3";
+            f3CreateToolStripMenuItem1.Click += f3CreateToolStripMenuItem1_Click;
             // 
             // редактированиеСпискаToolStripMenuItem
             // 
@@ -95,21 +121,21 @@
             // InsertBeforeFirstToolStripMenuItem
             // 
             InsertBeforeFirstToolStripMenuItem.Name = "InsertBeforeFirstToolStripMenuItem";
-            InsertBeforeFirstToolStripMenuItem.Size = new Size(359, 44);
+            InsertBeforeFirstToolStripMenuItem.Size = new Size(333, 44);
             InsertBeforeFirstToolStripMenuItem.Text = "В начало";
             InsertBeforeFirstToolStripMenuItem.Click += InsertBeforeFirstToolStripMenuItem_Click;
             // 
             // InsertInEndToolStripMenuItem
             // 
             InsertInEndToolStripMenuItem.Name = "InsertInEndToolStripMenuItem";
-            InsertInEndToolStripMenuItem.Size = new Size(359, 44);
+            InsertInEndToolStripMenuItem.Size = new Size(333, 44);
             InsertInEndToolStripMenuItem.Text = "В конец";
             InsertInEndToolStripMenuItem.Click += InsertInEndToolStripMenuItem_Click;
             // 
             // InsertToolStripMenuItem
             // 
             InsertToolStripMenuItem.Name = "InsertToolStripMenuItem";
-            InsertToolStripMenuItem.Size = new Size(359, 44);
+            InsertToolStripMenuItem.Size = new Size(333, 44);
             InsertToolStripMenuItem.Text = "В произвольную";
             InsertToolStripMenuItem.Click += InsertToolStripMenuItem_Click;
             // 
@@ -148,12 +174,62 @@
             ProcessingToolStripMenuItem.Text = "Обработка";
             ProcessingToolStripMenuItem.Click += ProcessingToolStripMenuItem_Click;
             // 
+            // показатьToolStripMenuItem
+            // 
+            показатьToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { f1ToolStripMenuItem, f2ToolStripMenuItem, f3ToolStripMenuItem });
+            показатьToolStripMenuItem.Name = "показатьToolStripMenuItem";
+            показатьToolStripMenuItem.Size = new Size(409, 44);
+            показатьToolStripMenuItem.Text = "Показать";
+            // 
+            // f1ToolStripMenuItem
+            // 
+            f1ToolStripMenuItem.Name = "f1ToolStripMenuItem";
+            f1ToolStripMenuItem.Size = new Size(172, 44);
+            f1ToolStripMenuItem.Text = "F1";
+            f1ToolStripMenuItem.Click += f1ToolStripMenuItem_Click;
+            // 
+            // f2ToolStripMenuItem
+            // 
+            f2ToolStripMenuItem.Name = "f2ToolStripMenuItem";
+            f2ToolStripMenuItem.Size = new Size(172, 44);
+            f2ToolStripMenuItem.Text = "F2";
+            f2ToolStripMenuItem.Click += f2ToolStripMenuItem_Click;
+            // 
+            // f3ToolStripMenuItem
+            // 
+            f3ToolStripMenuItem.Name = "f3ToolStripMenuItem";
+            f3ToolStripMenuItem.Size = new Size(172, 44);
+            f3ToolStripMenuItem.Text = "F3";
+            f3ToolStripMenuItem.Click += f3ToolStripMenuItem_Click;
+            // 
             // DestroyToolStripMenuItem
             // 
+            DestroyToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { f1DestroyToolStripMenuItem1, f2DestroyToolStripMenuItem1, f3DestroyToolStripMenuItem1 });
             DestroyToolStripMenuItem.Name = "DestroyToolStripMenuItem";
             DestroyToolStripMenuItem.Size = new Size(409, 44);
             DestroyToolStripMenuItem.Text = "Разрушение";
             DestroyToolStripMenuItem.Click += DestroyToolStripMenuItem_Click;
+            // 
+            // f1DestroyToolStripMenuItem1
+            // 
+            f1DestroyToolStripMenuItem1.Name = "f1DestroyToolStripMenuItem1";
+            f1DestroyToolStripMenuItem1.Size = new Size(359, 44);
+            f1DestroyToolStripMenuItem1.Text = "F1";
+            f1DestroyToolStripMenuItem1.Click += f1DestroyToolStripMenuItem1_Click;
+            // 
+            // f2DestroyToolStripMenuItem1
+            // 
+            f2DestroyToolStripMenuItem1.Name = "f2DestroyToolStripMenuItem1";
+            f2DestroyToolStripMenuItem1.Size = new Size(359, 44);
+            f2DestroyToolStripMenuItem1.Text = "F2";
+            f2DestroyToolStripMenuItem1.Click += f2DestroyToolStripMenuItem1_Click;
+            // 
+            // f3DestroyToolStripMenuItem1
+            // 
+            f3DestroyToolStripMenuItem1.Name = "f3DestroyToolStripMenuItem1";
+            f3DestroyToolStripMenuItem1.Size = new Size(359, 44);
+            f3DestroyToolStripMenuItem1.Text = "F3";
+            f3DestroyToolStripMenuItem1.Click += f3DestroyToolStripMenuItem1_Click;
             // 
             // AboutToolStripMenuItem
             // 
@@ -169,55 +245,23 @@
             ExitToolStripMenuItem.Text = "Выход";
             ExitToolStripMenuItem.Click += ExitToolStripMenuItem_Click;
             // 
-            // menuStrip2
+            // label1
             // 
-            menuStrip2.ImageScalingSize = new Size(32, 32);
-            menuStrip2.Items.AddRange(new ToolStripItem[] { f1ToolStripMenuItem, f2ToolStripMenuItem, f3ToolStripMenuItem });
-            menuStrip2.Location = new Point(0, 38);
-            menuStrip2.Name = "menuStrip2";
-            menuStrip2.Padding = new Padding(3, 1, 0, 1);
-            menuStrip2.Size = new Size(800, 38);
-            menuStrip2.TabIndex = 1;
-            menuStrip2.Text = "menuStrip2";
-            // 
-            // f1ToolStripMenuItem
-            // 
-            f1ToolStripMenuItem.Name = "f1ToolStripMenuItem";
-            f1ToolStripMenuItem.Size = new Size(59, 36);
-            f1ToolStripMenuItem.Text = "F1";
-            f1ToolStripMenuItem.Click += f1ToolStripMenuItem_Click;
-            // 
-            // f2ToolStripMenuItem
-            // 
-            f2ToolStripMenuItem.Name = "f2ToolStripMenuItem";
-            f2ToolStripMenuItem.Size = new Size(59, 36);
-            f2ToolStripMenuItem.Text = "F2";
-            f2ToolStripMenuItem.Click += f2ToolStripMenuItem_Click;
-            // 
-            // f3ToolStripMenuItem
-            // 
-            f3ToolStripMenuItem.Name = "f3ToolStripMenuItem";
-            f3ToolStripMenuItem.Size = new Size(59, 36);
-            f3ToolStripMenuItem.Text = "F3";
-            f3ToolStripMenuItem.Click += f3ToolStripMenuItem_Click;
-            // 
-            // listBox1
-            // 
-            listBox1.Dock = DockStyle.Fill;
-            listBox1.Font = new Font("Segoe UI", 15F);
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(0, 76);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(800, 374);
-            listBox1.TabIndex = 2;
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Fill;
+            label1.Font = new Font("Segoe UI", 20F);
+            label1.Location = new Point(0, 38);
+            label1.Name = "label1";
+            label1.Size = new Size(668, 288);
+            label1.TabIndex = 1;
+            label1.Text = "Лабалаторная работа №2\r\nВариант 25\r\nКузнецов Дмитрий\r\n\r\n";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(listBox1);
-            Controls.Add(menuStrip2);
+            ClientSize = new Size(740, 261);
+            Controls.Add(label1);
             Controls.Add(menuStrip1);
             Font = new Font("Segoe UI", 9F);
             Name = "Form1";
@@ -225,8 +269,6 @@
             FormClosing += Form1_FormClosing;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            menuStrip2.ResumeLayout(false);
-            menuStrip2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -249,10 +291,16 @@
         private ToolStripMenuItem DeleteFirstToolStripMenuItem;
         private ToolStripMenuItem DeleteLastToolStripMenuItem;
         private ToolStripMenuItem DeleteAtToolStripMenuItem;
-        private MenuStrip menuStrip2;
+        private ToolStripMenuItem показатьToolStripMenuItem;
         private ToolStripMenuItem f1ToolStripMenuItem;
         private ToolStripMenuItem f2ToolStripMenuItem;
         private ToolStripMenuItem f3ToolStripMenuItem;
-        private ListBox listBox1;
+        private ToolStripMenuItem f1CreateToolStripMenuItem1;
+        private ToolStripMenuItem f2CreateToolStripMenuItem1;
+        private ToolStripMenuItem f3CreateToolStripMenuItem1;
+        private ToolStripMenuItem f1DestroyToolStripMenuItem1;
+        private ToolStripMenuItem f2DestroyToolStripMenuItem1;
+        private ToolStripMenuItem f3DestroyToolStripMenuItem1;
+        private Label label1;
     }
 }

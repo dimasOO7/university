@@ -29,15 +29,21 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
-            button2 = new Button();
+            Close = new Button();
             TargetNumericUpDown = new NumericUpDown();
             label1 = new Label();
             label2 = new Label();
             NumberNumericUpDown = new NumericUpDown();
-            button1 = new Button();
+            okButton = new Button();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            comboBox1 = new ComboBox();
+            listBox1 = new ListBox();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)TargetNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NumberNumericUpDown).BeginInit();
+            tableLayoutPanel2.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -45,43 +51,44 @@
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 416F));
-            tableLayoutPanel1.Controls.Add(button2, 1, 2);
+            tableLayoutPanel1.Controls.Add(Close, 1, 2);
             tableLayoutPanel1.Controls.Add(TargetNumericUpDown, 1, 1);
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Controls.Add(label2, 0, 1);
             tableLayoutPanel1.Controls.Add(NumberNumericUpDown, 1, 0);
-            tableLayoutPanel1.Controls.Add(button1, 0, 2);
+            tableLayoutPanel1.Controls.Add(okButton, 0, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Location = new Point(640, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(800, 450);
+            tableLayoutPanel1.Size = new Size(631, 742);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // button2
+            // Close
             // 
-            button2.AutoSize = true;
-            button2.DialogResult = DialogResult.Cancel;
-            button2.Dock = DockStyle.Fill;
-            button2.Font = new Font("Segoe UI", 15F);
-            button2.Location = new Point(233, 381);
-            button2.Name = "button2";
-            button2.Size = new Size(564, 66);
-            button2.TabIndex = 5;
-            button2.Text = "Отмена";
-            button2.UseVisualStyleBackColor = true;
+            Close.AutoSize = true;
+            Close.DialogResult = DialogResult.Cancel;
+            Close.Dock = DockStyle.Fill;
+            Close.Font = new Font("Segoe UI", 15F);
+            Close.Location = new Point(233, 645);
+            Close.Name = "Close";
+            Close.Size = new Size(410, 94);
+            Close.TabIndex = 5;
+            Close.Text = "Закрыть";
+            Close.UseVisualStyleBackColor = true;
+            Close.Click += Close_Click;
             // 
             // TargetNumericUpDown
             // 
             TargetNumericUpDown.Dock = DockStyle.Fill;
             TargetNumericUpDown.Font = new Font("Segoe UI", 15F);
-            TargetNumericUpDown.Location = new Point(233, 192);
+            TargetNumericUpDown.Location = new Point(233, 324);
             TargetNumericUpDown.Maximum = new decimal(new int[] { int.MaxValue, 0, 0, 0 });
             TargetNumericUpDown.Name = "TargetNumericUpDown";
-            TargetNumericUpDown.Size = new Size(564, 61);
+            TargetNumericUpDown.Size = new Size(410, 61);
             TargetNumericUpDown.TabIndex = 3;
             TargetNumericUpDown.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
@@ -99,7 +106,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15F);
-            label2.Location = new Point(3, 189);
+            label2.Location = new Point(3, 321);
             label2.Name = "label2";
             label2.Size = new Size(224, 54);
             label2.TabIndex = 1;
@@ -113,46 +120,103 @@
             NumberNumericUpDown.Maximum = new decimal(new int[] { int.MaxValue, 0, 0, 0 });
             NumberNumericUpDown.Minimum = new decimal(new int[] { int.MinValue, 0, 0, int.MinValue });
             NumberNumericUpDown.Name = "NumberNumericUpDown";
-            NumberNumericUpDown.Size = new Size(564, 61);
+            NumberNumericUpDown.Size = new Size(410, 61);
             NumberNumericUpDown.TabIndex = 2;
             NumberNumericUpDown.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // button1
+            // okButton
             // 
-            button1.AutoSize = true;
-            button1.DialogResult = DialogResult.OK;
-            button1.Dock = DockStyle.Fill;
-            button1.Font = new Font("Segoe UI", 15F);
-            button1.Location = new Point(3, 381);
-            button1.Name = "button1";
-            button1.Size = new Size(224, 66);
-            button1.TabIndex = 4;
-            button1.Text = "Ок";
-            button1.UseVisualStyleBackColor = true;
+            okButton.AutoSize = true;
+            okButton.DialogResult = DialogResult.OK;
+            okButton.Dock = DockStyle.Fill;
+            okButton.Font = new Font("Segoe UI", 15F);
+            okButton.Location = new Point(3, 645);
+            okButton.Name = "okButton";
+            okButton.Size = new Size(224, 94);
+            okButton.TabIndex = 4;
+            okButton.Text = "Вставить";
+            okButton.UseVisualStyleBackColor = true;
+            okButton.Click += okButton_Click;
+            // 
+            // tableLayoutPanel2
+            // 
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.Controls.Add(tableLayoutPanel1, 1, 0);
+            tableLayoutPanel2.Controls.Add(tableLayoutPanel3, 0, 0);
+            tableLayoutPanel2.Dock = DockStyle.Fill;
+            tableLayoutPanel2.Location = new Point(0, 0);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.Size = new Size(1274, 748);
+            tableLayoutPanel2.TabIndex = 1;
+            // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.ColumnCount = 1;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.Controls.Add(comboBox1, 0, 0);
+            tableLayoutPanel3.Controls.Add(listBox1, 0, 1);
+            tableLayoutPanel3.Dock = DockStyle.Fill;
+            tableLayoutPanel3.Location = new Point(3, 3);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 2;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 67F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.Size = new Size(631, 742);
+            tableLayoutPanel3.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Segoe UI", 15F);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "F1", "F2", "F3" });
+            comboBox1.Location = new Point(3, 3);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(242, 62);
+            comboBox1.TabIndex = 0;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // listBox1
+            // 
+            listBox1.Dock = DockStyle.Fill;
+            listBox1.FormattingEnabled = true;
+            listBox1.Location = new Point(3, 70);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(625, 669);
+            listBox1.TabIndex = 1;
             // 
             // InsertAt
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(tableLayoutPanel1);
+            ClientSize = new Size(1274, 748);
+            Controls.Add(tableLayoutPanel2);
             Name = "InsertAt";
             Text = "InsertAt";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)TargetNumericUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)NumberNumericUpDown).EndInit();
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
         private TableLayoutPanel tableLayoutPanel1;
+        private Button Close;
+        public NumericUpDown TargetNumericUpDown;
         private Label label1;
         private Label label2;
-        private Button button1;
-        private Button button2;
         public NumericUpDown NumberNumericUpDown;
-        public NumericUpDown TargetNumericUpDown;
+        private Button okButton;
+        private TableLayoutPanel tableLayoutPanel2;
+        private TableLayoutPanel tableLayoutPanel3;
+        private ComboBox comboBox1;
+        private ListBox listBox1;
     }
 }

@@ -63,6 +63,7 @@
             Cancel.TabIndex = 2;
             Cancel.Text = "Отмена";
             Cancel.UseVisualStyleBackColor = true;
+            Cancel.Click += Cancel_Click;
             // 
             // Ok
             // 
@@ -75,6 +76,7 @@
             Ok.TabIndex = 1;
             Ok.Text = "Ок";
             Ok.UseVisualStyleBackColor = true;
+            Ok.Click += Ok_Click;
             // 
             // Создать
             // 

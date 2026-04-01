@@ -5,7 +5,6 @@ namespace LabWork2
         public SingleLinkedList F1;
         public SingleLinkedList F2;
         public SingleLinkedList F3;
-        public SingleLinkedList currentList;
 
         public Form1()
         {
@@ -13,40 +12,8 @@ namespace LabWork2
             F1 = new SingleLinkedList();
             F2 = new SingleLinkedList();
             F3 = new SingleLinkedList();
-            currentList = F1;
-            currentList.DisplayInListBox(listBox1);
-            f1ToolStripMenuItem.BackColor = SystemColors.GradientActiveCaption;
         }
 
-        private void f1ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            currentList = F1;
-            currentList.DisplayInListBox(listBox1);
-
-            f1ToolStripMenuItem.BackColor = SystemColors.GradientActiveCaption;
-            f2ToolStripMenuItem.BackColor = SystemColors.Control;
-            f3ToolStripMenuItem.BackColor = SystemColors.Control;
-        }
-
-        private void f2ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            currentList = F2;
-            currentList.DisplayInListBox(listBox1);
-
-            f1ToolStripMenuItem.BackColor = SystemColors.Control;
-            f2ToolStripMenuItem.BackColor = SystemColors.GradientActiveCaption;
-            f3ToolStripMenuItem.BackColor = SystemColors.Control;
-        }
-
-        private void f3ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            currentList = F3;
-            currentList.DisplayInListBox(listBox1);
-
-            f1ToolStripMenuItem.BackColor = SystemColors.Control;
-            f2ToolStripMenuItem.BackColor = SystemColors.Control;
-            f3ToolStripMenuItem.BackColor = SystemColors.GradientActiveCaption;
-        }
 
         private void DestroyToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -57,8 +24,8 @@ namespace LabWork2
             MessageBoxIcon.Question);
             if (result == DialogResult.OK)
             {
-                currentList.Destroy();
-                currentList.DisplayInListBox(listBox1);
+                //currentList.Destroy();
+                //currentList.DisplayInListBox(listBox1);
             }
         }
 
@@ -85,50 +52,32 @@ namespace LabWork2
 
         private void InsertInEndToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (InputNumber form = new InputNumber("Добавление в конец"))
-            {
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    currentList.InsertAfterLast((int)form.numericUpDown.Value);
-                    currentList.DisplayInListBox(listBox1);
-                }
-            }
+            InsertLast form = new InsertLast(F1, F2, F3);
+            form.Show();
         }
 
         private void InsertBeforeFirstToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (InputNumber form = new InputNumber("Добавление в начало"))
-            {
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    currentList.InsertBeforeFirst((int)form.numericUpDown.Value);
-                    currentList.DisplayInListBox(listBox1);
-                }
-            }
+            InsertFirst form = new InsertFirst(F1, F2, F3);
+            form.Show();
         }
 
         private void DeleteFirstToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            currentList.DeleteFirst();
-            currentList.DisplayInListBox(listBox1);
+            DeleteFirst form = new DeleteFirst(F1, F2, F3);
+            form.Show();
         }
 
         private void DeleteLastToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            currentList.DeleteLast();
-            currentList.DisplayInListBox(listBox1);
+            DeleteLast form = new DeleteLast(F1, F2, F3);
+            form.Show();
         }
 
         private void DeleteAtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (InputNumber form = new InputNumber("удаление по индексу"))
-            {
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    currentList.DeleteAt((int)form.numericUpDown.Value);
-                    currentList.DisplayInListBox(listBox1);
-                }
-            }
+            DeleteAt form = new DeleteAt(F1, F2, F3);
+            form.Show();
         }
 
         private void ProcessingToolStripMenuItem_Click(object sender, EventArgs e)
@@ -136,52 +85,88 @@ namespace LabWork2
             using (Processing form = new Processing(F1, F2, F3))
             {
                 form.ShowDialog();
-                currentList = F1;
-                currentList.DisplayInListBox(listBox1);
-
-                f1ToolStripMenuItem.BackColor = SystemColors.GradientActiveCaption;
-                f2ToolStripMenuItem.BackColor = SystemColors.Control;
-                f3ToolStripMenuItem.BackColor = SystemColors.Control;
             }
         }
 
-        private void CreateListToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (CreateList form = new CreateList())
-            {
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    string[] items = form.InputBox.Text.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-                    int[] resultArray = new int[items.Length];
-                    bool isSuccess = true;
-
-                    for (int i = 0; i < items.Length; i++)
-                    {
-                        if (!int.TryParse(items[i].Trim(), out resultArray[i]))
-                        {
-                            MessageBox.Show($"Ошибка: '{items[i]}' не является целым числом.");
-                            isSuccess = false;
-                            break;
-                        }
-                    }
-                    if (isSuccess && resultArray.Length > 0)
-                    {
-                        currentList.Create(resultArray);
-                        currentList.DisplayInListBox(listBox1);
-                    }
-                }
-            }
-        }
 
         private void InsertToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (InsertAt form = new InsertAt())
+            InsertAt form = new InsertAt(F1, F2, F3);
+            form.Show();
+        }
+
+        private void f1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowList form = new ShowList("F1", F1);
+            form.Show();
+        }
+
+        private void f2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowList form = new ShowList("F2", F2);
+            form.Show();
+        }
+
+        private void f3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowList form = new ShowList("F3", F3);
+            form.Show();
+        }
+
+        private void f1CreateToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CreateList form = new CreateList("F1", F1);
+            form.Show();
+        }
+
+        private void f2CreateToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CreateList form = new CreateList("F2", F2);
+            form.Show();
+        }
+
+        private void f3CreateToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CreateList form = new CreateList("F3", F3);
+            form.Show();
+        }
+
+        private void f1DestroyToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Вы уверены, что хотите разрушить список F1",
+            "Подтверждение разрушения F1",
+            MessageBoxButtons.OKCancel,
+            MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
             {
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    currentList.InsertAt((int)form.TargetNumericUpDown.Value, (int)form.NumberNumericUpDown.Value);
-                    currentList.DisplayInListBox(listBox1);
-                }
+                F1.Destroy();
+            }
+        }
+
+        private void f2DestroyToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Вы уверены, что хотите разрушить список F2",
+            "Подтверждение разрушения F2",
+            MessageBoxButtons.OKCancel,
+            MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                F2.Destroy();
+            }
+        }
+
+        private void f3DestroyToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Вы уверены, что хотите разрушить список F3",
+            "Подтверждение разрушения F3",
+            MessageBoxButtons.OKCancel,
+            MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                F3.Destroy();
             }
         }
     }

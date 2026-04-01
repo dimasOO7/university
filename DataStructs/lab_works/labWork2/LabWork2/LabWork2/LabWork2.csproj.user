@@ -4,6 +4,18 @@
     <Compile Update="About.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="DeleteAt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DeleteFirst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DeleteLast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InsertFirst.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CreateList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -16,7 +28,13 @@
     <Compile Update="InsertAt.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="InsertLast.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Processing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ShowList.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

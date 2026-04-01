@@ -20,3 +20,9 @@ C:\Users\REDMI\university\DataStructs\lab_works\labWork2\LabWork2\LabWork2\obj\D
 C:\Users\REDMI\university\DataStructs\lab_works\labWork2\LabWork2\LabWork2\obj\Debug\net10.0-windows\LabWork2.Processing.resources
 C:\Users\REDMI\university\DataStructs\lab_works\labWork2\LabWork2\LabWork2\obj\Debug\net10.0-windows\LabWork2.CreateList.resources
 C:\Users\REDMI\university\DataStructs\lab_works\labWork2\LabWork2\LabWork2\obj\Debug\net10.0-windows\LabWork2.InsertAt.resources
+C:\Users\REDMI\university\DataStructs\lab_works\labWork2\LabWork2\LabWork2\obj\Debug\net10.0-windows\LabWork2.ShowList.resources
+C:\Users\REDMI\university\DataStructs\lab_works\labWork2\LabWork2\LabWork2\obj\Debug\net10.0-windows\LabWork2.InsertFirst.resources
+C:\Users\REDMI\university\DataStructs\lab_works\labWork2\LabWork2\LabWork2\obj\Debug\net10.0-windows\LabWork2.InsertLast.resources
+C:\Users\REDMI\university\DataStructs\lab_works\labWork2\LabWork2\LabWork2\obj\Debug\net10.0-windows\LabWork2.DeleteAt.resources
+C:\Users\REDMI\university\DataStructs\lab_works\labWork2\LabWork2\LabWork2\obj\Debug\net10.0-windows\LabWork2.DeleteFirst.resources
+C:\Users\REDMI\university\DataStructs\lab_works\labWork2\LabWork2\LabWork2\obj\Debug\net10.0-windows\LabWork2.DeleteLast.resources
