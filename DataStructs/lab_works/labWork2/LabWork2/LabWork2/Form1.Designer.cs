@@ -213,21 +213,21 @@
             // f1DestroyToolStripMenuItem1
             // 
             f1DestroyToolStripMenuItem1.Name = "f1DestroyToolStripMenuItem1";
-            f1DestroyToolStripMenuItem1.Size = new Size(359, 44);
+            f1DestroyToolStripMenuItem1.Size = new Size(172, 44);
             f1DestroyToolStripMenuItem1.Text = "F1";
             f1DestroyToolStripMenuItem1.Click += f1DestroyToolStripMenuItem1_Click;
             // 
             // f2DestroyToolStripMenuItem1
             // 
             f2DestroyToolStripMenuItem1.Name = "f2DestroyToolStripMenuItem1";
-            f2DestroyToolStripMenuItem1.Size = new Size(359, 44);
+            f2DestroyToolStripMenuItem1.Size = new Size(172, 44);
             f2DestroyToolStripMenuItem1.Text = "F2";
             f2DestroyToolStripMenuItem1.Click += f2DestroyToolStripMenuItem1_Click;
             // 
             // f3DestroyToolStripMenuItem1
             // 
             f3DestroyToolStripMenuItem1.Name = "f3DestroyToolStripMenuItem1";
-            f3DestroyToolStripMenuItem1.Size = new Size(359, 44);
+            f3DestroyToolStripMenuItem1.Size = new Size(172, 44);
             f3DestroyToolStripMenuItem1.Text = "F3";
             f3DestroyToolStripMenuItem1.Click += f3DestroyToolStripMenuItem1_Click;
             // 
@@ -252,9 +252,9 @@
             label1.Font = new Font("Segoe UI", 20F);
             label1.Location = new Point(0, 38);
             label1.Name = "label1";
-            label1.Size = new Size(668, 288);
+            label1.Size = new Size(677, 288);
             label1.TabIndex = 1;
-            label1.Text = "Лабалаторная работа №2\r\nВариант 25\r\nКузнецов Дмитрий\r\n\r\n";
+            label1.Text = "Лабораторная работа №2\r\nВариант 25\r\nКузнецов Дмитрий\r\n\r\n";
             // 
             // Form1
             // 
@@ -265,7 +265,7 @@
             Controls.Add(menuStrip1);
             Font = new Font("Segoe UI", 9F);
             Name = "Form1";
-            Text = "Лабалаторная работа 2";
+            Text = "Лабораторная работа 2";
             FormClosing += Form1_FormClosing;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

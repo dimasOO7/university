@@ -195,7 +195,7 @@
             ClientSize = new Size(1274, 748);
             Controls.Add(tableLayoutPanel2);
             Name = "InsertAt";
-            Text = "InsertAt";
+            Text = "Вставка в произвольную позицию";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)TargetNumericUpDown).EndInit();

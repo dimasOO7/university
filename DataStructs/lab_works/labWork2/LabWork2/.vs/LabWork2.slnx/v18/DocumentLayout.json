@@ -3,80 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\deleteat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\deleteat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\deletefirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\deletefirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\deletelast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\deletelast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\singlelinkedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\singlelinkedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\insertat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\insertat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\deletelast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\deletelast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\insertlast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\insertlast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\deleteat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\deleteat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\insertlast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\insertlast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\insertfirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\insertfirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\deletefirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\labwork2\\deletefirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\deletefirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\insertfirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\insertfirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\inputnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\inputnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\labwork2\\processing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\processing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\labwork2\\insertat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\insertat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\labwork2\\createlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\createlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\createlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\createlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\showlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\showlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\deleteat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\deleteat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\deletelast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\deletelast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\insertfirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\insertfirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\deletefirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\deletefirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\insertat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\insertat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\showlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,20 +55,52 @@
       "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\processing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\labwork2\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\insertlast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\insertlast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD4FBA4D-CA00-4B95-9111-D19BFA3C2A93}|LabWork2\\LabWork2.csproj|C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\labwork2\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AD4FBA4D-CA00-4B95-9111-D19BFA3C2A93}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\inputnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\inputnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|c:\\users\\redmi\\university\\datastructs\\lab_works\\labwork2\\labwork2\\labwork2\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\labwork2\\processing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\processing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\labwork2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\labwork2\\deletelast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\deletelast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\labwork2\\insertlast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\insertlast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\labwork2\\insertfirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\insertfirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\labwork2\\createlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\createlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\labwork2\\showlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\showlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\labwork2\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{86C5529C-7F0E-B9BA-B3AD-7BCD0DC67344}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4FBA4D-CA00-4B95-9111-D19BFA3C2A93}|LabWork2\\LabWork2.csproj|C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\labwork2\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AD4FBA4D-CA00-4B95-9111-D19BFA3C2A93}|LabWork2\\LabWork2.csproj|solutionrelative:labwork2\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -110,7 +110,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 254,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 25,
           "Children": [
             {
               "$type": "Bookmark",
@@ -118,226 +118,228 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "DeleteAt.cs",
               "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteAt.cs",
               "RelativeDocumentMoniker": "LabWork2\\DeleteAt.cs",
               "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteAt.cs",
               "RelativeToolTip": "LabWork2\\DeleteAt.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA/wCEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-01T16:20:59.074Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DeleteAt.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentIndex": 1,
+              "Title": "DeleteAt.cs [Design]",
               "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteAt.cs",
               "RelativeDocumentMoniker": "LabWork2\\DeleteAt.cs",
-              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteAt.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "LabWork2\\DeleteAt.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteAt.cs [Design]",
+              "RelativeToolTip": "LabWork2\\DeleteAt.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-01T16:17:24.724Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "DeleteLast.cs",
               "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteLast.cs",
               "RelativeDocumentMoniker": "LabWork2\\DeleteLast.cs",
               "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteLast.cs",
               "RelativeToolTip": "LabWork2\\DeleteLast.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA/wC4AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-01T16:12:22.032Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DeleteLast.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteLast.cs",
-              "RelativeDocumentMoniker": "LabWork2\\DeleteLast.cs",
-              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteLast.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "LabWork2\\DeleteLast.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T16:11:16.295Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 2,
               "Title": "DeleteFirst.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteFirst.cs",
               "RelativeDocumentMoniker": "LabWork2\\DeleteFirst.cs",
-              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteFirst.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "LabWork2\\DeleteFirst.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteFirst.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "RelativeToolTip": "LabWork2\\DeleteFirst.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T16:05:55.165Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "InsertFirst.cs",
-              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertFirst.cs",
-              "RelativeDocumentMoniker": "LabWork2\\InsertFirst.cs",
-              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertFirst.cs",
-              "RelativeToolTip": "LabWork2\\InsertFirst.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T15:53:29.474Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "InsertLast.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertLast.cs",
-              "RelativeDocumentMoniker": "LabWork2\\InsertLast.cs",
-              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertLast.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "LabWork2\\InsertLast.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T15:59:41.298Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "InsertFirst.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertFirst.cs",
-              "RelativeDocumentMoniker": "LabWork2\\InsertFirst.cs",
-              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertFirst.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "LabWork2\\InsertFirst.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T15:39:50.093Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "InsertAt.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertAt.cs",
-              "RelativeDocumentMoniker": "LabWork2\\InsertAt.cs",
-              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertAt.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "LabWork2\\InsertAt.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T14:05:04.163Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2026-04-01T16:05:55.165Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "InsertAt.cs",
-              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertAt.cs",
-              "RelativeDocumentMoniker": "LabWork2\\InsertAt.cs",
-              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertAt.cs",
-              "RelativeToolTip": "LabWork2\\InsertAt.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC0AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T13:39:51.59Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ShowList.cs",
-              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\ShowList.cs",
-              "RelativeDocumentMoniker": "LabWork2\\ShowList.cs",
-              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\ShowList.cs",
-              "RelativeToolTip": "LabWork2\\ShowList.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T13:36:42.436Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ShowList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\ShowList.cs",
-              "RelativeDocumentMoniker": "LabWork2\\ShowList.cs",
-              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\ShowList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "LabWork2\\ShowList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T13:28:02.259Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\Form1.cs",
-              "RelativeDocumentMoniker": "LabWork2\\Form1.cs",
-              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "LabWork2\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T13:25:00.51Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
               "Title": "CreateList.cs",
               "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\CreateList.cs",
               "RelativeDocumentMoniker": "LabWork2\\CreateList.cs",
               "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\CreateList.cs",
               "RelativeToolTip": "LabWork2\\CreateList.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-28T13:22:29.413Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
+              "Title": "DeleteLast.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteLast.cs",
+              "RelativeDocumentMoniker": "LabWork2\\DeleteLast.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteLast.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "LabWork2\\DeleteLast.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T16:11:16.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InsertFirst.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertFirst.cs",
+              "RelativeDocumentMoniker": "LabWork2\\InsertFirst.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertFirst.cs",
+              "RelativeToolTip": "LabWork2\\InsertFirst.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T15:53:29.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "InsertLast.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertLast.cs",
+              "RelativeDocumentMoniker": "LabWork2\\InsertLast.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertLast.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "RelativeToolTip": "LabWork2\\InsertLast.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T15:59:41.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "InsertFirst.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertFirst.cs",
+              "RelativeDocumentMoniker": "LabWork2\\InsertFirst.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertFirst.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "LabWork2\\InsertFirst.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T15:39:50.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DeleteFirst.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteFirst.cs",
+              "RelativeDocumentMoniker": "LabWork2\\DeleteFirst.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteFirst.cs",
+              "RelativeToolTip": "LabWork2\\DeleteFirst.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T16:08:47.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InsertAt.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertAt.cs",
+              "RelativeDocumentMoniker": "LabWork2\\InsertAt.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertAt.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "RelativeToolTip": "LabWork2\\InsertAt.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T14:05:04.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "InsertAt.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertAt.cs",
+              "RelativeDocumentMoniker": "LabWork2\\InsertAt.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertAt.cs",
+              "RelativeToolTip": "LabWork2\\InsertAt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T13:39:51.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ShowList.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\ShowList.cs",
+              "RelativeDocumentMoniker": "LabWork2\\ShowList.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\ShowList.cs",
+              "RelativeToolTip": "LabWork2\\ShowList.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T13:36:42.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ShowList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\ShowList.cs",
+              "RelativeDocumentMoniker": "LabWork2\\ShowList.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\ShowList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "LabWork2\\ShowList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T13:28:02.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "CreateList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\CreateList.cs",
               "RelativeDocumentMoniker": "LabWork2\\CreateList.cs",
               "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\CreateList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "LabWork2\\CreateList.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T13:19:51.212Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2026-03-28T13:19:51.212Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 12,
               "Title": "Processing.cs",
               "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\Processing.cs",
               "RelativeDocumentMoniker": "LabWork2\\Processing.cs",
               "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\Processing.cs",
               "RelativeToolTip": "LabWork2\\Processing.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAArwAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-28T12:55:24.15Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 3,
               "Title": "Processing.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\Processing.cs",
               "RelativeDocumentMoniker": "LabWork2\\Processing.cs",
               "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\Processing.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "LabWork2\\Processing.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T12:33:51.617Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2026-03-28T12:33:51.617Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 13,
+              "Title": "InsertLast.cs",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertLast.cs",
+              "RelativeDocumentMoniker": "LabWork2\\InsertLast.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertLast.cs",
+              "RelativeToolTip": "LabWork2\\InsertLast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T16:00:26.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "About.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\About.cs",
               "RelativeDocumentMoniker": "LabWork2\\About.cs",
               "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\About.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "LabWork2\\About.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T12:32:36.562Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2026-03-28T12:32:36.562Z"
             },
             {
               "$type": "Document",
@@ -347,14 +349,13 @@
               "RelativeDocumentMoniker": "LabWork2\\InputNumber.cs",
               "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InputNumber.cs",
               "RelativeToolTip": "LabWork2\\InputNumber.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T10:51:29.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-28T10:51:29.95Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "About.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\About.cs",
               "RelativeDocumentMoniker": "LabWork2\\About.cs",
@@ -365,73 +366,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 16,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "LabWork2\\Form1.Designer.cs",
               "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\Form1.Designer.cs",
               "RelativeToolTip": "LabWork2\\Form1.Designer.cs",
-              "ViewState": "AgIAALAAAAAAAAAAAAAYwBUBAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUBAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T10:02:38.259Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-28T10:02:38.259Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 17,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\Form1.cs",
+              "RelativeDocumentMoniker": "LabWork2\\Form1.cs",
+              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "RelativeToolTip": "LabWork2\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T13:25:00.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\Form1.cs",
               "RelativeDocumentMoniker": "LabWork2\\Form1.cs",
               "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\Form1.cs",
               "RelativeToolTip": "LabWork2\\Form1.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAkwE8AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAQwKsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T07:42:20.748Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-28T07:42:20.748Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "SingleLinkedList.cs",
               "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\SingleLinkedList.cs",
               "RelativeDocumentMoniker": "LabWork2\\SingleLinkedList.cs",
               "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\SingleLinkedList.cs",
               "RelativeToolTip": "LabWork2\\SingleLinkedList.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAiwFkAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAuwFMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-28T06:43:09.019Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 146,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "InsertLast.cs",
-              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertLast.cs",
-              "RelativeDocumentMoniker": "LabWork2\\InsertLast.cs",
-              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\InsertLast.cs",
-              "RelativeToolTip": "LabWork2\\InsertLast.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAswC4AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T16:00:26.978Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DeleteFirst.cs",
-              "DocumentMoniker": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteFirst.cs",
-              "RelativeDocumentMoniker": "LabWork2\\DeleteFirst.cs",
-              "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\lab_works\\labWork2\\LabWork2\\LabWork2\\DeleteFirst.cs",
-              "RelativeToolTip": "LabWork2\\DeleteFirst.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAswC4AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T16:08:47.216Z",
               "EditorCaption": ""
             }
           ]

@@ -184,7 +184,7 @@
             ClientSize = new Size(831, 450);
             Controls.Add(tableLayoutPanel1);
             Name = "DeleteAt";
-            Text = "DeleteAt";
+            Text = "Удаление произвольного";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);

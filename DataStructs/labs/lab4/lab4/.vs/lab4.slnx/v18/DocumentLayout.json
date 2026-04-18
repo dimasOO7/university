@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\REDMI\\university\\DataStructs\\labs\\lab4\\lab4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC7502F7-9748-4DE6-A9D4-E33669614F2E}|lab4\\lab4.csproj|c:\\users\\redmi\\university\\datastructs\\labs\\lab4\\lab4\\lab4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC7502F7-9748-4DE6-A9D4-E33669614F2E}|lab4\\lab4.csproj|solutionrelative:lab4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2AFC9B6-B883-AE0A-77C6-0B34E93D8B48}|lab4\\lab4.csproj|c:\\users\\redmi\\university\\datastructs\\labs\\lab4\\lab4\\lab4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2AFC9B6-B883-AE0A-77C6-0B34E93D8B48}|lab4\\lab4.csproj|solutionrelative:lab4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +14,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,

@@ -116,7 +116,7 @@
             ClientSize = new Size(945, 832);
             Controls.Add(tableLayoutPanel1);
             Name = "Processing";
-            Text = "Processing";
+            Text = "Обработка";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);

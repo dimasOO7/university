@@ -193,6 +193,7 @@ namespace LabWork2
                 Node p = first;
                 Node p2 = F2.First;
                 Node partStart = null;
+                Node prev = null;
                 while (p != null)
                 {
                     if (p.Info == p2.Info)
@@ -228,13 +229,31 @@ namespace LabWork2
                     }
                     else
                     {
-                        partStart = p;
-                        p = p.Link;
+                        if (p2 == F2.First)
+                        {
+                            prev = p;
+                            partStart = p;
+                            p = p.Link;
+                        }
+                        else
+                        {
+                            if (prev == null)
+                            {
+                                partStart = first;
+                                prev = first;
+                            }
+                            else
+                            {
+                                partStart = prev.Link;
+                            }
+                            p = partStart.Link;
+                        }
                         p2 = F2.First;
                     }
                 }
             }
         }
+
         public void DisplayInListBox(System.Windows.Forms.ListBox listBox)
         {
             listBox.Items.Clear();
