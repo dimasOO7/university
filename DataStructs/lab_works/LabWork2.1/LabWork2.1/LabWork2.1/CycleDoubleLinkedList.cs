@@ -86,14 +86,17 @@ namespace LabWork2._1
         public bool InsertAt(int index, int data)
         {
             bool success = false;
-            DoubleNode p = head.Next;
-            int i = 1;
-            while (i < index && p != head)
+            DoubleNode p = head;
+            int i =1;
+            if (index > 1)
             {
-                p = p.Next;
-                i++;
+                while (i < index && p != head || i == 1)
+                {
+                    p = p.Next;
+                    i++;
+                }
             }
-            if(p!=head)
+            if(p!=head || index == 1)
             {
                 DoubleNode n = new DoubleNode(data);
                 n.Prev = p;
@@ -110,8 +113,8 @@ namespace LabWork2._1
             if(head.Next != head)
             {
                 success = true;
-                head.Next.Prev = head;
                 head.Next = head.Next.Next;
+                head.Next.Prev = head;
             }
             return success;
         }
@@ -122,8 +125,8 @@ namespace LabWork2._1
             if (head.Prev != head)
             {
                 success = true;
-                head.Prev.Next = head;
                 head.Prev = head.Prev.Prev;
+                head.Prev.Next = head;
             }
             return success;
         }
@@ -139,8 +142,8 @@ namespace LabWork2._1
             }
             if (p != head)
             {
-                p.Next = p.Next.Next;
-                p.Next.Prev = p;
+                p.Prev.Next = p.Next;
+                p.Next.Prev = p.Prev;
                 success = true;
             }
             return success;
@@ -229,7 +232,7 @@ namespace LabWork2._1
 
             DoubleNode p = head.Next;
 
-            while (p != null)
+            while (p != head)
             {
                 listBox.Items.Add(p.Info);
                 p = p.Next;
