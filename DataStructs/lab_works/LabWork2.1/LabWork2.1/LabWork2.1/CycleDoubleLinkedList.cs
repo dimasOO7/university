@@ -67,54 +67,61 @@ namespace LabWork2._1
 
         public void InsertFirst(int data)
         {
-            DoubleNode p = new DoubleNode(data);
-            p.Prev = head;
-            p.Next = head.Next;
-            head.Next.Prev = p;
-            head.Next = p;
+            if (head != null)
+            {
+                DoubleNode p = new DoubleNode(data);
+                p.Next = head.Next;
+                p.Prev = head;
+                head.Next.Prev = p;
+                head.Next = p;
+            }
         }
 
         public void InsertLast(int data)
         {
-            DoubleNode p = new DoubleNode(data);
-            p.Next = head;
-            p.Prev = head.Prev;
-            head.Prev.Next = p;
-            head.Prev = p;
+            if (head != null)
+            {
+                DoubleNode p = new DoubleNode(data);
+                p.Next = head;
+                p.Prev = head.Prev;
+                head.Prev.Next = p;
+                head.Prev = p;
+            }
         }
 
         public bool InsertAt(int index, int data)
         {
             bool success = false;
-            DoubleNode p = head;
-            int i =1;
-            if (index > 1)
+            if (head != null)
             {
-                while (i < index && p != head || i == 1)
+                DoubleNode p = head.Next;
+                int i = 1;
+                while (p != head && i < index)
                 {
                     p = p.Next;
                     i++;
                 }
-            }
-            if(p!=head || index == 1)
-            {
-                DoubleNode n = new DoubleNode(data);
-                n.Prev = p;
-                n.Next = p.Next;
-                p.Next.Prev = n;
-                p.Next = n;
-                success = true;
+                if (i == index)
+                {
+                    DoubleNode n = new DoubleNode(data, p, p.Prev);
+                    p.Prev.Next = n;
+                    p.Prev = n;
+                    success = true;
+                }
             }
             return success;
         }
         public bool DeleteFirst()
         {
             bool success = false;
-            if(head.Next != head)
+            if (head != null)
             {
-                success = true;
-                head.Next = head.Next.Next;
-                head.Next.Prev = head;
+                if (head.Next != head)
+                {
+                    success = true;
+                    head.Next = head.Next.Next;
+                    head.Next.Prev = head;
+                }
             }
             return success;
         }
@@ -122,37 +129,40 @@ namespace LabWork2._1
         public bool DeleteLast()
         {
             bool success = false;
-            if (head.Prev != head)
+            if (head != null)
             {
-                success = true;
-                head.Prev = head.Prev.Prev;
-                head.Prev.Next = head;
+                if (head.Prev != head)
+                {
+                    success = true;
+                    head.Prev = head.Prev.Prev;
+                    head.Prev.Next = head;
+                }
             }
             return success;
         }
         public bool DeleteAt(int index)
         {
             bool success = false;
-            DoubleNode p = head.Next;
-            int i = 1;
-            while (i < index && p != head)
+            if (head != null)
             {
-                p = p.Next;
-                i++;
-            }
-            if (p != head)
-            {
-                p.Prev.Next = p.Next;
-                p.Next.Prev = p.Prev;
-                success = true;
+                DoubleNode p = head.Next;
+                int i = 1;
+                while (p != head && i < index)
+                {
+                    p = p.Next;
+                    i++;
+                }
+                if (p != head)
+                {
+                    p.Prev.Next = p.Next;
+                    p.Next.Prev = p.Prev;
+                    success = true;
+                }
             }
             return success;
         }
         public void Create(int[] dates)
         {
-            head = new DoubleNode();
-            head.Next = head;
-            head.Prev = head;
             DoubleNode p;
             for (int i = 0; i < dates.Length; i++)
             {
@@ -166,7 +176,6 @@ namespace LabWork2._1
 
         public void Clear()
         {
-            head = new DoubleNode();
             head.Next = head;
             head.Prev = head;
         }
@@ -174,11 +183,14 @@ namespace LabWork2._1
         public int Count()
         {
             int count = 0;
-            DoubleNode p = head.Next;
-            while(p != head)
+            if (head != null)
             {
-                count++;
-                p = p.Next;
+                DoubleNode p = head.Next;
+                while (p != head)
+                {
+                    count++;
+                    p = p.Next;
+                }
             }
             return count;
         }
@@ -226,7 +238,7 @@ namespace LabWork2._1
             }
         }
 
-        public void DisplayInListBox(System.Windows.Forms.ListBox listBox)
+        public void DisplayInListBox(ListBox listBox)
         {
             listBox.Items.Clear();
 

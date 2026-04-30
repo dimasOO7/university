@@ -65,7 +65,7 @@ namespace LabWork2._1
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(3, 1, 0, 1);
-            menuStrip1.Size = new Size(740, 40);
+            menuStrip1.Size = new Size(740, 38);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -73,7 +73,7 @@ namespace LabWork2._1
             // 
             заданиеToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { CreateListToolStripMenuItem, редактированиеСпискаToolStripMenuItem, ProcessingToolStripMenuItem, показатьToolStripMenuItem, DestroyToolStripMenuItem });
             заданиеToolStripMenuItem.Name = "заданиеToolStripMenuItem";
-            заданиеToolStripMenuItem.Size = new Size(125, 38);
+            заданиеToolStripMenuItem.Size = new Size(125, 36);
             заданиеToolStripMenuItem.Text = "Задание";
             // 
             // CreateListToolStripMenuItem
@@ -212,35 +212,35 @@ namespace LabWork2._1
             // f1DestroyToolStripMenuItem1
             // 
             f1DestroyToolStripMenuItem1.Name = "f1DestroyToolStripMenuItem1";
-            f1DestroyToolStripMenuItem1.Size = new Size(359, 44);
+            f1DestroyToolStripMenuItem1.Size = new Size(172, 44);
             f1DestroyToolStripMenuItem1.Text = "F1";
             f1DestroyToolStripMenuItem1.Click += f1DestroyToolStripMenuItem1_Click;
             // 
             // f2DestroyToolStripMenuItem1
             // 
             f2DestroyToolStripMenuItem1.Name = "f2DestroyToolStripMenuItem1";
-            f2DestroyToolStripMenuItem1.Size = new Size(359, 44);
+            f2DestroyToolStripMenuItem1.Size = new Size(172, 44);
             f2DestroyToolStripMenuItem1.Text = "F2";
             f2DestroyToolStripMenuItem1.Click += f2DestroyToolStripMenuItem1_Click;
             // 
             // f3DestroyToolStripMenuItem1
             // 
             f3DestroyToolStripMenuItem1.Name = "f3DestroyToolStripMenuItem1";
-            f3DestroyToolStripMenuItem1.Size = new Size(359, 44);
+            f3DestroyToolStripMenuItem1.Size = new Size(172, 44);
             f3DestroyToolStripMenuItem1.Text = "F3";
             f3DestroyToolStripMenuItem1.Click += f3DestroyToolStripMenuItem1_Click;
             // 
             // AboutToolStripMenuItem
             // 
             AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
-            AboutToolStripMenuItem.Size = new Size(183, 38);
+            AboutToolStripMenuItem.Size = new Size(183, 36);
             AboutToolStripMenuItem.Text = "О программе";
             AboutToolStripMenuItem.Click += AboutToolStripMenuItem_Click;
             // 
             // ExitToolStripMenuItem
             // 
             ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            ExitToolStripMenuItem.Size = new Size(103, 38);
+            ExitToolStripMenuItem.Size = new Size(103, 36);
             ExitToolStripMenuItem.Text = "Выход";
             ExitToolStripMenuItem.Click += ExitToolStripMenuItem_Click;
             // 
@@ -249,11 +249,11 @@ namespace LabWork2._1
             label1.AutoSize = true;
             label1.Dock = DockStyle.Fill;
             label1.Font = new Font("Segoe UI", 20F);
-            label1.Location = new Point(0, 40);
+            label1.Location = new Point(0, 38);
             label1.Name = "label1";
-            label1.Size = new Size(677, 288);
+            label1.Size = new Size(718, 288);
             label1.TabIndex = 1;
-            label1.Text = "Лабораторная работа №2\r\nВариант 25\r\nКузнецов Дмитрий\r\n\r\n";
+            label1.Text = "Лабораторная работа №2.2\r\nВариант 25\r\nКузнецов Дмитрий\r\n\r\n";
             // 
             // Form1
             // 
@@ -264,7 +264,7 @@ namespace LabWork2._1
             Controls.Add(menuStrip1);
             Font = new Font("Segoe UI", 9F);
             Name = "Form1";
-            Text = "Лабораторная работа 2";
+            Text = "Лабораторная работа 2.2";
             FormClosing += Form1_FormClosing;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

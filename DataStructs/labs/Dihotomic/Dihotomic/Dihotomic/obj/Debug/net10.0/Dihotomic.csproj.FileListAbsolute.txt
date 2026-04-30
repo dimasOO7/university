@@ -1,0 +1,15 @@
+C:\Users\REDMI\university\DataStructs\labs\Dihotomic\Dihotomic\Dihotomic\bin\Debug\net10.0\Dihotomic.exe
+C:\Users\REDMI\university\DataStructs\labs\Dihotomic\Dihotomic\Dihotomic\bin\Debug\net10.0\Dihotomic.deps.json
+C:\Users\REDMI\university\DataStructs\labs\Dihotomic\Dihotomic\Dihotomic\bin\Debug\net10.0\Dihotomic.runtimeconfig.json
+C:\Users\REDMI\university\DataStructs\labs\Dihotomic\Dihotomic\Dihotomic\bin\Debug\net10.0\Dihotomic.dll
+C:\Users\REDMI\university\DataStructs\labs\Dihotomic\Dihotomic\Dihotomic\bin\Debug\net10.0\Dihotomic.pdb
+C:\Users\REDMI\university\DataStructs\labs\Dihotomic\Dihotomic\Dihotomic\obj\Debug\net10.0\Dihotomic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\REDMI\university\DataStructs\labs\Dihotomic\Dihotomic\Dihotomic\obj\Debug\net10.0\Dihotomic.AssemblyInfoInputs.cache
+C:\Users\REDMI\university\DataStructs\labs\Dihotomic\Dihotomic\Dihotomic\obj\Debug\net10.0\Dihotomic.AssemblyInfo.cs
+C:\Users\REDMI\university\DataStructs\labs\Dihotomic\Dihotomic\Dihotomic\obj\Debug\net10.0\Dihotomic.csproj.CoreCompileInputs.cache
+C:\Users\REDMI\university\DataStructs\labs\Dihotomic\Dihotomic\Dihotomic\obj\Debug\net10.0\Dihotomic.sourcelink.json
+C:\Users\REDMI\university\DataStructs\labs\Dihotomic\Dihotomic\Dihotomic\obj\Debug\net10.0\Dihotomic.dll
+C:\Users\REDMI\university\DataStructs\labs\Dihotomic\Dihotomic\Dihotomic\obj\Debug\net10.0\refint\Dihotomic.dll
+C:\Users\REDMI\university\DataStructs\labs\Dihotomic\Dihotomic\Dihotomic\obj\Debug\net10.0\Dihotomic.pdb
+C:\Users\REDMI\university\DataStructs\labs\Dihotomic\Dihotomic\Dihotomic\obj\Debug\net10.0\Dihotomic.genruntimeconfig.cache
+C:\Users\REDMI\university\DataStructs\labs\Dihotomic\Dihotomic\Dihotomic\obj\Debug\net10.0\ref\Dihotomic.dll

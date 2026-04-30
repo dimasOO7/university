@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\REDMI\\university\\DataStructs\\labs\\recursionList\\ConsoleApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{96BA40BB-9D52-4530-A021-888449B4AB26}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\redmi\\university\\datastructs\\labs\\recursionlist\\consoleapp1\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96BA40BB-9D52-4530-A021-888449B4AB26}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\redmi\\university\\datastructs\\labs\\recursionlist\\consoleapp1\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
               "ToolTip": "C:\\Users\\REDMI\\university\\DataStructs\\labs\\recursionList\\ConsoleApp1\\ConsoleApp1\\Program.cs",
               "RelativeToolTip": "ConsoleApp1\\Program.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAIwFQAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAIwFUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-13T06:13:42.256Z",
               "EditorCaption": ""
