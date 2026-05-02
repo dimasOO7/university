@@ -1,0 +1,17 @@
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\bin\Debug\net10.0-windows\LabWork3.exe
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\bin\Debug\net10.0-windows\LabWork3.deps.json
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\bin\Debug\net10.0-windows\LabWork3.runtimeconfig.json
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\bin\Debug\net10.0-windows\LabWork3.dll
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\bin\Debug\net10.0-windows\LabWork3.pdb
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\obj\Debug\net10.0-windows\LabWork3.Form1.resources
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\obj\Debug\net10.0-windows\LabWork3.csproj.GenerateResource.cache
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\obj\Debug\net10.0-windows\LabWork3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\obj\Debug\net10.0-windows\LabWork3.AssemblyInfoInputs.cache
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\obj\Debug\net10.0-windows\LabWork3.AssemblyInfo.cs
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\obj\Debug\net10.0-windows\LabWork3.csproj.CoreCompileInputs.cache
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\obj\Debug\net10.0-windows\LabWork3.sourcelink.json
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\obj\Debug\net10.0-windows\LabWork3.dll
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\obj\Debug\net10.0-windows\refint\LabWork3.dll
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\obj\Debug\net10.0-windows\LabWork3.pdb
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\obj\Debug\net10.0-windows\LabWork3.genruntimeconfig.cache
+C:\Users\REDMI\university\DataStructs\lab_works\LabWork3\LabWork3\obj\Debug\net10.0-windows\ref\LabWork3.dll
