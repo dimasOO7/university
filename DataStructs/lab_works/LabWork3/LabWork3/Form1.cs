@@ -2,9 +2,11 @@ namespace LabWork3
 {
     public partial class Form1 : Form
     {
+        private ArTree tree;
         public Form1()
         {
             InitializeComponent();
+            tree = new ArTree();
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -19,12 +21,8 @@ namespace LabWork3
 
         private void CreateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void ProcessingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            Create form = new Create(tree);
+            form.Show();
         }
 
         private void DestroyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -40,6 +38,11 @@ namespace LabWork3
             {
                 e.Cancel = true;
             }
+        }
+
+        private void ShowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

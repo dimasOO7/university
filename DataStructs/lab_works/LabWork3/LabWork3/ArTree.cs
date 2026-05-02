@@ -5,12 +5,11 @@ using System.Xml.Linq;
 
 namespace LabWork3
 {
-    public class ArNode // Класс «Узел дерева арифметических выражений»
+    public class ArNode
     {
-        private char info; // значение операнда в терминальном узле
-        private ArNode left; // ссылка на левое поддерево
-        private ArNode right; // ссылка на правое поддерево
-                              // свойства,
+        private char info;
+        private ArNode left;
+        private ArNode right;
 
         public char Info
         {
@@ -99,7 +98,7 @@ namespace LabWork3
                     }
                     else
                     {
-                        MessageBox.Show("Некорректный ввод, формула состоящая только из оператора");
+                        MessageBox.Show("Ошибка разбора формулы: формула состоящая только из оператора");
                         result = null;
                     }
                 }
@@ -107,7 +106,7 @@ namespace LabWork3
                 {
                     int level = 0;
                     int i = 0;
-                    while (level != 1 || !"+-*".Contains(f[i]))
+                    while (i < f.Length && (level != 1 || !"+-*".Contains(f[i])))
                     {
                         if (f[i] == '(')
                         {
@@ -119,48 +118,73 @@ namespace LabWork3
                         }
                         i++;
                     }
-                    result = new ArNode(f[i]);
-                    result.Left = Create(f.Substring(1, i - 1));
-                    result.Right = Create(f.Substring(i + 1, f.Length - i - 2));
 
-                    char operand = f[i];
-                    if (operand == '+')
+                    if (i >= f.Length)
                     {
-                        if (result.Left != null && result.Left.Info == '0')
-                        {
-                            result = result.Right;
-                        }
-                        else if (result.Right != null && result.Right.Info == '0')
-                        {
-                            result = result.Left;
-                        }
-                    }
-                    else if(operand == '-')
-                    {
-                         if (result.Right != null && result.Right.Info == '0')
-                        {
-                            result = result.Left;
-                        }
+                        MessageBox.Show("Ошибка разбора формулы: Не найден знак (+, -, *) на верхнем уровне.");
+                        result = null;
                     }
                     else
                     {
-                        if ((result.Left != null && result.Left.Info == '0') || (result.Right != null && result.Right.Info == '0'))
+                        result = new ArNode(f[i]);
+                        result.Left = Create(f.Substring(1, i - 1));
+                        result.Right = Create(f.Substring(i + 1, f.Length - i - 2));
+
+                        char operand = f[i];
+                        if (operand == '+')
                         {
-                            result = new ArNode('0');
+                            if (result.Left != null && result.Left.Info == '0')
+                            {
+                                result = result.Right;
+                            }
+                            else if (result.Right != null && result.Right.Info == '0')
+                            {
+                                result = result.Left;
+                            }
                         }
-                        else if(result.Left != null && result.Left.Info == '1')
-                        {  
-                            result = result.Right; 
-                        }
-                        else if(result.Right != null && result.Right.Info == '1')
+                        else if (operand == '-')
                         {
-                            result = result.Left;
+                            if (result.Right != null && result.Right.Info == '0')
+                            {
+                                result = result.Left;
+                            }
+                        }
+                        else
+                        {
+                            if ((result.Left != null && result.Left.Info == '0') || (result.Right != null && result.Right.Info == '0'))
+                            {
+                                result = new ArNode('0');
+                            }
+                            else if (result.Left != null && result.Left.Info == '1')
+                            {
+                                result = result.Right;
+                            }
+                            else if (result.Right != null && result.Right.Info == '1')
+                            {
+                                result = result.Left;
+                            }
                         }
                     }
                 }
             }
             return result;
             
+        }
+
+        public void Show(ArNode root, float x, float y, float dX, float dY, Graphics g, Font font, Brush brush, StringFormat format)
+        {
+            if(root != null)
+            {
+                g.DrawString(root.Info.ToString(), font, brush, x, y, format);
+                if(root.Left != null)
+                {
+                    Show(root.Left,x-dX,y+dY,dX/2,dY,g,font,brush,format);
+                }
+                if (root.Right != null)
+                {
+                    Show(root.Right, x + dX, y + dY, dX/2, dY, g, font, brush, format);
+                }
+            }
         }
     }
 }

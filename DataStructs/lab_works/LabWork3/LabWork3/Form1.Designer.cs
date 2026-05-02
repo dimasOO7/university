@@ -32,7 +32,7 @@
             menuStrip1 = new MenuStrip();
             заданиеToolStripMenuItem = new ToolStripMenuItem();
             CreateToolStripMenuItem = new ToolStripMenuItem();
-            ProcessingToolStripMenuItem = new ToolStripMenuItem();
+            ShowToolStripMenuItem = new ToolStripMenuItem();
             DestroyToolStripMenuItem = new ToolStripMenuItem();
             AboutToolStripMenuItem = new ToolStripMenuItem();
             ExitToolStripMenuItem = new ToolStripMenuItem();
@@ -53,43 +53,43 @@
             // 
             // заданиеToolStripMenuItem
             // 
-            заданиеToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { CreateToolStripMenuItem, ProcessingToolStripMenuItem, DestroyToolStripMenuItem });
+            заданиеToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { CreateToolStripMenuItem, ShowToolStripMenuItem, DestroyToolStripMenuItem });
             заданиеToolStripMenuItem.Name = "заданиеToolStripMenuItem";
-            заданиеToolStripMenuItem.Size = new Size(125, 38);
+            заданиеToolStripMenuItem.Size = new Size(125, 36);
             заданиеToolStripMenuItem.Text = "Задание";
             // 
             // CreateToolStripMenuItem
             // 
             CreateToolStripMenuItem.Name = "CreateToolStripMenuItem";
-            CreateToolStripMenuItem.Size = new Size(359, 44);
+            CreateToolStripMenuItem.Size = new Size(282, 44);
             CreateToolStripMenuItem.Text = "Создание";
             CreateToolStripMenuItem.Click += CreateToolStripMenuItem_Click;
             // 
-            // ProcessingToolStripMenuItem
+            // ShowToolStripMenuItem
             // 
-            ProcessingToolStripMenuItem.Name = "ProcessingToolStripMenuItem";
-            ProcessingToolStripMenuItem.Size = new Size(359, 44);
-            ProcessingToolStripMenuItem.Text = "Обработка";
-            ProcessingToolStripMenuItem.Click += ProcessingToolStripMenuItem_Click;
+            ShowToolStripMenuItem.Name = "ShowToolStripMenuItem";
+            ShowToolStripMenuItem.Size = new Size(282, 44);
+            ShowToolStripMenuItem.Text = "Показ";
+            ShowToolStripMenuItem.Click += ShowToolStripMenuItem_Click;
             // 
             // DestroyToolStripMenuItem
             // 
             DestroyToolStripMenuItem.Name = "DestroyToolStripMenuItem";
-            DestroyToolStripMenuItem.Size = new Size(359, 44);
+            DestroyToolStripMenuItem.Size = new Size(282, 44);
             DestroyToolStripMenuItem.Text = "Разрушение";
             DestroyToolStripMenuItem.Click += DestroyToolStripMenuItem_Click;
             // 
             // AboutToolStripMenuItem
             // 
             AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
-            AboutToolStripMenuItem.Size = new Size(183, 38);
+            AboutToolStripMenuItem.Size = new Size(183, 36);
             AboutToolStripMenuItem.Text = "О программе";
             AboutToolStripMenuItem.Click += AboutToolStripMenuItem_Click;
             // 
             // ExitToolStripMenuItem
             // 
             ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            ExitToolStripMenuItem.Size = new Size(103, 38);
+            ExitToolStripMenuItem.Size = new Size(103, 36);
             ExitToolStripMenuItem.Text = "Выход";
             ExitToolStripMenuItem.Click += ExitToolStripMenuItem_Click;
             // 
@@ -137,7 +137,7 @@
         private ToolStripMenuItem ExitToolStripMenuItem;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem CreateToolStripMenuItem;
-        private ToolStripMenuItem ProcessingToolStripMenuItem;
+        private ToolStripMenuItem ShowToolStripMenuItem;
         private ToolStripMenuItem DestroyToolStripMenuItem;
         private Label label1;
     }
