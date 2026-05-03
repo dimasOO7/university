@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace LabWork3
 {
+    //((((3*a)+(f+c))*((3*a)+(t+1)))*(((3*a)+(f+c))*((3*a)+(t+1))))
     public partial class Create : Form
     {
         private ArTree tree;

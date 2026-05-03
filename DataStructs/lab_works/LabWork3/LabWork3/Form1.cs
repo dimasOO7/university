@@ -16,7 +16,8 @@ namespace LabWork3
 
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            About form = new About();
+            form.Show();
         }
 
         private void CreateToolStripMenuItem_Click(object sender, EventArgs e)
@@ -27,7 +28,15 @@ namespace LabWork3
 
         private void DestroyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            DialogResult result = MessageBox.Show(
+            "Вы уверены, что хотите разрушить дерево",
+            "Подтверждение разрушения",
+            MessageBoxButtons.OKCancel,
+            MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                tree.Destroy();
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

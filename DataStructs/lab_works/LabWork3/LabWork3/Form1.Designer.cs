@@ -32,7 +32,6 @@
             menuStrip1 = new MenuStrip();
             заданиеToolStripMenuItem = new ToolStripMenuItem();
             CreateToolStripMenuItem = new ToolStripMenuItem();
-            ShowToolStripMenuItem = new ToolStripMenuItem();
             DestroyToolStripMenuItem = new ToolStripMenuItem();
             AboutToolStripMenuItem = new ToolStripMenuItem();
             ExitToolStripMenuItem = new ToolStripMenuItem();
@@ -53,7 +52,7 @@
             // 
             // заданиеToolStripMenuItem
             // 
-            заданиеToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { CreateToolStripMenuItem, ShowToolStripMenuItem, DestroyToolStripMenuItem });
+            заданиеToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { CreateToolStripMenuItem, DestroyToolStripMenuItem });
             заданиеToolStripMenuItem.Name = "заданиеToolStripMenuItem";
             заданиеToolStripMenuItem.Size = new Size(125, 36);
             заданиеToolStripMenuItem.Text = "Задание";
@@ -64,13 +63,6 @@
             CreateToolStripMenuItem.Size = new Size(282, 44);
             CreateToolStripMenuItem.Text = "Создание";
             CreateToolStripMenuItem.Click += CreateToolStripMenuItem_Click;
-            // 
-            // ShowToolStripMenuItem
-            // 
-            ShowToolStripMenuItem.Name = "ShowToolStripMenuItem";
-            ShowToolStripMenuItem.Size = new Size(282, 44);
-            ShowToolStripMenuItem.Text = "Показ";
-            ShowToolStripMenuItem.Click += ShowToolStripMenuItem_Click;
             // 
             // DestroyToolStripMenuItem
             // 
@@ -106,20 +98,20 @@
             label1.Font = new Font("Segoe UI", 20F);
             label1.Location = new Point(0, 40);
             label1.Name = "label1";
-            label1.Size = new Size(677, 288);
+            label1.Size = new Size(677, 216);
             label1.TabIndex = 2;
-            label1.Text = "Лабораторная работа №3\r\nВариант 30.1\r\nКузнецов Дмитрий\r\n\r\n";
+            label1.Text = "Лабораторная работа №3\r\nВариант 30.1\r\nКузнецов Дмитрий";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(674, 259);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            MinimumSize = new Size(700, 330);
             Name = "Form1";
             Text = "Лаюораторная работа 3";
             FormClosing += Form1_FormClosing;
@@ -137,7 +129,6 @@
         private ToolStripMenuItem ExitToolStripMenuItem;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem CreateToolStripMenuItem;
-        private ToolStripMenuItem ShowToolStripMenuItem;
         private ToolStripMenuItem DestroyToolStripMenuItem;
         private Label label1;
     }

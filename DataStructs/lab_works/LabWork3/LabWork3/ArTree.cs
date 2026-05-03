@@ -121,7 +121,7 @@ namespace LabWork3
 
                     if (i >= f.Length)
                     {
-                        MessageBox.Show("Ошибка разбора формулы: Не найден знак (+, -, *) на верхнем уровне.");
+                        MessageBox.Show("Ошибка разбора формулы: Не найден знак (+, -, *)");
                         result = null;
                     }
                     else
