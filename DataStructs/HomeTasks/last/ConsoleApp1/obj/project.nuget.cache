@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ACRBrD3P1+w=",
+  "success": true,
+  "projectFilePath": "/home/dima/university/DataStructs/HomeTasks/last/ConsoleApp1/ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "/home/dima/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.4/microsoft.aspnetcore.app.ref.10.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
