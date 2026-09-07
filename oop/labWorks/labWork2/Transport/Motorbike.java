@@ -1,3 +1,5 @@
+package Transport;
+
 import java.util.Random;
 
 public class Motorbike implements Transport {
@@ -41,7 +43,7 @@ public class Motorbike implements Transport {
         String duplicateModelFix = "";
         while (size < modelsSize) {
             try {
-                addModel(mark + duplicateModelFix + size, random.nextDouble(1000, 100000));
+                addModel(mark + duplicateModelFix + (size + 1), random.nextDouble(1000, 100000));
             } catch (DuplicateModelNameException e) {
                 System.out.println("Ошибка: " + e.getMessage());
                 duplicateModelFix += "0";

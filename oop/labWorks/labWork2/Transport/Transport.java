@@ -1,3 +1,5 @@
+package Transport;
+
 public interface Transport {
 
     public abstract String getMark();

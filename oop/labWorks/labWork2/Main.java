@@ -1,3 +1,5 @@
+import Transport.*;
+
 public class Main {
     public static void main(String[] args) {
         Transport[] transports = new Transport[2];
@@ -14,7 +16,7 @@ public class Main {
                 transport.removeModel(transport.getModelsNames()[1]);
                 transport.show();
                 System.out.println("Средняя цена: " + transport.getAvgCost());
-            } catch (DuplicateModelNameException | NoSuchModelNameException e) {
+            } catch (DuplicateModelNameException | NoSuchModelNameException | ModelPriceOutOfBoundsException e) {
                 System.out.println("Ошибка: " + e.getMessage());
             }
         }
