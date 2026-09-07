@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Created-By: Кузнецов
+Main-Class: Main
+Implementation-Title: Transports
+Implementation-Version: 5.0

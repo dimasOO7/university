@@ -1,18 +1,7 @@
 import java.util.Arrays;
-import java.util.Scanner;
+import java.util.Random;
 
-public class Car {
-    private String mark;
-    private Model[] models;
-
-    public String getMark() {
-        return mark;
-    }
-
-    public void changeMark(String new_mark) {
-        mark = new_mark;
-    }
-
+public class Car implements Transport {
     private class Model {
         public String name;
         public double cost;
@@ -23,21 +12,46 @@ public class Car {
         }
     }
 
-    public void changeModelName(String oldName, String newName) {
+    private String mark;
+    private Model[] models;
+
+    public Car(String mark, int modelsSize) {
+        this.mark = mark;
+        models = new Model[modelsSize];
+        Random random = new Random();
+        for (int i = 0; i < modelsSize; i++) {
+            models[i] = new Model(mark + (i + 1), random.nextDouble(1000, 100000));
+        }
+    }
+
+    @Override
+    public String getMark() {
+        return mark;
+    }
+
+    @Override
+    public void changeMark(String new_mark) {
+        mark = new_mark;
+    }
+
+    @Override
+    public void changeModelName(String oldName, String newName)
+            throws DuplicateModelNameException, NoSuchModelNameException {
         Model targetModel = null;
         for (Model model : models) {
             if (model.name.equals(oldName)) {
                 targetModel = model;
             } else if (model.name.equals(newName)) {
-                throw new RuntimeException();
+                throw new DuplicateModelNameException(newName);
             }
         }
         if (targetModel == null) {
-            throw new RuntimeException("Не найдена старая модель");
+            throw new NoSuchModelNameException(oldName);
         }
         targetModel.name = newName;
     }
 
+    @Override
     public String[] getModelsNames() {
         String[] names = new String[models.length];
         for (int i = 0; i < names.length; i++) {
@@ -46,25 +60,31 @@ public class Car {
         return names;
     }
 
-    public double getModelCost(String name) {
+    @Override
+    public double getModelCost(String name) throws NoSuchModelNameException {
         for (Model model : models) {
             if (model.name.equals(name)) {
                 return model.cost;
             }
         }
-        throw new RuntimeException();
+        throw new NoSuchModelNameException(name);
     }
 
-    public void changeModelCost(String name, double newCost) {
+    @Override
+    public void changeModelCost(String name, double newCost) throws NoSuchModelNameException {
+        if (newCost < 0) {
+            throw new ModelPriceOutOfBoundsException(newCost);
+        }
         for (Model model : models) {
             if (model.name.equals(name)) {
                 model.cost = newCost;
                 return;
             }
         }
-        throw new RuntimeException();
+        throw new NoSuchModelNameException(name);
     }
 
+    @Override
     public double[] getAllModelsCost() {
         double[] costs = new double[models.length];
         for (int i = 0; i < costs.length; i++) {
@@ -73,17 +93,19 @@ public class Car {
         return costs;
     }
 
-    public void addModel(String name, double cost) {
+    @Override
+    public void addModel(String name, double cost) throws DuplicateModelNameException {
         for (Model model : models) {
             if (model.name.equals(name)) {
-                throw new RuntimeException();
+                throw new DuplicateModelNameException(name);
             }
         }
         models = Arrays.copyOf(models, models.length + 1);
         models[models.length - 1] = new Model(name, cost);
     }
 
-    public void removeModel(String name) {
+    @Override
+    public void removeModel(String name) throws NoSuchModelNameException {
         int targetIndex = -1;
         for (int i = 0; i < models.length; i++) {
             if (models[i].name.equals(name)) {
@@ -92,40 +114,14 @@ public class Car {
             }
         }
         if (targetIndex < 0) {
-            throw new RuntimeException();
+            throw new NoSuchModelNameException(name);
         }
         System.arraycopy(models, targetIndex + 1, models, targetIndex, models.length - targetIndex - 1);
         models = Arrays.copyOf(models, models.length - 1);
     }
 
+    @Override
     public int getModelsLength() {
         return models.length;
-    }
-
-    public Car(String mark, int modelsSize) {
-        this.mark = mark;
-        models = new Model[modelsSize];
-        Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < modelsSize; i++) {
-            boolean checkedName = false;
-            String name = "";
-            while (!checkedName) {
-                System.out.println("Введите название для модели №" + (i + 1) + ":");
-                name = scanner.nextLine();
-                if (name != null && !name.equals("")) {
-                    checkedName = true;
-                    for (int j = 0; j < i; j++) {
-                        if (models[j].name.equals(name)) {
-                            checkedName = false;
-                            break;
-                        }
-                    }
-                }
-            }
-
-            System.out.println("Введите цену модели " + name + ":");
-            double cost = Double.parseDouble(scanner.nextLine());
-            models[i] = new Model(name, cost);
-        }
     }
 }

@@ -1,6 +1,6 @@
-import java.util.Scanner;
+import java.util.Random;
 
-public class Motorbike {
+public class Motorbike implements Transport {
     private class Model {
         String name = null;
         double cost = Double.NaN;
@@ -37,45 +37,53 @@ public class Motorbike {
 
     public Motorbike(String mark, int modelsSize) {
         this.mark = mark;
-        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        String duplicateModelFix = "";
         while (size < modelsSize) {
-            System.out.println("Введите название для модели №" + (size + 1) + ":");
-            String name = scanner.nextLine();
-            System.out.println("Введите цену модели " + name + ":");
-            double cost = Double.parseDouble(scanner.nextLine());
-
-            addModel(name, cost);
+            try {
+                addModel(mark + duplicateModelFix + size, random.nextDouble(1000, 100000));
+            } catch (DuplicateModelNameException e) {
+                System.out.println("Ошибка: " + e.getMessage());
+                duplicateModelFix += "0";
+            } catch (ModelPriceOutOfBoundsException e) {
+                System.out.println("Ошибка: " + e.getMessage());
+            }
         }
         lastModified = System.currentTimeMillis();
     }
 
+    @Override
     public String getMark() {
         return mark;
     }
 
+    @Override
     public void changeMark(String new_mark) {
         mark = new_mark;
         lastModified = System.currentTimeMillis();
     }
 
-    public void changeModelName(String oldName, String newName) {
+    @Override
+    public void changeModelName(String oldName, String newName)
+            throws DuplicateModelNameException, NoSuchModelNameException {
         Model target = null;
         Model p = head.next;
         while (p != head) {
             if (p.name.equals(oldName)) {
                 target = p;
             } else if (p.name.equals(newName)) {
-                throw new RuntimeException();
+                throw new DuplicateModelNameException(newName);
             }
             p = p.next;
         }
         if (target == null) {
-            throw new RuntimeException();
+            throw new NoSuchModelNameException(oldName);
         }
         target.name = newName;
         lastModified = System.currentTimeMillis();
     }
 
+    @Override
     public String[] getModelsNames() {
         String[] names = new String[size];
         Model p = head.next;
@@ -88,7 +96,8 @@ public class Motorbike {
         return names;
     }
 
-    public double getModelCost(String name) {
+    @Override
+    public double getModelCost(String name) throws NoSuchModelNameException {
         Model p = head.next;
         while (p != head) {
             if (p.name.equals(name)) {
@@ -96,10 +105,14 @@ public class Motorbike {
             }
             p = p.next;
         }
-        throw new RuntimeException();
+        throw new NoSuchModelNameException(name);
     }
 
-    public void changeModelCost(String name, double newCost) {
+    @Override
+    public void changeModelCost(String name, double newCost) throws NoSuchModelNameException {
+        if (newCost < 0) {
+            throw new ModelPriceOutOfBoundsException(newCost);
+        }
         Model p = head.next;
         while (p != head) {
             if (p.name.equals(name)) {
@@ -109,9 +122,10 @@ public class Motorbike {
             }
             p = p.next;
         }
-        throw new RuntimeException();
+        throw new NoSuchModelNameException(name);
     }
 
+    @Override
     public double[] getAllModelsCost() {
         double[] costs = new double[size];
         Model p = head.next;
@@ -124,11 +138,15 @@ public class Motorbike {
         return costs;
     }
 
-    public void addModel(String name, double cost) {
+    @Override
+    public void addModel(String name, double cost) throws DuplicateModelNameException {
+        if (cost < 0) {
+            throw new ModelPriceOutOfBoundsException(cost);
+        }
         Model p = head.next;
         while (p != head) {
             if (p.name.equals(name)) {
-                throw new RuntimeException();
+                throw new DuplicateModelNameException(name);
             }
             p = p.next;
         }
@@ -139,7 +157,8 @@ public class Motorbike {
         lastModified = System.currentTimeMillis();
     }
 
-    public void removeModel(String name) {
+    @Override
+    public void removeModel(String name) throws NoSuchModelNameException {
         Model p = head.next;
         while (p != head) {
             if (p.name.equals(name)) {
@@ -151,8 +170,10 @@ public class Motorbike {
             }
             p = p.next;
         }
+        throw new NoSuchModelNameException(name);
     }
 
+    @Override
     public int getModelsLength() {
         return size;
     }
