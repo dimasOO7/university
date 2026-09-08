@@ -3,8 +3,8 @@
 [ext_resource type="Shader" uid="uid://diu3l05cespdd" path="res://fractal.gdshader" id="1_5femd"]
 
 [sub_resource type="Gradient" id="Gradient_ig7tw"]
-offsets = PackedFloat32Array(0, 0.52095807, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1)
+offsets = PackedFloat32Array(0, 0.16, 0.42, 0.64, 1)
+colors = PackedColorArray(0, 0.02745098, 0.39215687, 1, 0.1254902, 0.41960785, 0.79607844, 1, 0.92941177, 1, 1, 1, 1, 0.5019608, 0, 1, 0, 0.007843138, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_7dm0k"]
 gradient = SubResource("Gradient_ig7tw")
@@ -16,3 +16,4 @@ shader_parameter/x_min = -2.2
 shader_parameter/x_max = 1.0
 shader_parameter/y_min = -1.2
 shader_parameter/y_max = 1.2
+shader_parameter/maxColor = 100

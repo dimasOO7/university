@@ -1,16 +1,105 @@
 [gd_scene format=3 uid="uid://n02y18jsltsv"]
 
 [ext_resource type="Material" uid="uid://cdv7v20urp6x4" path="res://fractal.tres" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://bi7ctcets2two" path="res://Fractal.cs" id="2_0xm2m"]
 
 [node name="Node2D" type="Control" unique_id=2100920688]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1078497164]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=732015699]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer" unique_id=1078497164 node_paths=PackedStringArray("max_x", "min_x", "max_y", "min_y", "max_color")]
 material = ExtResource("1_ig7tw")
-layout_mode = 0
-offset_left = 1083.0
-offset_top = -386.0
-offset_right = 2083.0
-offset_bottom = 614.0
-rotation = 1.5707964
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+script = ExtResource("2_0xm2m")
+max_x = NodePath("../VBoxContainer/max_x")
+min_x = NodePath("../VBoxContainer/min_x")
+max_y = NodePath("../VBoxContainer/max_y")
+min_y = NodePath("../VBoxContainer/min_y")
+max_color = NodePath("../VBoxContainer/max_color")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=521106693]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1904231678]
+layout_mode = 2
+text = "max X"
+
+[node name="max_x" type="SpinBox" parent="HBoxContainer/VBoxContainer" unique_id=353155440]
+layout_mode = 2
+min_value = -10.0
+max_value = 10.0
+step = 0.001
+value = 1.0
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=799983163]
+layout_mode = 2
+text = "min X"
+
+[node name="min_x" type="SpinBox" parent="HBoxContainer/VBoxContainer" unique_id=1046031237]
+layout_mode = 2
+min_value = -10.0
+max_value = 10.0
+step = 0.001
+value = -2.2
+
+[node name="Label3" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1389215558]
+layout_mode = 2
+text = "min Y"
+
+[node name="max_y" type="SpinBox" parent="HBoxContainer/VBoxContainer" unique_id=965055049]
+layout_mode = 2
+min_value = -10.0
+max_value = 10.0
+step = 0.001
+value = 1.1999999999999993
+
+[node name="Label4" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=564786447]
+layout_mode = 2
+text = "max Y"
+
+[node name="min_y" type="SpinBox" parent="HBoxContainer/VBoxContainer" unique_id=1541129464]
+layout_mode = 2
+min_value = -10.0
+max_value = 10.0
+step = 0.001
+value = -1.1999999999999993
+
+[node name="Label5" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=2088579744]
+layout_mode = 2
+text = "MAXCOLOR"
+
+[node name="max_color" type="SpinBox" parent="HBoxContainer/VBoxContainer" unique_id=1837229749]
+layout_mode = 2
+min_value = 1.0
+max_value = 1000.0
+value = 100.0
+rounded = true
+
+[node name="reset" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=311169048]
+layout_mode = 2
+text = "Сбросить"
+
+[connection signal="value_changed" from="HBoxContainer/VBoxContainer/max_x" to="HBoxContainer/ColorRect" method="_on_max_x_changed"]
+[connection signal="value_changed" from="HBoxContainer/VBoxContainer/min_x" to="HBoxContainer/ColorRect" method="_on_min_x_changed"]
+[connection signal="value_changed" from="HBoxContainer/VBoxContainer/max_y" to="HBoxContainer/ColorRect" method="_on_max_y_changed"]
+[connection signal="value_changed" from="HBoxContainer/VBoxContainer/min_y" to="HBoxContainer/ColorRect" method="_on_min_y_changed"]
+[connection signal="value_changed" from="HBoxContainer/VBoxContainer/max_color" to="HBoxContainer/ColorRect" method="_on_MAXCOLOR_changed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/reset" to="HBoxContainer/ColorRect" method="_on_reset_pressed"]
