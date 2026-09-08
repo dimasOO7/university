@@ -188,4 +188,12 @@ public partial class Fractal : ColorRect
         material.SetShaderParameter("y_min", (float)_curMinY);
         material.SetShaderParameter("y_max", (float)_curMaxY);
     }
+
+    public override void _Input(InputEvent @event)
+    {
+        if (@event is InputEventKey keyEvent && keyEvent.Pressed && keyEvent.Keycode == Key.Escape)
+        {
+            GetTree().Quit();
+        }
+    }
 }
