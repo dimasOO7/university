@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://n02y18jsltsv"]
+
+[ext_resource type="Material" uid="uid://cdv7v20urp6x4" path="res://fractal.tres" id="1_ig7tw"]
+
+[node name="Node2D" type="Control" unique_id=2100920688]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1078497164]
+material = ExtResource("1_ig7tw")
+layout_mode = 0
+offset_left = 1083.0
+offset_top = -386.0
+offset_right = 2083.0
+offset_bottom = 614.0
+rotation = 1.5707964
