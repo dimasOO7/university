@@ -1,10 +1,11 @@
 package Transport;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Car implements Transport {
-    private class Model {
+public class Car implements Transport, Serializable {
+    private class Model implements Serializable {
         public String name;
         public double cost;
 

@@ -1,9 +1,10 @@
 package Transport;
 
+import java.io.Serializable;
 import java.util.Random;
 
-public class Motorbike implements Transport {
-    private class Model {
+public class Motorbike implements Transport, Serializable {
+    private class Model implements Serializable {
         String name = null;
         double cost = Double.NaN;
         Model prev = null;
@@ -27,7 +28,7 @@ public class Motorbike implements Transport {
 
     private int size = 0;
     private Model head;
-    private long lastModified;
+    private transient long lastModified;
     private String mark;
 
     {
