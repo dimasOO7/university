@@ -90,7 +90,7 @@ public class Main {
         try (InputStream fileIn = new FileInputStream("car.serialized");
                 ObjectInputStream in = new ObjectInputStream(fileIn)) {
             transports[6] = (Transport) in.readObject();
-            transports[6].changeMark("сериализованная машина");
+            // transports[6].changeMark("сериализованная машина");
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -98,7 +98,7 @@ public class Main {
         try (InputStream fileIn = new FileInputStream("bike.serialized");
                 ObjectInputStream in = new ObjectInputStream(fileIn)) {
             transports[7] = (Transport) in.readObject();
-            transports[7].changeMark("сериализованный мотоцикл");
+            // transports[7].changeMark("сериализованный мотоцикл");
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -113,12 +113,12 @@ public class Main {
         System.out.println("Ручной ввод транспорта:");
         System.out.println("1.тип Car или Motorbike");
         System.out.println("2.марка");
-        System.out.println("3.название модели 1");
-        System.out.println("4.цена модели 1");
-        System.out.println("5.название модели 2");
-        System.out.println("6.цена модели 2");
+        System.out.println("3.количество моделей");
+        System.out.println("4.название модели 1");
+        System.out.println("5.цена модели 1");
+        System.out.println("6.название модели 2");
+        System.out.println("7.цена модели 2");
         System.out.println("...");
-        System.out.println("7. Ctr+D для Linux/Mac, Ctrl+Z для Windows");
         try {
             Transport transportFromReader = TransportIO.readTransport(new java.io.InputStreamReader(System.in));
             java.io.PrintWriter pw = new java.io.PrintWriter(System.out);

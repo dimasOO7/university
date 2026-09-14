@@ -14,10 +14,10 @@ import java.nio.charset.StandardCharsets;
 public class TransportIO {
     public static void outputTransport(Transport v, OutputStream out) throws IOException {
         DataOutputStream dOutStream = new DataOutputStream(out);
-        byte[] classBytes = v.getClass().getSimpleName().getBytes();
+        byte[] classBytes = v.getClass().getSimpleName().getBytes(StandardCharsets.UTF_8);
         dOutStream.writeInt(classBytes.length);
         dOutStream.write(classBytes);
-        byte[] markBytes = v.getMark().getBytes();
+        byte[] markBytes = v.getMark().getBytes(StandardCharsets.UTF_8);
         dOutStream.writeInt(markBytes.length);
         dOutStream.write(markBytes);
 
@@ -29,7 +29,7 @@ public class TransportIO {
         String[] names = v.getModelsNames();
 
         for (int i = 0; i < modelsCount; i++) {
-            byte[] nameBytes = names[i].getBytes();
+            byte[] nameBytes = names[i].getBytes(StandardCharsets.UTF_8);
             dOutStream.writeInt(nameBytes.length);
             dOutStream.write(nameBytes);
             dOutStream.writeDouble(costs[i]);
@@ -78,6 +78,7 @@ public class TransportIO {
         PrintWriter writer = new PrintWriter(out);
         writer.println(v.getClass().getSimpleName());
         writer.println(v.getMark());
+        writer.println(v.getModelsLength());
 
         double[] costs = v.getAllModelsCost();
         String[] names = v.getModelsNames();
@@ -85,6 +86,7 @@ public class TransportIO {
             writer.println(names[i]);
             writer.println(costs[i]);
         }
+        writer.flush();
     }
 
     public static Transport readTransport(Reader in) throws IOException {
@@ -105,16 +107,16 @@ public class TransportIO {
                 throw new IllegalArgumentException("Неизвестный тип");
         }
 
-        String name = reader.readLine();
+        int length = Integer.parseInt(reader.readLine());
 
-        while (name != null) {
+        for (int i = 0; i < length; i++) {
+            String name = reader.readLine();
             double cost = Double.parseDouble(reader.readLine());
             try {
                 transport.addModel(name, cost);
             } catch (DuplicateModelNameException e) {
                 System.err.println(e.getMessage() + " пропуск этой модели");
             }
-            name = reader.readLine();
         }
 
         return transport;

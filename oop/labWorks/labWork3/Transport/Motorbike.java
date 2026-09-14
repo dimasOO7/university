@@ -1,5 +1,6 @@
 package Transport;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.Random;
 
@@ -7,8 +8,8 @@ public class Motorbike implements Transport, Serializable {
     private class Model implements Serializable {
         String name = null;
         double cost = Double.NaN;
-        Model prev = null;
-        Model next = null;
+        transient Model prev = null;
+        transient Model next = null;
 
         public Model() {
         }
@@ -27,7 +28,7 @@ public class Motorbike implements Transport, Serializable {
     }
 
     private int size = 0;
-    private Model head;
+    private transient Model head;
     private transient long lastModified;
     private String mark;
 
@@ -179,5 +180,31 @@ public class Motorbike implements Transport, Serializable {
     @Override
     public int getModelsLength() {
         return size;
+    }
+
+    private void writeObject(java.io.ObjectOutputStream out) throws IOException {
+        out.defaultWriteObject();
+
+        Model m = head.next;
+        while (m != head) {
+            out.writeObject(m);
+            m = m.next;
+        }
+    }
+
+    private void readObject(java.io.ObjectInputStream in) throws IOException, ClassNotFoundException {
+        in.defaultReadObject();
+
+        head = new Model();
+        head.prev = head;
+        head.next = head;
+        for (int i = 0; i < size; i++) {
+            Model newModel = (Model) in.readObject();
+            newModel.next = head;
+            newModel.prev = head.prev;
+            head.prev.next = newModel;
+            head.prev = newModel;
+        }
+        lastModified = System.currentTimeMillis();
     }
 }
