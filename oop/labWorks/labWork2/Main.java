@@ -11,11 +11,14 @@ public class Main {
                 System.out.println("марка: " + transport.getMark());
                 System.out.println("Класс: " + transport.getClass().getName());
                 transport.addModel("Точно уникальное название", 9999999);
-                transport.changeModelName("Точно уникальное название", "пупупу");
-                transport.changeModelCost(transport.getModelsNames()[0], 100);
+                //transport.addModel("Точно уникальное название", -9999999);
+                transport.setModelName("Точно уникальное название", "пупупу");
+                //transport.setModelName("Точно не существующая модель", "тутутут");
+                //transport.addModel("пупупу", 50000);
+                transport.setModelCost(transport.getModelsNames()[0], 100);
                 transport.removeModel(transport.getModelsNames()[1]);
-                transport.show();
-                System.out.println("Средняя цена: " + transport.getAvgCost());
+                TransportStatic.show(transport);
+                System.out.println("Средняя цена: " + TransportStatic.getAvgCost(transport));
             } catch (DuplicateModelNameException | NoSuchModelNameException | ModelPriceOutOfBoundsException e) {
                 System.out.println("Ошибка: " + e.getMessage());
             }

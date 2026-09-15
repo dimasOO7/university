@@ -32,12 +32,12 @@ public class Car implements Transport {
     }
 
     @Override
-    public void changeMark(String new_mark) {
+    public void setMark(String new_mark) {
         mark = new_mark;
     }
 
     @Override
-    public void changeModelName(String oldName, String newName)
+    public void setModelName(String oldName, String newName)
             throws DuplicateModelNameException, NoSuchModelNameException {
         Model targetModel = null;
         for (Model model : models) {
@@ -73,7 +73,7 @@ public class Car implements Transport {
     }
 
     @Override
-    public void changeModelCost(String name, double newCost) throws NoSuchModelNameException {
+    public void setModelCost(String name, double newCost) throws NoSuchModelNameException {
         if (newCost < 0) {
             throw new ModelPriceOutOfBoundsException(newCost);
         }
@@ -97,6 +97,9 @@ public class Car implements Transport {
 
     @Override
     public void addModel(String name, double cost) throws DuplicateModelNameException {
+    if (cost < 0) {
+            throw new ModelPriceOutOfBoundsException(cost);
+        }
         for (Model model : models) {
             if (model.name.equals(name)) {
                 throw new DuplicateModelNameException(name);

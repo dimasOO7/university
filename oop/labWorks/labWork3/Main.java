@@ -31,14 +31,14 @@ public class Main {
 
         try (InputStream in = new FileInputStream("car.transport")) {
             transports[2] = TransportIO.inputTransport(in);
-            transports[2].changeMark("Прочитанная машина");
+            transports[2].setMark("Прочитанная машина");
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         try (InputStream in = new FileInputStream("bike.transport")) {
             transports[3] = TransportIO.inputTransport(in);
-            transports[3].changeMark("Двухколёсный файл");
+            transports[3].setMark("Двухколёсный файл");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -59,14 +59,14 @@ public class Main {
 
         try (FileReader in = new FileReader("car.txt")) {
             transports[4] = TransportIO.readTransport(in);
-            transports[4].changeMark("машина из символов");
+            transports[4].setMark("машина из символов");
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         try (FileReader in = new FileReader("bike.txt")) {
             transports[5] = TransportIO.readTransport(in);
-            transports[5].changeMark("Мотоцикл из символов");
+            transports[5].setMark("Мотоцикл из символов");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -106,8 +106,8 @@ public class Main {
         for (Transport transport : transports) {
             System.out.println("марка: " + transport.getMark());
             System.out.println("Класс: " + transport.getClass().getName());
-            transport.show();
-            System.out.println("Средняя цена: " + transport.getAvgCost());
+            TransportStatic.show(transport);
+            System.out.println("Средняя цена: " + TransportStatic.getAvgCost(transport));
         }
 
         System.out.println("Ручной ввод транспорта:");
@@ -121,10 +121,10 @@ public class Main {
         System.out.println("...");
         try {
             Transport transportFromReader = TransportIO.readTransport(new java.io.InputStreamReader(System.in));
-            java.io.PrintWriter pw = new java.io.PrintWriter(System.out);
+            java.io.OutputStreamWriter pw = new java.io.OutputStreamWriter(System.out);
             TransportIO.writeTransport(transportFromReader, pw);
             pw.flush();
-            transportFromReader.show();
+            TransportStatic.show(transportFromReader);
         } catch (IOException e) {
             e.printStackTrace();
         }

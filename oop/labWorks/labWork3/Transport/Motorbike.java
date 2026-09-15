@@ -1,6 +1,5 @@
 package Transport;
 
-import java.io.IOException;
 import java.io.Serializable;
 import java.util.Random;
 
@@ -8,8 +7,8 @@ public class Motorbike implements Transport, Serializable {
     private class Model implements Serializable {
         String name = null;
         double cost = Double.NaN;
-        transient Model prev = null;
-        transient Model next = null;
+        Model prev = null;
+        Model next = null;
 
         public Model() {
         }
@@ -28,7 +27,7 @@ public class Motorbike implements Transport, Serializable {
     }
 
     private int size = 0;
-    private transient Model head;
+    private Model head;
     private transient long lastModified;
     private String mark;
 
@@ -62,13 +61,13 @@ public class Motorbike implements Transport, Serializable {
     }
 
     @Override
-    public void changeMark(String new_mark) {
+    public void setMark(String new_mark) {
         mark = new_mark;
         lastModified = System.currentTimeMillis();
     }
 
     @Override
-    public void changeModelName(String oldName, String newName)
+    public void setModelName(String oldName, String newName)
             throws DuplicateModelNameException, NoSuchModelNameException {
         Model target = null;
         Model p = head.next;
@@ -113,7 +112,7 @@ public class Motorbike implements Transport, Serializable {
     }
 
     @Override
-    public void changeModelCost(String name, double newCost) throws NoSuchModelNameException {
+    public void setModelCost(String name, double newCost) throws NoSuchModelNameException {
         if (newCost < 0) {
             throw new ModelPriceOutOfBoundsException(newCost);
         }
@@ -182,29 +181,4 @@ public class Motorbike implements Transport, Serializable {
         return size;
     }
 
-    private void writeObject(java.io.ObjectOutputStream out) throws IOException {
-        out.defaultWriteObject();
-
-        Model m = head.next;
-        while (m != head) {
-            out.writeObject(m);
-            m = m.next;
-        }
-    }
-
-    private void readObject(java.io.ObjectInputStream in) throws IOException, ClassNotFoundException {
-        in.defaultReadObject();
-
-        head = new Model();
-        head.prev = head;
-        head.next = head;
-        for (int i = 0; i < size; i++) {
-            Model newModel = (Model) in.readObject();
-            newModel.next = head;
-            newModel.prev = head.prev;
-            head.prev.next = newModel;
-            head.prev = newModel;
-        }
-        lastModified = System.currentTimeMillis();
-    }
 }
