@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Car implements Transport, Serializable {
+public class Car implements Transport {
     private class Model implements Serializable {
         public String name;
         public double cost;

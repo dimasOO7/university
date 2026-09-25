@@ -1,6 +1,8 @@
 package Transport;
 
-public interface Transport  {
+import java.io.Serializable;
+
+public interface Transport extends Serializable {
 
     public abstract String getMark();
 

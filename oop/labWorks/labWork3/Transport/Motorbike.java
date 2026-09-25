@@ -3,7 +3,7 @@ package Transport;
 import java.io.Serializable;
 import java.util.Random;
 
-public class Motorbike implements Transport, Serializable {
+public class Motorbike implements Transport {
     private class Model implements Serializable {
         String name = null;
         double cost = Double.NaN;
