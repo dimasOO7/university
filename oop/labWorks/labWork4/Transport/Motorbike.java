@@ -2,10 +2,11 @@ package Transport;
 
 import java.io.Serializable;
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Random;
 
 public class Motorbike implements Transport {
-    private class Model implements Serializable {
+    private class Model implements Serializable, Cloneable {
         String name = null;
         double cost = Double.NaN;
         Model prev = null;
@@ -29,6 +30,11 @@ public class Motorbike implements Transport {
         @Override
         public String toString() {
             return name + " : " + cost;
+        }
+
+        @Override
+        public Object clone() throws CloneNotSupportedException {
+            return super.clone();
         }
     }
 
@@ -212,9 +218,12 @@ public class Motorbike implements Transport {
         if (obj == null) {
             return false;
         }
+        if (obj == this) {
+            return true;
+        }
         if (obj instanceof Transport) {
             Transport transport = (Transport) obj;
-            if (transport.getMark().equals(mark)) {
+            if (Objects.equals(mark, transport.getMark())) {
                 if (transport.getModelsLength() == size) {
                     return Arrays.equals(transport.getModelsNames(), getModelsNames())
                             && Arrays.equals(transport.getAllModelsCost(), getAllModelsCost());
@@ -222,5 +231,33 @@ public class Motorbike implements Transport {
             }
         }
         return false;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hashCode(mark);
+        result = 31 * result + Arrays.hashCode(getModelsNames());
+        result = 31 * result + Arrays.hashCode(getAllModelsCost());
+        return result;
+    }
+
+    @Override
+    public Object clone() {
+        Motorbike result = null;
+        try {
+            result = (Motorbike) super.clone();
+            result.head = (Model) result.head.clone();
+            Model p = result.head;
+            while (p.next != head) {
+                p.next = (Model) p.next.clone();
+                p.next.prev = p;
+                p = p.next;
+            }
+            p.next = result.head;
+            result.head.prev = p;
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 }

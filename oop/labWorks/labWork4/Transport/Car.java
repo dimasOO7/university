@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.Objects;
 
 public class Car implements Transport {
-    private class Model implements Serializable {
+    private class Model implements Serializable, Cloneable {
         public String name;
         public double cost;
 
@@ -21,9 +21,10 @@ public class Car implements Transport {
         }
 
         @Override
-        public int hashCode() {
-            return Objects.hash(name, cost);
+        public Object clone() throws CloneNotSupportedException {
+            return super.clone();
         }
+
     }
 
     private String mark;
@@ -163,9 +164,12 @@ public class Car implements Transport {
         if (obj == null) {
             return false;
         }
+        if (obj == this) {
+            return true;
+        }
         if (obj instanceof Transport) {
             Transport transport = (Transport) obj;
-            if (transport.getMark().equals(mark)) {
+            if (Objects.equals(mark, transport.getMark())) {
                 if (transport.getModelsLength() == models.length) {
                     return Arrays.equals(transport.getModelsNames(), getModelsNames())
                             && Arrays.equals(transport.getAllModelsCost(), getAllModelsCost());
@@ -177,8 +181,25 @@ public class Car implements Transport {
 
     @Override
     public int hashCode() {
-        int result = mark.hashCode();
-        result += Arrays.hashCode(models);
+        int result = Objects.hashCode(mark);
+        result = 31 * result + Arrays.hashCode(getModelsNames());
+        result = 31 * result + Arrays.hashCode(getAllModelsCost());
+        return result;
+    }
+
+    @Override
+    public Object clone() {
+        Car result = null;
+        try {
+            result = (Car) super.clone();
+            result.models = (Model[]) models.clone();
+            for (int i = 0; i < models.length; i++) {
+                result.models[i] = (Model) models[i].clone();
+            }
+
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
         return result;
     }
 }

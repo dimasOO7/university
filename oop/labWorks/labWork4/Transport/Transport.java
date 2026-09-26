@@ -2,7 +2,7 @@ package Transport;
 
 import java.io.Serializable;
 
-public interface Transport extends Serializable {
+public interface Transport extends Serializable, Cloneable {
 
     public abstract String getMark();
 
