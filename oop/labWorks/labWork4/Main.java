@@ -34,6 +34,7 @@ public class Main {
             transports[2].setModelName("Четырёхколёсное1", "клонированная марка");
             transports[3].setMark("клонированный мотоцикл");
             transports[3].setModelName("Двухколёсное1", "клонированная марка");
+            transports[3].removeModel("клонированная марка");
         } catch (DuplicateModelNameException | NoSuchModelNameException e) {
             e.printStackTrace();
         }
