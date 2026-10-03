@@ -1,4 +1,3 @@
-import atexit
 import tkinter as tk
 from PIL import Image, ImageTk
 
@@ -151,16 +150,44 @@ def fill_texture(x0, y0, texture, line_color, pix, width=640, height=800):
                     filled_pix.add((nx, ny))
                     stack.append((nx, ny))
 
+def fill(x0, y0, color, line_color, pix, width=640, height=800):
+    if not (0 <= x0 < width and 0 <= y0 < height):
+        return
 
 
-draw_line(10,10,10,100,(255,0,0),pixels)
-draw_line(10,100,100,100,(255,0,0),pixels)
-draw_line(100,100,100,10,(255,0,0),pixels)
-draw_line(100,10,10,10,(255,0,0),pixels)
+    stack = [(x0, y0)]
 
-text = Image.open("brick.png")
+    while stack:
+        x, y = stack.pop()
+        
+        for dx, dy in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
+            nx, ny = x + dx, y + dy
+            if 0 <= nx < width and 0 <= ny < height:
+                if pix[nx, ny] != color and pix[nx, ny] != line_color:
+                    pix[nx, ny] = color
+                    stack.append((nx, ny))
 
-fill_texture(50,500,text,(255,0,0),pixels)
+brick = Image.open("brick.png")
+
+draw_line(240, 650, 240, 350, (255, 255, 255), pixels)
+draw_line(400, 650, 400, 350, (255, 255, 255), pixels)
+draw_line(240, 350, 400, 350, (255, 255, 255), pixels)
+draw_line(240, 650, 400, 650, (255, 255, 255), pixels)
+
+fill(320, 500, (255, 255, 255), (255, 255, 255), pixels)
+
+fill_texture(0, 0, brick, (255, 255, 255), pixels)
+
+draw_line(320, 350, 320, 320, (255, 255, 255), pixels)
+
+draw_bezier_curve([(320, 320), (290, 300), (310, 240), (320, 200)], 0.01, (255, 255, 0), pixels)
+draw_bezier_curve([(320, 320), (350, 300), (330, 240), (320, 200)], 0.01, (255, 255, 0), pixels)
+
+fill(320, 260, (255, 165, 0), (255, 255, 0), pixels)
+
+draw_circle(320, 260, 75, (255, 165, 0), pixels)
+
+draw_polygon([(100, 799), (540, 799), (475, 650), (165, 650)], (128, 128, 128), pixels)
 
 tk_img = ImageTk.PhotoImage(img)
 canvas = tk.Canvas(root, width=640, height=800)
