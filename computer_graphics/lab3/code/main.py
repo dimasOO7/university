@@ -72,25 +72,28 @@ def draw_circle(x0, y0, R, color, pix):
         x += 1
 
 def draw_bezier_curve(points, step, color, pix):
-    if step <= 1:
-        step = 0.000001
+    if step <= 0:
+        step = 0.01
         
     t = 0.0
-    while t <= 1.0 + step / 2:
+    prev_point = None
+    while t <= 1.0 + step:
+        current_t = min(t, 1.0)
         current_points = list(points)
         
         while len(current_points) > 1:
             next_points = []
             for i in range(len(current_points) - 1):
-                x = current_points[i][0] + (current_points[i+1][0] - current_points[i][0]) * t
-                y = current_points[i][1] + (current_points[i+1][1] - current_points[i][1]) * t
+                x = current_points[i][0] + (current_points[i+1][0] - current_points[i][0]) * current_t
+                y = current_points[i][1] + (current_points[i+1][1] - current_points[i][1]) * current_t
                 next_points.append((x, y))
             current_points = next_points
             
         if current_points:
             px, py = int(round(current_points[0][0])), int(round(current_points[0][1]))
-            if 0 <= px < 640 and 0 <= py < 800:
-                pix[px, py] = color
+            if prev_point is not None:
+                draw_line(prev_point[0], prev_point[1], px, py, color, pix)
+            prev_point = (px, py)
                 
         t += step
 
@@ -176,7 +179,7 @@ draw_line(240, 650, 400, 650, (255, 255, 255), pixels)
 
 fill(320, 500, (255, 255, 255), (255, 255, 255), pixels)
 
-fill_texture(0, 0, brick, (255, 255, 255), pixels)
+
 
 draw_line(320, 350, 320, 320, (255, 255, 255), pixels)
 
@@ -188,6 +191,8 @@ fill(320, 260, (255, 165, 0), (255, 255, 0), pixels)
 draw_circle(320, 260, 75, (255, 165, 0), pixels)
 
 draw_polygon([(100, 799), (540, 799), (475, 650), (165, 650)], (128, 128, 128), pixels)
+
+fill_texture(390, 260, brick, (255, 165, 0), pixels)
 
 tk_img = ImageTk.PhotoImage(img)
 canvas = tk.Canvas(root, width=640, height=800)
