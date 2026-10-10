@@ -12,7 +12,7 @@ import java.io.OutputStream;
 public class Main {
     public static void main(String[] args) {
         Transport original = new Motorbike("orig", 5);
-        Transport transport = TransportStatic.CreateByLink("created", 67, original);
+        Transport transport = TransportStatic.createByLink("created", 9, original);
         TransportStatic.show(original);
         TransportStatic.show(transport);
         System.out.println("Оригинальный класс:" + original.getClass().getName());

@@ -26,7 +26,10 @@ public class TransportStatic {
         return sum / length;
     }
 
-    public static Transport CreateByLink(String mark, int size, Transport link) {
+    public static Transport createByLink(String mark, int size, Transport link) {
+        if (link == null) {
+            return null;
+        }
         Class c = link.getClass();
         try {
             Constructor constructor = c.getConstructor(String.class, int.class);
