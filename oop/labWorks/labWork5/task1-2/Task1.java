@@ -1,6 +1,5 @@
 
 import Transport.*;
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -19,6 +18,7 @@ public class Task1 {
             transport = (Transport) constr.newInstance("марка", 10);
             Method method = c.getMethod(args[1], String.class, double.class);
             method.invoke(transport, args[2], Double.parseDouble(args[3]));
+            System.out.println("Класс: " + transport.getClass().getSimpleName());
             System.out.println("Марка: " + transport.getMark());
             TransportStatic.show(transport);
         } catch (ClassNotFoundException e) {
