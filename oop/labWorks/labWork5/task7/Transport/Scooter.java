@@ -8,29 +8,9 @@ import java.util.Objects;
 import java.util.Random;
 
 public class Scooter implements Transport {
-    private class Model implements Serializable, Cloneable {
-        public String name;
-        public double cost;
-
-        public Model(String name, double cost) {
-            this.name = name;
-            this.cost = cost;
-        }
-
-        @Override
-        public String toString() {
-            return name + " : " + cost;
-        }
-
-        @Override
-        public Object clone() throws CloneNotSupportedException {
-            return super.clone();
-        }
-    }
-
     private String mark;
 
-    private HashMap<String, Model> map;
+    private HashMap<String, Double> map;
 
     public Scooter(String mark, int modelsSize) {
         map = new HashMap<>(modelsSize);
@@ -65,12 +45,10 @@ public class Scooter implements Transport {
         if (!oldName.equals(newName) && map.containsKey(newName)) {
             throw new DuplicateModelNameException(newName);
         }
-        Model model = map.remove(oldName);
-        if (model == null) {
+        if (!map.containsKey(oldName)) {
             throw new NoSuchModelNameException(oldName);
         }
-        model.name = newName;
-        map.put(newName, model);
+        map.put(newName, map.remove(oldName));
     }
 
     @Override
@@ -80,11 +58,11 @@ public class Scooter implements Transport {
 
     @Override
     public double getModelCost(String name) throws NoSuchModelNameException {
-        Model model = map.get(name);
-        if (model == null) {
+        Double cost = map.get(name);
+        if (cost == null) {
             throw new NoSuchModelNameException(name);
         }
-        return model.cost;
+        return cost;
     }
 
     @Override
@@ -92,19 +70,17 @@ public class Scooter implements Transport {
         if (newCost < 0) {
             throw new ModelPriceOutOfBoundsException(newCost);
         }
-        Model model = map.get(name);
-        if (model == null) {
+        if (map.replace(name, newCost) == null) {
             throw new NoSuchModelNameException(name);
         }
-        model.cost = newCost;
     }
 
     @Override
     public double[] getAllModelsCost() {
         double[] costs = new double[map.size()];
         int i = 0;
-        for (Model model : map.values()) {
-            costs[i] = model.cost;
+        for (Double cost : map.values()) {
+            costs[i] = cost;
             i++;
         }
         return costs;
@@ -118,13 +94,12 @@ public class Scooter implements Transport {
         if (map.containsKey(name)) {
             throw new DuplicateModelNameException(name);
         }
-        map.put(name, new Model(name, cost));
+        map.put(name, cost);
     }
 
     @Override
     public void removeModel(String name) throws NoSuchModelNameException {
-        Model model = map.remove(name);
-        if (model == null) {
+        if (map.remove(name) == null) {
             throw new NoSuchModelNameException(name);
         }
     }
@@ -142,32 +117,41 @@ public class Scooter implements Transport {
         if (obj == this) {
             return true;
         }
-        if (obj instanceof Transport) {
-            Transport transport = (Transport) obj;
-            if (Objects.equals(mark, transport.getMark())) {
-                if (transport.getModelsLength() == map.size()) {
-                    return Arrays.equals(transport.getModelsNames(), getModelsNames())
-                            && Arrays.equals(transport.getAllModelsCost(), getAllModelsCost());
+        if (!(obj instanceof Transport)) {
+            return false;
+        }
+        Transport transport = (Transport) obj;
+        if (!Objects.equals(mark, transport.getMark())) {
+            return false;
+        }
+        if (transport.getModelsLength() != map.size()) {
+            return false;
+        }
+
+        for (String name : getModelsNames()) {
+            try {
+                if (Double.compare(getModelCost(name), transport.getModelCost(name)) != 0) {
+                    return false;
                 }
+            } catch (NoSuchModelNameException e) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     @Override
-    public Object clone() {
-        Scooter result = null;
+    public Scooter clone() {
         try {
-            result = (Scooter) super.clone();
-            result.map = new HashMap<>(map.size());
-            for (Map.Entry<String, Model> entry : map.entrySet()) {
-                result.map.put(entry.getKey(), (Model) entry.getValue().clone());
+            Scooter result = (Scooter) super.clone();
+            if (this.map != null) {
+                result.map = new HashMap<>(this.map);
             }
-
+            return result;
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
-        return result;
+        return null;
     }
 
     @Override
@@ -178,10 +162,12 @@ public class Scooter implements Transport {
         buff.append(map.size());
         buff.append("\nсписок моделей:");
         int i = 1;
-        for (Map.Entry<String, Model> entry : map.entrySet()) {
+        for (Map.Entry<String, Double> entry : map.entrySet()) {
             buff.append("\n");
             buff.append(i);
             buff.append(". ");
+            buff.append(entry.getKey());
+            buff.append(" : ");
             buff.append(entry.getValue());
             i++;
         }

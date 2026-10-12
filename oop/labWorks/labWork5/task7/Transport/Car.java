@@ -167,16 +167,27 @@ public class Car implements Transport {
         if (obj == this) {
             return true;
         }
-        if (obj instanceof Transport) {
-            Transport transport = (Transport) obj;
-            if (Objects.equals(mark, transport.getMark())) {
-                if (transport.getModelsLength() == models.length) {
-                    return Arrays.equals(transport.getModelsNames(), getModelsNames())
-                            && Arrays.equals(transport.getAllModelsCost(), getAllModelsCost());
+        if (!(obj instanceof Transport)) {
+            return false;
+        }
+        Transport transport = (Transport) obj;
+        if (!Objects.equals(mark, transport.getMark())) {
+            return false;
+        }
+        if (transport.getModelsLength() != getModelsLength()) {
+            return false;
+        }
+
+        for (String name : getModelsNames()) {
+            try {
+                if (Double.compare(getModelCost(name), transport.getModelCost(name)) != 0) {
+                    return false;
                 }
+            } catch (NoSuchModelNameException e) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     @Override
@@ -188,7 +199,7 @@ public class Car implements Transport {
     }
 
     @Override
-    public Object clone() {
+    public Car clone() {
         Car result = null;
         try {
             result = (Car) super.clone();

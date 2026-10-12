@@ -5,12 +5,17 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class task1 {
+public class Task1 {
     public static void main(String[] args) {
+        if (args.length < 4) {
+            System.out.println(
+                    "Ошибка ввода, введите 4 аргумента: полное название класса, метод, аргумент1 метода, аргумент2 метода");
+            return;
+        }
         Transport transport;
         try {
-            Class c = Class.forName(args[0]);
-            Constructor constr = c.getConstructor(String.class, int.class);
+            Class<?> c = Class.forName(args[0]);
+            Constructor<?> constr = c.getConstructor(String.class, int.class);
             transport = (Transport) constr.newInstance("марка", 10);
             Method method = c.getMethod(args[1], String.class, double.class);
             method.invoke(transport, args[2], Double.parseDouble(args[3]));
@@ -29,4 +34,4 @@ public class task1 {
     }
 }
 
-// java task1 Transport.Motorbike setModelCost марка1 67
+// java Task1 Transport.Motorbike setModelCost марка1 67

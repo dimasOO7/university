@@ -91,7 +91,7 @@ public class TransportIO {
         double[] costs = v.getAllModelsCost();
         String[] names = v.getModelsNames();
         for (int i = 0; i < names.length; i++) {
-            writer.printf("%s %s%n", costs[i], names[i]);
+            writer.printf(Locale.US, "%.2f %s%n", costs[i], names[i]);
         }
         writer.flush();
     }

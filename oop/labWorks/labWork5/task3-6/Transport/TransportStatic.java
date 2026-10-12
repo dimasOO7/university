@@ -30,9 +30,9 @@ public class TransportStatic {
         if (link == null) {
             return null;
         }
-        Class c = link.getClass();
+        Class<? extends Transport> c = link.getClass();
         try {
-            Constructor constructor = c.getConstructor(String.class, int.class);
+            Constructor<?> constructor = c.getConstructor(String.class, int.class);
             return (Transport) constructor.newInstance(mark, size);
         } catch (NoSuchMethodException e) {
             return null;

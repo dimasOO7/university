@@ -2,6 +2,7 @@ package Transport;
 
 import java.io.Serializable;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Objects;
 import java.util.Random;
@@ -130,9 +131,12 @@ public class Moped implements Transport {
 
     @Override
     public void removeModel(String name) throws NoSuchModelNameException {
-        for (Model model : list) {
+        Iterator<Model> iter = list.iterator();
+        while (iter.hasNext()) {
+            Model model = iter.next();
+
             if (model.name.equals(name)) {
-                list.remove(model);
+                iter.remove();
                 return;
             }
         }
@@ -170,16 +174,27 @@ public class Moped implements Transport {
         if (obj == this) {
             return true;
         }
-        if (obj instanceof Transport) {
-            Transport transport = (Transport) obj;
-            if (Objects.equals(mark, transport.getMark())) {
-                if (transport.getModelsLength() == list.size()) {
-                    return Arrays.equals(transport.getModelsNames(), getModelsNames())
-                            && Arrays.equals(transport.getAllModelsCost(), getAllModelsCost());
+        if (!(obj instanceof Transport)) {
+            return false;
+        }
+        Transport transport = (Transport) obj;
+        if (!Objects.equals(mark, transport.getMark())) {
+            return false;
+        }
+        if (transport.getModelsLength() != getModelsLength()) {
+            return false;
+        }
+
+        for (String name : getModelsNames()) {
+            try {
+                if (Double.compare(getModelCost(name), transport.getModelCost(name)) != 0) {
+                    return false;
                 }
+            } catch (NoSuchModelNameException e) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     @Override
@@ -191,7 +206,7 @@ public class Moped implements Transport {
     }
 
     @Override
-    public Object clone() {
+    public Moped clone() {
         Moped result = null;
         try {
             result = (Moped) super.clone();
