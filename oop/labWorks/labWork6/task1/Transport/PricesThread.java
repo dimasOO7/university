@@ -11,7 +11,7 @@ public class PricesThread extends Thread {
     public void run() {
         double[] costs = transport.getAllModelsCost();
         for (double cost : costs) {
-            System.out.println(cost);
+            System.out.println("цена:" + cost);
         }
     }
 }

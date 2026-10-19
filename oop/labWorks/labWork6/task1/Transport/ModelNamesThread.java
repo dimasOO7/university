@@ -11,7 +11,7 @@ public class ModelNamesThread extends Thread {
     public void run() {
         String[] names = transport.getModelsNames();
         for (String name : names) {
-            System.out.println(name);
+            System.out.println("модель: " + name);
         }
     }
 }
