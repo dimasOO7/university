@@ -10,6 +10,9 @@ public class Matrix implements Serializable {
     private static final long serialVersionUID = 1L;
 
     public Matrix(int collums, int rows) {
+        if (collums < 1 || rows < 1) {
+            throw new IllegalArgumentException();
+        }
         matrix = new double[collums][rows];
         Random random = new Random();
         for (int i = 0; i < collums; i++) {
