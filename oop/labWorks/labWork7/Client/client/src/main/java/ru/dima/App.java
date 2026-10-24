@@ -25,10 +25,16 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) {
-        Spinner<Integer> rowsSpinner = new Spinner<>(1, 100, 5);
-        Spinner<Integer> colsSpinner = new Spinner<>(1, 100, 5);
-        configureSpinner(rowsSpinner, 1, 100, 5);
-        configureSpinner(colsSpinner, 1, 100, 5);
+        UnaryOperator<TextFormatter.Change> filter = change -> {
+            String newText = change.getControlNewText();
+            if (newText.matches("\\d*")) {
+                return change;
+            }
+            return null;
+        };
+
+        Spinner<Integer> rowsSpinner = new IntSpinner(1, 100, 5);
+        Spinner<Integer> colsSpinner = new IntSpinner(1, 100, 5);
         rowsSpinner.setPrefWidth(70);
         colsSpinner.setPrefWidth(70);
 
@@ -60,23 +66,12 @@ public class App extends Application {
         scrollPane.setFitToHeight(true);
 
         generateBtn.setOnAction(e -> {
-            try {
-                rowsSpinner.commitValue();
-                colsSpinner.commitValue();
-            } catch (Exception ex) {
-                rowsSpinner.getEditor().setText(String.valueOf(rowsSpinner.getValue()));
-                colsSpinner.getEditor().setText(String.valueOf(colsSpinner.getValue()));
-            }
-
             int rows = rowsSpinner.getValue();
             int cols = colsSpinner.getValue();
             if (cols >= 1 && rows >= 1) {
                 matrix = new Matrix(rows, cols);
                 displayMatrix(matrix);
                 sumLabel.setText("Сумма нечётных элементов:");
-            } else {
-                Alert alert = new Alert(AlertType.ERROR, "Ошибка: вводите только целые положительные числа!");
-                alert.show();
             }
         });
 
@@ -141,54 +136,6 @@ public class App extends Application {
                 matrixGrid.add(cell, c, r);
             }
         }
-    }
-
-    public void configureSpinner(Spinner<Integer> spinner, int min, int max, int initial) {
-        SpinnerValueFactory.IntegerSpinnerValueFactory factory = new SpinnerValueFactory.IntegerSpinnerValueFactory(min,
-                max, initial);
-        spinner.setValueFactory(factory);
-        spinner.setEditable(true);
-
-        UnaryOperator<TextFormatter.Change> filter = change -> {
-            String newText = change.getControlNewText();
-            return newText.matches("\\d*") ? change : null;
-        };
-        spinner.getEditor().setTextFormatter(new TextFormatter<>(filter));
-
-        Runnable commitAction = () -> {
-            String text = spinner.getEditor().getText();
-
-            if (text == null || text.trim().isEmpty()) {
-                spinner.getEditor().setText(String.valueOf(spinner.getValue()));
-                return;
-            }
-
-            try {
-                long parsed = Long.parseLong(text.trim());
-                int clampedValue;
-
-                if (parsed < factory.getMin()) {
-                    clampedValue = factory.getMin();
-                } else if (parsed > factory.getMax()) {
-                    clampedValue = factory.getMax();
-                } else {
-                    clampedValue = (int) parsed;
-                }
-
-                factory.setValue(clampedValue);
-                spinner.getEditor().setText(String.valueOf(clampedValue));
-            } catch (NumberFormatException ex) {
-                spinner.getEditor().setText(String.valueOf(spinner.getValue()));
-            }
-        };
-
-        spinner.getEditor().setOnAction(e -> commitAction.run());
-
-        spinner.getEditor().focusedProperty().addListener((obs, oldVal, newVal) -> {
-            if (!newVal) {
-                commitAction.run();
-            }
-        });
     }
 
     public static void main(String[] args) {
