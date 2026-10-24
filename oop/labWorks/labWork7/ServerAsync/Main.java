@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 
 public class Main {
     public static void main(String[] args) {
-        ExecutorService pool = Executors.newFixedThreadPool(14);
+        ExecutorService pool = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
         try (ServerSocket serverSocket = new ServerSocket(8081)) {
             while (!serverSocket.isClosed()) {
                 try {

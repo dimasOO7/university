@@ -1,0 +1,19 @@
+{
+    "java.project.sourcePaths": [
+        "."
+    ],
+    "java.project.referencedLibraries": [],
+    "java.jdt.ls.java.home": "/usr/lib/jvm/java-27-openjdk",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-27",
+            "path": "/usr/lib/jvm/java-27-openjdk",
+            "default": true
+        },
+        {
+            "name": "JavaSE-17",
+            "path": "/usr/lib/jvm/java-17-openjdk"
+        }
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
+}

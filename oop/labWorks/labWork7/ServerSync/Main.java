@@ -4,24 +4,23 @@ import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import matrix.Matrix;
+import ru.dima.matrix.Matrix;
 
 public class Main {
     public static void main(String[] args) {
         try (ServerSocket serverSocket = new ServerSocket(8081)) {
             while (!serverSocket.isClosed()) {
-                try (Socket client = serverSocket.accept()) {
-                    ObjectInputStream inStream = new ObjectInputStream(client.getInputStream());
+                try (Socket client = serverSocket.accept();
+                        ObjectInputStream inStream = new ObjectInputStream(client.getInputStream());
+                        DataOutputStream outStream = new DataOutputStream(client.getOutputStream())) {
                     Object obj = inStream.readObject();
                     if (obj instanceof Matrix) {
                         Matrix matrix = (Matrix) obj;
-                        DataOutputStream outStream = new DataOutputStream(client.getOutputStream());
                         outStream.writeDouble(Matrix.getOddSum(matrix));
-                        outStream.close();
+                        outStream.flush();
                     } else {
                         System.err.println("Ошибка, получен неверный класс");
                     }
-                    inStream.close();
                 } catch (IOException | ClassNotFoundException e) {
                     System.err.println(e.getMessage());
                     e.printStackTrace();

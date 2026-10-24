@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.Socket;
 
-import matrix.Matrix;
+import ru.dima.matrix.Matrix;
 
 public class ClientHandler implements Runnable {
     private final Socket socket;
@@ -14,21 +14,20 @@ public class ClientHandler implements Runnable {
 
     @Override
     public void run() {
-        try {
-            ObjectInputStream inStream = new ObjectInputStream(socket.getInputStream());
+        try (Socket socket = this.socket;
+                ObjectInputStream inStream = new ObjectInputStream(socket.getInputStream());
+                DataOutputStream outStream = new DataOutputStream(socket.getOutputStream());) {
             Object obj = inStream.readObject();
             if (obj instanceof Matrix) {
                 Matrix matrix = (Matrix) obj;
-                DataOutputStream outStream = new DataOutputStream(socket.getOutputStream());
                 outStream.writeDouble(Matrix.getOddSum(matrix));
-                outStream.close();
+                outStream.flush();
             } else {
                 System.err.println("Ошибка, получен неверный класс");
             }
-            inStream.close();
         } catch (IOException | ClassNotFoundException e) {
             System.err.println(e.getMessage());
-            e.getStackTrace();
+            e.printStackTrace();
         }
     }
 }

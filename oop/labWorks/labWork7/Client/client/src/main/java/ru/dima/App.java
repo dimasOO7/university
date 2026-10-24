@@ -1,89 +1,135 @@
 package ru.dima;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import ru.dima.matrix.Matrix;
 
-import java.util.Random;
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
+import java.util.function.UnaryOperator;
 
 public class App extends Application {
 
     private final GridPane matrixGrid = new GridPane();
 
+    Matrix matrix;
+
     @Override
     public void start(Stage stage) {
-        // 1. Поля ввода для задания произвольного размера матрицы
         Spinner<Integer> rowsSpinner = new Spinner<>(1, 100, 5);
         Spinner<Integer> colsSpinner = new Spinner<>(1, 100, 5);
+        configureSpinner(rowsSpinner, 1, 100, 5);
+        configureSpinner(colsSpinner, 1, 100, 5);
         rowsSpinner.setPrefWidth(70);
         colsSpinner.setPrefWidth(70);
 
         Button generateBtn = new Button("Показать матрицу");
+        Button calculateBtn = new Button("Рассчитать сумму нечётных элементов");
+        Label sumLabel = new Label("Сумма нечётных элементов: ");
 
-        // Панель управления (верхняя плашка)
-        HBox controlPanel = new HBox(10,
+        HBox topPanel = new HBox(10,
                 new Label("Строк:"), rowsSpinner,
                 new Label("Столбцов:"), colsSpinner,
                 generateBtn);
-        controlPanel.setAlignment(Pos.CENTER_LEFT);
-        controlPanel.setPadding(new Insets(10));
+        topPanel.setAlignment(Pos.CENTER_LEFT);
+        topPanel.setPadding(new Insets(5));
+        HBox calculatePanel = new HBox(10, calculateBtn, sumLabel);
+        calculatePanel.setAlignment(Pos.CENTER_LEFT);
+        calculatePanel.setPadding(new Insets(5));
 
-        // 2. Настройка сетки для ячеек матрицы
-        matrixGrid.setHgap(4); // расстояние между столбцами
-        matrixGrid.setVgap(4); // расстояние между строками
-        matrixGrid.setPadding(new Insets(100));
+        VBox topBox = new VBox(topPanel, calculatePanel);
+        topBox.setAlignment(Pos.CENTER_LEFT);
+        topBox.setPadding(new Insets(5));
+
+        matrixGrid.setHgap(4);
+        matrixGrid.setVgap(4);
+        matrixGrid.setPadding(new Insets(10));
         matrixGrid.setAlignment(Pos.CENTER);
 
-        // 3. Оборачиваем сетку в ScrollPane для поддержки произвольных размеров
         ScrollPane scrollPane = new ScrollPane(matrixGrid);
         scrollPane.setFitToWidth(true);
         scrollPane.setFitToHeight(true);
 
-        // Обработка кнопки: генерация и вывод
         generateBtn.setOnAction(e -> {
+            try {
+                rowsSpinner.commitValue();
+                colsSpinner.commitValue();
+            } catch (Exception ex) {
+                rowsSpinner.getEditor().setText(String.valueOf(rowsSpinner.getValue()));
+                colsSpinner.getEditor().setText(String.valueOf(colsSpinner.getValue()));
+            }
+
             int rows = rowsSpinner.getValue();
             int cols = colsSpinner.getValue();
-            double[][] randomMatrix = generateRandomMatrix(rows, cols);
-            displayMatrix(randomMatrix);
+            if (cols >= 1 && rows >= 1) {
+                matrix = new Matrix(rows, cols);
+                displayMatrix(matrix);
+                sumLabel.setText("Сумма нечётных элементов:");
+            } else {
+                Alert alert = new Alert(AlertType.ERROR, "Ошибка: вводите только целые положительные числа!");
+                alert.show();
+            }
         });
 
-        // Корневой контейнер
+        Runnable getOddSum = () -> {
+            try (Socket socket = new Socket("localhost", 8081);
+                    ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
+                    DataInputStream in = new DataInputStream(socket.getInputStream())) {
+                out.writeObject(matrix);
+                out.flush();
+                double sum = in.readDouble();
+                Platform.runLater(() -> {
+                    sumLabel.setText(String.format("Сумма нечётных элементов: %f", sum));
+                    calculateBtn.setDisable(false);
+                });
+            } catch (IOException ex) {
+                Platform.runLater(() -> {
+                    sumLabel.setText("Сумма нечётных элементов: ошибка связи с сервером");
+                    calculateBtn.setDisable(false);
+                });
+            }
+
+        };
+
+        calculateBtn.setOnAction(e -> {
+            new Thread(getOddSum).start();
+            calculateBtn.setDisable(true);
+        });
+
         BorderPane root = new BorderPane();
-        root.setTop(controlPanel);
+        root.setTop(topBox);
         root.setCenter(scrollPane);
 
-        Scene scene = new Scene(root, 650, 450);
+        Scene scene = new Scene(root, 750, 500);
+        stage.setMinWidth(750);
         stage.setTitle("Вывод матрицы произвольного размера");
         stage.setScene(scene);
         stage.show();
 
-        // Отображение начальной матрицы при запуске
         generateBtn.fire();
     }
 
-    /**
-     * Динамическое наполнение GridPane элементами матрицы
-     */
-    private void displayMatrix(double[][] matrix) {
+    private void displayMatrix(Matrix matrix) {
         matrixGrid.getChildren().clear();
 
-        if (matrix == null || matrix.length == 0) {
+        if (matrix == null) {
             return;
         }
-
-        int rows = matrix.length;
-        for (int r = 0; r < rows; r++) {
-            int cols = matrix[r].length;
-            for (int c = 0; c < cols; c++) {
-                String valueStr = String.format("%.1f", matrix[r][c]);
+        for (int r = 0; r < matrix.getRows(); r++) {
+            for (int c = 0; c < matrix.getColumns(); c++) {
+                String valueStr = String.format("%.2f", matrix.getElement(r, c));
 
                 Label cell = new Label(valueStr);
 
-                // Фиксируем размеры (минимальный и предпочтительный), чтобы текст не обрезался
                 cell.setPrefSize(55, 30);
                 cell.setMinSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE);
                 cell.setAlignment(Pos.CENTER);
@@ -97,18 +143,52 @@ public class App extends Application {
         }
     }
 
-    /**
-     * Вспомогательный метод создания матрицы случайных чисел
-     */
-    private double[][] generateRandomMatrix(int rows, int cols) {
-        Random rnd = new Random();
-        double[][] mat = new double[rows][cols];
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                mat[i][j] = rnd.nextDouble() * 100;
+    public void configureSpinner(Spinner<Integer> spinner, int min, int max, int initial) {
+        SpinnerValueFactory.IntegerSpinnerValueFactory factory = new SpinnerValueFactory.IntegerSpinnerValueFactory(min,
+                max, initial);
+        spinner.setValueFactory(factory);
+        spinner.setEditable(true);
+
+        UnaryOperator<TextFormatter.Change> filter = change -> {
+            String newText = change.getControlNewText();
+            return newText.matches("\\d*") ? change : null;
+        };
+        spinner.getEditor().setTextFormatter(new TextFormatter<>(filter));
+
+        Runnable commitAction = () -> {
+            String text = spinner.getEditor().getText();
+
+            if (text == null || text.trim().isEmpty()) {
+                spinner.getEditor().setText(String.valueOf(spinner.getValue()));
+                return;
             }
-        }
-        return mat;
+
+            try {
+                long parsed = Long.parseLong(text.trim());
+                int clampedValue;
+
+                if (parsed < factory.getMin()) {
+                    clampedValue = factory.getMin();
+                } else if (parsed > factory.getMax()) {
+                    clampedValue = factory.getMax();
+                } else {
+                    clampedValue = (int) parsed;
+                }
+
+                factory.setValue(clampedValue);
+                spinner.getEditor().setText(String.valueOf(clampedValue));
+            } catch (NumberFormatException ex) {
+                spinner.getEditor().setText(String.valueOf(spinner.getValue()));
+            }
+        };
+
+        spinner.getEditor().setOnAction(e -> commitAction.run());
+
+        spinner.getEditor().focusedProperty().addListener((obs, oldVal, newVal) -> {
+            if (!newVal) {
+                commitAction.run();
+            }
+        });
     }
 
     public static void main(String[] args) {

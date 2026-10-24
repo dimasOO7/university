@@ -7,17 +7,17 @@ import java.util.Random;
 public class Matrix implements Serializable {
     private double[][] matrix;
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 2L;
 
-    public Matrix(int collums, int rows) {
-        if (collums < 1 || rows < 1) {
+    public Matrix(int rows, int columns) {
+        if (columns < 1 || rows < 1) {
             throw new IllegalArgumentException();
         }
-        matrix = new double[collums][rows];
+        matrix = new double[rows][columns];
         Random random = new Random();
-        for (int i = 0; i < collums; i++) {
-            for (int j = 0; j < rows; j++) {
-                matrix[i][j] = random.nextInt(100);
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                matrix[i][j] = random.nextDouble(-100, 100);
             }
         }
     }
@@ -29,12 +29,20 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    public double getElement(int x, int y) {
-        return matrix[x][y];
+    public int getRows() {
+        return matrix.length;
     }
 
-    public void setElement(int x, int y, double value) {
-        matrix[x][y] = value;
+    public int getColumns() {
+        return matrix[0].length;
+    }
+
+    public double getElement(int row, int column) {
+        return matrix[row][column];
+    }
+
+    public void setElement(int row, int column, double value) {
+        matrix[row][column] = value;
     }
 
     public static double getOddSum(Matrix matrix) {
