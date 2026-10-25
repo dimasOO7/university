@@ -37,12 +37,12 @@ public class Matrix implements Serializable {
         return matrix[0].length;
     }
 
-    public double getElement(int row, int colum) {
-        return matrix[row][colum];
+    public double getElement(int row, int column) {
+        return matrix[row][column];
     }
 
-    public void setElement(int row, int colum, double value) {
-        matrix[row][colum] = value;
+    public void setElement(int row, int column, double value) {
+        matrix[row][column] = value;
     }
 
     public static double getOddSum(Matrix matrix) {

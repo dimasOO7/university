@@ -1,8 +1,6 @@
 package ru.dima;
 
 import javafx.animation.PauseTransition;
-import javafx.beans.property.ReadOnlyStringProperty;
-import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.geometry.Point2D;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
@@ -14,7 +12,6 @@ import javafx.util.StringConverter;
 public class IntSpinner extends Spinner<Integer> {
 
     private final SpinnerValueFactory.IntegerSpinnerValueFactory factory;
-    private final ReadOnlyStringWrapper errorMessage = new ReadOnlyStringWrapper("");
     private final Tooltip errorTooltip = new Tooltip();
     private final PauseTransition hideTimer = new PauseTransition(Duration.seconds(2.5));
 
@@ -85,7 +82,6 @@ public class IntSpinner extends Spinner<Integer> {
     }
 
     private void showError(String message) {
-        errorMessage.set(message);
         getEditor().setStyle("-fx-border-color: #c62828; -fx-border-radius: 3;");
 
         errorTooltip.setText(message);
@@ -98,7 +94,6 @@ public class IntSpinner extends Spinner<Integer> {
     }
 
     private void clearError() {
-        errorMessage.set("");
         getEditor().setStyle("");
         errorTooltip.hide();
     }

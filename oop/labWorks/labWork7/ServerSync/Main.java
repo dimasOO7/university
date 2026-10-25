@@ -10,18 +10,20 @@ public class Main {
     public static void main(String[] args) {
         try (ServerSocket serverSocket = new ServerSocket(8081)) {
             while (!serverSocket.isClosed()) {
-                try (Socket client = serverSocket.accept();
-                        ObjectInputStream inStream = new ObjectInputStream(client.getInputStream());
-                        DataOutputStream outStream = new DataOutputStream(client.getOutputStream())) {
-                    Object obj = inStream.readObject();
-                    if (obj instanceof Matrix) {
-                        Matrix matrix = (Matrix) obj;
-                        outStream.writeDouble(Matrix.getOddSum(matrix));
-                        outStream.flush();
-                    } else {
-                        System.err.println("Ошибка, получен неверный класс");
+                try (Socket client = serverSocket.accept()) {
+                    client.setSoTimeout(5000);
+                    try (ObjectInputStream inStream = new ObjectInputStream(client.getInputStream());
+                            DataOutputStream outStream = new DataOutputStream(client.getOutputStream())) {
+                        Object obj = inStream.readObject();
+                        if (obj instanceof Matrix) {
+                            Matrix matrix = (Matrix) obj;
+                            outStream.writeDouble(Matrix.getOddSum(matrix));
+                            outStream.flush();
+                        } else {
+                            System.err.println("Ошибка, получен неверный класс");
+                        }
                     }
-                } catch (IOException | ClassNotFoundException e) {
+                } catch (IOException | ClassNotFoundException | RuntimeException e) {
                     System.err.println(e.getMessage());
                     e.printStackTrace();
                 }

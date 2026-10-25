@@ -2,6 +2,8 @@ package ru.dima;
 
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -18,8 +20,9 @@ import java.net.Socket;
 public class App extends Application {
 
     private final GridPane matrixGrid = new GridPane();
+    private final BooleanProperty busy = new SimpleBooleanProperty(false);
 
-    Matrix matrix;
+    volatile Matrix matrix;
 
     @Override
     public void start(Stage stage) {
@@ -31,6 +34,8 @@ public class App extends Application {
 
         Button generateBtn = new Button("Показать матрицу");
         Button calculateBtn = new Button("Рассчитать сумму нечётных элементов");
+        calculateBtn.disableProperty().bind(busy);
+        generateBtn.disableProperty().bind(busy);
         Label sumLabel = new Label("Сумма нечётных элементов: ");
 
         HBox topPanel = new HBox(10,
@@ -65,25 +70,28 @@ public class App extends Application {
             try (Socket socket = new Socket("localhost", 8081);
                     ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
                     DataInputStream in = new DataInputStream(socket.getInputStream())) {
+                socket.setSoTimeout(5000);
                 out.writeObject(matrix);
                 out.flush();
                 double sum = in.readDouble();
                 Platform.runLater(() -> {
                     sumLabel.setText(String.format("Сумма нечётных элементов: %f", sum));
-                    calculateBtn.setDisable(false);
                 });
             } catch (IOException ex) {
                 Platform.runLater(() -> {
                     sumLabel.setText("Сумма нечётных элементов: ошибка связи с сервером");
-                    calculateBtn.setDisable(false);
+                });
+            } finally {
+                Platform.runLater(() -> {
+                    busy.set(false);
                 });
             }
 
         };
 
         calculateBtn.setOnAction(e -> {
+            busy.set(true);
             new Thread(getOddSum).start();
-            calculateBtn.setDisable(true);
         });
 
         BorderPane root = new BorderPane();
