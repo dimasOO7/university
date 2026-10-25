@@ -102,12 +102,4 @@ public class IntSpinner extends Spinner<Integer> {
         getEditor().setStyle("");
         errorTooltip.hide();
     }
-
-    public ReadOnlyStringProperty errorMessageProperty() {
-        return errorMessage.getReadOnlyProperty();
-    }
-
-    public String getErrorMessage() {
-        return errorMessage.get();
-    }
 }

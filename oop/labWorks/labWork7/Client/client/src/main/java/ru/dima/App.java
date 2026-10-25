@@ -37,14 +37,11 @@ public class App extends Application {
                 new Label("Строк:"), rowsSpinner,
                 new Label("Столбцов:"), colsSpinner,
                 generateBtn);
-        topPanel.setAlignment(Pos.CENTER_LEFT);
         topPanel.setPadding(new Insets(5));
         HBox calculatePanel = new HBox(10, calculateBtn, sumLabel);
-        calculatePanel.setAlignment(Pos.CENTER_LEFT);
         calculatePanel.setPadding(new Insets(5));
 
         VBox topBox = new VBox(topPanel, calculatePanel);
-        topBox.setAlignment(Pos.CENTER_LEFT);
         topBox.setPadding(new Insets(5));
 
         matrixGrid.setHgap(4);
