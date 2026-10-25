@@ -6,7 +6,6 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import ru.dima.matrix.Matrix;
@@ -15,7 +14,6 @@ import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-import java.util.function.UnaryOperator;
 
 public class App extends Application {
 
@@ -25,13 +23,6 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) {
-        UnaryOperator<TextFormatter.Change> filter = change -> {
-            String newText = change.getControlNewText();
-            if (newText.matches("\\d*")) {
-                return change;
-            }
-            return null;
-        };
 
         Spinner<Integer> rowsSpinner = new IntSpinner(1, 100, 5);
         Spinner<Integer> colsSpinner = new IntSpinner(1, 100, 5);
@@ -68,11 +59,9 @@ public class App extends Application {
         generateBtn.setOnAction(e -> {
             int rows = rowsSpinner.getValue();
             int cols = colsSpinner.getValue();
-            if (cols >= 1 && rows >= 1) {
-                matrix = new Matrix(rows, cols);
-                displayMatrix(matrix);
-                sumLabel.setText("Сумма нечётных элементов:");
-            }
+            matrix = new Matrix(rows, cols);
+            displayMatrix(matrix);
+            sumLabel.setText("Сумма нечётных элементов:");
         });
 
         Runnable getOddSum = () -> {
