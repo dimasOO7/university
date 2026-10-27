@@ -18,14 +18,11 @@ public class TransportCreator implements Runnable {
     public void run() {
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String mark = reader.readLine();
-            queue.put(new Car(mark, 5));
+            queue.add(new Car(mark, 5));
 
         } catch (IOException e) {
             e.printStackTrace();
             System.err.println("Не найден файл");
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-            Thread.currentThread().interrupt();
         }
     }
 }

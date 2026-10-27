@@ -1,6 +1,5 @@
-import java.util.concurrent.locks.ReentrantLock;
-
 import Transport.*;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,8 +9,8 @@ public class Main {
 
         Thread threadModels = new Thread(new NamesRunnable(transport, lock));
         Thread threadPrices = new Thread(new PricesRunnable(transport, lock));
-
-        threadModels.start();
         threadPrices.start();
+        threadModels.start();
+
     }
 }

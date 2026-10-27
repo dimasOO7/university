@@ -11,15 +11,15 @@ public class TransportSynchronizer {
     }
 
     public void printPrice() throws InterruptedException {
-        double val;
+        String val;
         synchronized (lock) {
-            double[] p = v.getAllModelsCost();
+            String[] p = v.getModelsNames();
             if (!canPrintPrice())
                 throw new InterruptedException();
             while (!set)
                 lock.wait();
             val = p[current++];
-            System.out.println("Print price: " + val);
+            System.out.println("Print model: " + val);
             set = false;
             lock.notifyAll();
         }
@@ -27,12 +27,13 @@ public class TransportSynchronizer {
 
     public void printModel() throws InterruptedException {
         synchronized (lock) {
-            String[] s = v.getModelsNames();
+            double[] s = v.getAllModelsCost();
             if (!canPrintModel())
                 throw new InterruptedException();
             while (set)
                 lock.wait();
-            System.out.println("Print model: " + s[current]);
+            System.out.println("Print price: " + s[current]);
+
             set = true;
             lock.notifyAll();
         }
