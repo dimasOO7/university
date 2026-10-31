@@ -83,7 +83,7 @@ public class App extends Application {
                 tile("Оттенки серого", grayView),
                 tile("бинаризация", binaryView),
                 tile("Неполная пороговая обработка", task2View),
-                tile("Сглаживающий фильтр (B = 1/10)", task3View),
+                tile("Сглаживающий фильтр", task3View),
                 tile("Эрозия", erosionView),
                 tile("Эвристическое утончение линий", evristicView),
                 controls(stage),
