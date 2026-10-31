@@ -59,6 +59,10 @@ public class ImageProcessing {
         return result;
     }
 
+    private static int clamp(int value, int min, int max) {
+        return Math.max(min, Math.min(max, value));
+    }
+
     public static WritableImage task3(Image source) {
         double[][] mask = new double[][] { { 1, 1, 1 }, { 1, 2, 1 }, { 1, 1, 1 } };
         int width = (int) source.getWidth();
@@ -72,7 +76,6 @@ public class ImageProcessing {
                 double color = 0;
                 for (int i = -1; i <= 1; i++) {
                     for (int j = -1; j <= 1; j++) {
-                        // за краем берём яркость ближайшего крайнего пикселя
                         int sx = clamp(x + i, 0, width - 1);
                         int sy = clamp(y + j, 0, height - 1);
                         color += reader.getColor(sx, sy).getRed() * mask[i + 1][j + 1];
@@ -156,10 +159,6 @@ public class ImageProcessing {
             }
         }
         return result;
-    }
-
-    private static int clamp(int value, int min, int max) {
-        return Math.max(min, Math.min(max, value));
     }
 
     public static double localDensity(PixelReader reader, int x, int y) {
