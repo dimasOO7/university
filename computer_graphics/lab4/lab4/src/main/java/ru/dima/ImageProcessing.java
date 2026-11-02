@@ -120,7 +120,7 @@ public class ImageProcessing {
                         kernel[y][x] = Math.abs(dx) <= 0.5 || Math.abs(dy) <= 0.5;
                         break;
                     case CIRCLE:
-                        kernel[y][x] = dx * dx + dy * dy <= radius * radius - 0.5;
+                        kernel[y][x] = dx * dx + dy * dy <= Math.max(radius * radius - 0.5, 0);
                         break;
                 }
             }
@@ -163,10 +163,11 @@ public class ImageProcessing {
 
     public static double localDensity(PixelReader reader, int x, int y) {
         double d = 0;
-        double current = reader.getColor(x, y).getRed();
         for (int i = -1; i <= 1; i++) {
             for (int j = -1; j <= 1; j++) {
-                d += reader.getColor(x + i, y + j).getRed() - current;
+                if (i != 0 || j != 0) {
+                    d += reader.getColor(x + i, y + j).getRed() * 255;
+                }
             }
         }
         return d;
@@ -180,28 +181,80 @@ public class ImageProcessing {
         PixelReader reader = source.getPixelReader();
         PixelWriter writer = result.getPixelWriter();
 
-        Color lineColor = new Color(1, 1, 1, 1);
-        Color backColor = new Color(0, 0, 0, 1);
+        Color backColor = new Color(1, 1, 1, 1);
+
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                writer.setColor(x, y, backColor);
+            }
+        }
 
         for (int y = 2; y < height - 2; y++) {
             for (int x = 2; x < width - 2; x++) {
-                double d = localDensity(reader, x, y);
-                writer.setColor(x, y, backColor);
-                if (d > F1) {
+                if (localDensity(reader, x, y) > F1) {
                     double D = 0;
-                    double curr = localDensity(reader, x, y);
                     for (int i = -1; i <= 1; i++) {
                         for (int j = -1; j <= 1; j++) {
                             if (i != 0 || j != 0) {
-                                D += localDensity(reader, x + i, y + j) - curr;
+                                D += localDensity(reader, x + i, y + j);
                             }
                         }
                     }
                     if (D > F2) {
-                        writer.setColor(x, y, lineColor);
+                        writer.setColor(x, y, reader.getColor(x, y));
                     }
                 }
+            }
+        }
+        return result;
+    }
 
+    public static WritableImage colorContours(Image source) {
+        int width = (int) source.getWidth();
+        int height = (int) source.getHeight();
+        WritableImage result = new WritableImage(width, height);
+        PixelReader reader = source.getPixelReader();
+        PixelWriter writer = result.getPixelWriter();
+
+        Color backColor = new Color(0, 0, 0, 1);
+
+        boolean[][] dark = new boolean[height][width];
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                dark[y][x] = reader.getColor(x, y).getRed() < 0.5;
+                writer.setColor(x, y, backColor);
+            }
+        }
+
+        int[] stack = new int[width * height];
+        int contours = 0;
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                if (!dark[y][x]) {
+                    continue;
+                }
+                Color color = Color.hsb(contours * 137.508 % 360, 1, 0.8);
+                contours++;
+
+                int size = 0;
+                stack[size++] = y * width + x;
+                dark[y][x] = false;
+                while (size > 0) {
+                    int current = stack[--size];
+                    int cx = current % width;
+                    int cy = current / width;
+                    writer.setColor(cx, cy, color);
+                    for (int i = -1; i <= 1; i++) {
+                        for (int j = -1; j <= 1; j++) {
+                            int sx = cx + i;
+                            int sy = cy + j;
+                            if (sx >= 0 && sx < width && sy >= 0 && sy < height && dark[sy][sx]) {
+                                dark[sy][sx] = false;
+                                stack[size++] = sy * width + sx;
+                            }
+                        }
+                    }
+                }
             }
         }
         return result;

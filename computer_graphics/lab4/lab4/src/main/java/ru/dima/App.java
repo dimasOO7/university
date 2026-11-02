@@ -1,6 +1,7 @@
 package ru.dima;
 
 import java.io.File;
+import java.util.List;
 
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
@@ -29,13 +30,11 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.util.StringConverter;
 
 import ru.dima.ImageProcessing.KernelShape;
 
 public class App extends Application {
-
-    // большие картинки уменьшаются при загрузке, иначе эвристический алгоритм
-    // заметно тормозит
     private static final double MAX_IMAGE_SIZE = 800;
     private static final int COLUMNS = 4;
     private static final double KERNEL_PREVIEW_SIZE = 120;
@@ -55,8 +54,8 @@ public class App extends Application {
     private final Spinner<Integer> anchorX = new Spinner<>(0, 2, 1);
     private final Spinner<Integer> anchorY = new Spinner<>(0, 2, 1);
     private final Canvas kernelPreview = new Canvas(KERNEL_PREVIEW_SIZE, KERNEL_PREVIEW_SIZE);
-    private final Spinner<Double> f1 = new Spinner<>(-8.0, 8.0, 0.0, 0.01);
-    private final Spinner<Double> f2 = new Spinner<>(-100.0, 100.0, 0.0, 0.01);
+    private final Spinner<Integer> f1 = new Spinner<>(0, 2040, 300, 10);
+    private final Spinner<Integer> f2 = new Spinner<>(0, 16320, 100, 10);
 
     private final Button refresh = new Button("Обновить");
 
@@ -66,9 +65,8 @@ public class App extends Application {
     public void start(Stage stage) {
         kernelShape.getItems().addAll(KernelShape.values());
         kernelShape.setValue(KernelShape.SQUARE);
+        List.of(kernelSize, anchorX, anchorY, f1, f2).forEach(App::keepValueOnBadInput);
 
-        // превью ядра перерисовывается сразу, а изображения — только по кнопке
-        // «Обновить»
         kernelSize.valueProperty().addListener((obs, oldValue, newValue) -> {
             resetAnchor(anchorX, newValue);
             resetAnchor(anchorY, newValue);
@@ -85,7 +83,7 @@ public class App extends Application {
                 tile("Неполная пороговая обработка", task2View),
                 tile("Сглаживающий фильтр", task3View),
                 tile("Эрозия", erosionView),
-                tile("Эвристическое утончение линий", evristicView),
+                tile("Эвристический алгоритм", evristicView),
                 controls(stage),
         };
 
@@ -213,16 +211,35 @@ public class App extends Application {
         Image binary = ImageProcessing.graytoBinary(gray, binaryThreshold.getValue());
         binaryView.setImage(binary);
         erosionView.setImage(ImageProcessing.erosion(binary, currentKernel(), anchorX.getValue(), anchorY.getValue()));
-        evristicView.setImage(ImageProcessing.evristicAlgoritm(gray, f1.getValue(), f2.getValue()));
+        evristicView.setImage(ImageProcessing
+                .colorContours(ImageProcessing.evristicAlgoritm(gray, f1.getValue(), f2.getValue())));
     }
 
     private static <T> void commit(Spinner<T> spinner) {
         SpinnerValueFactory<T> factory = spinner.getValueFactory();
-        try {
-            factory.setValue(factory.getConverter().fromString(spinner.getEditor().getText()));
-        } catch (RuntimeException e) {
-            spinner.getEditor().setText(factory.getConverter().toString(factory.getValue()));
-        }
+        factory.setValue(factory.getConverter().fromString(spinner.getEditor().getText()));
+        spinner.getEditor().setText(factory.getConverter().toString(factory.getValue()));
+    }
+
+    private static void keepValueOnBadInput(Spinner<Integer> spinner) {
+        SpinnerValueFactory<Integer> factory = spinner.getValueFactory();
+        StringConverter<Integer> converter = factory.getConverter();
+        factory.setConverter(new StringConverter<>() {
+            @Override
+            public String toString(Integer value) {
+                return converter.toString(value);
+            }
+
+            @Override
+            public Integer fromString(String text) {
+                try {
+                    Integer value = converter.fromString(text);
+                    return value != null ? value : factory.getValue();
+                } catch (NumberFormatException e) {
+                    return factory.getValue();
+                }
+            }
+        });
     }
 
     private boolean[][] currentKernel() {
